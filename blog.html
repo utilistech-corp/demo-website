@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — Utilistech</title>
+  <meta name="description" content="IT insights, tips, and practical advice from the Utilistech team.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+
+    @media (max-width: 700px) {
+      .blog-grid { grid-template-columns: 1fr; }
+    }
+
+    .blog-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--gray-300);
+      overflow: hidden;
+      transition: all var(--transition);
+    }
+
+    .blog-card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-4px);
+    }
+
+    .blog-card__image {
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+    }
+
+    .blog-card__body {
+      padding: 1.75rem;
+    }
+
+    .blog-card__meta {
+      display: flex;
+      gap: 1rem;
+      font-size: 0.8rem;
+      color: var(--gray-500);
+      margin-bottom: 0.75rem;
+    }
+
+    .blog-card__tag {
+      background: var(--primary-light);
+      color: var(--primary);
+      padding: 0.15rem 0.6rem;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.75rem;
+    }
+
+    .blog-card__body h3 {
+      margin-bottom: 0.6rem;
+      font-size: 1.2rem;
+    }
+
+    .blog-card__body h3 a {
+      color: var(--dark);
+      text-decoration: none;
+    }
+
+    .blog-card__body h3 a:hover {
+      color: var(--primary);
+    }
+
+    .blog-card__body p {
+      font-size: 0.92rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .blog-card__read-more {
+      font-weight: 600;
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .blog-featured {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--gray-300);
+      overflow: hidden;
+      margin-bottom: 3rem;
+    }
+
+    .blog-featured__image {
+      height: 100%;
+      min-height: 320px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+    }
+
+    .blog-featured__body {
+      padding: 2.5rem 2.5rem 2.5rem 0;
+    }
+
+    .blog-featured__label {
+      display: inline-block;
+      background: var(--primary);
+      color: var(--white);
+      padding: 0.25rem 0.75rem;
+      border-radius: 50px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .blog-featured__body h2 a {
+      color: var(--dark);
+      text-decoration: none;
+    }
+
+    .blog-featured__body h2 a:hover {
+      color: var(--primary);
+    }
+
+    @media (max-width: 768px) {
+      .blog-featured {
+        grid-template-columns: 1fr;
+      }
+      .blog-featured__body {
+        padding: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar__inner">
+      <a href="index.html" class="navbar__logo">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="32" height="32" rx="8" fill="#1a73e8"/>
+          <path d="M8 10h6v12H8V10zm10 0h6v12h-6V10z" fill="#fff" opacity="0.9"/>
+          <path d="M14 14h4v4h-4v-4z" fill="#fff"/>
+        </svg>
+        Utilistech
+      </a>
+      <ul class="navbar__links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li class="navbar__cta"><a href="contact.html" class="btn btn--primary">Get in Touch</a></li>
+      </ul>
+      <button class="navbar__toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Blog</h1>
+      <p>Practical IT insights, tips, and no-nonsense advice for businesses.</p>
+    </div>
+  </section>
+
+  <!-- Featured Post -->
+  <section class="section" style="padding-bottom: 0;">
+    <div class="container">
+      <div class="blog-featured">
+        <div class="blog-featured__image" style="background: linear-gradient(135deg, #e8f0fe 0%, #d2e3fc 100%);">
+          <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#1a73e8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/><path d="M12 3v1m0 16v1m-9-9h1m16 0h1m-2.636-6.364-.707.707M6.343 17.657l-.707.707m0-12.728.707.707m11.314 11.314.707.707"/></svg>
+        </div>
+        <div class="blog-featured__body">
+          <span class="blog-featured__label">Featured</span>
+          <h2><a href="#">Why AI Is the Biggest Opportunity for Small Business IT in 2026</a></h2>
+          <div class="blog-card__meta" style="margin: 0.75rem 0 1rem;">
+            <span>12 March 2026</span>
+            <span>&middot;</span>
+            <span>6 min read</span>
+          </div>
+          <p>AI isn't just for big tech anymore. From automated support to smarter document handling, here's how small businesses can use AI tools right now — without a massive budget or a data science team.</p>
+          <a href="#" class="blog-card__read-more">Read More &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Posts -->
+  <section class="section">
+    <div class="container">
+      <div class="blog-grid">
+
+        <div class="blog-card">
+          <div class="blog-card__image" style="background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#c62828" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
+          </div>
+          <div class="blog-card__body">
+            <div class="blog-card__meta">
+              <span class="blog-card__tag">Security</span>
+              <span>5 March 2026</span>
+              <span>&middot;</span>
+              <span>4 min read</span>
+            </div>
+            <h3><a href="#">Cyber Essentials: What It Actually Involves and Why It Matters</a></h3>
+            <p>Cyber Essentials certification is increasingly expected by clients and partners. Here's a plain-English breakdown of what's involved and how to get through it without the headache.</p>
+            <a href="#" class="blog-card__read-more">Read More &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <div class="blog-card__image" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#2e7d32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+          </div>
+          <div class="blog-card__body">
+            <div class="blog-card__meta">
+              <span class="blog-card__tag">Cloud</span>
+              <span>27 February 2026</span>
+              <span>&middot;</span>
+              <span>5 min read</span>
+            </div>
+            <h3><a href="#">Microsoft 365 vs Google Workspace: Which One's Right for Your Business?</a></h3>
+            <p>Both platforms are excellent — but they're not interchangeable. We break down the real differences to help you pick the right fit for your team and workflows.</p>
+            <a href="#" class="blog-card__read-more">Read More &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <div class="blog-card__image" style="background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#e65100" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M7 7h.01M7 12h.01M7 17h.01M12 7h5M12 12h5M12 17h5"/></svg>
+          </div>
+          <div class="blog-card__body">
+            <div class="blog-card__meta">
+              <span class="blog-card__tag">Strategy</span>
+              <span>18 February 2026</span>
+              <span>&middot;</span>
+              <span>7 min read</span>
+            </div>
+            <h3><a href="#">5 Signs Your Business Has Outgrown Its IT Setup</a></h3>
+            <p>Slow logins, lost files, and "it just crashes sometimes" aren't normal. Here are the telltale signs it's time to rethink your IT infrastructure.</p>
+            <a href="#" class="blog-card__read-more">Read More &rarr;</a>
+          </div>
+        </div>
+
+        <div class="blog-card">
+          <div class="blog-card__image" style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#1565c0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <div class="blog-card__body">
+            <div class="blog-card__meta">
+              <span class="blog-card__tag">Support</span>
+              <span>10 February 2026</span>
+              <span>&middot;</span>
+              <span>3 min read</span>
+            </div>
+            <h3><a href="#">What to Look for in a Managed IT Support Provider</a></h3>
+            <p>Not all IT support is created equal. Here's what separates a good provider from one that'll leave you waiting on hold when things go wrong.</p>
+            <a href="#" class="blog-card__read-more">Read More &rarr;</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter CTA -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-banner">
+        <h2>Get IT tips straight to your inbox</h2>
+        <p>No spam, no fluff — just practical advice for businesses. Once a month, max.</p>
+        <a href="contact.html" class="btn btn--white btn--lg">Subscribe</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="navbar__logo" style="color: #fff; margin-bottom: 0.5rem;">
+            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:28px;height:28px;">
+              <rect width="32" height="32" rx="8" fill="#1a73e8"/>
+              <path d="M8 10h6v12H8V10zm10 0h6v12h-6V10z" fill="#fff" opacity="0.9"/>
+              <path d="M14 14h4v4h-4v-4z" fill="#fff"/>
+            </svg>
+            Utilistech
+          </a>
+          <p>Practical IT consulting and technology solutions for businesses that value results over buzzwords.</p>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul class="footer__links">
+            <li><a href="services.html">Cloud Solutions</a></li>
+            <li><a href="services.html">IT Strategy</a></li>
+            <li><a href="services.html">Security</a></li>
+            <li><a href="services.html">Managed Support</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul class="footer__links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Get in Touch</h4>
+          <ul class="footer__links">
+            <li><a href="mailto:hello@utilistech.co.uk">hello@utilistech.co.uk</a></li>
+            <li><a href="tel:+441234567890">01234 567 890</a></li>
+            <li><a href="contact.html">Contact Form</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; 2026 Utilistech. All rights reserved.</span>
+        <div class="footer__social">
+          <a href="#" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="#" aria-label="Twitter">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
