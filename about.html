@@ -19,403 +19,907 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    window.addEventListener('load', function() {
+      try {
+        if (typeof Calendly !== 'undefined') {
+      Calendly.initBadgeWidget({
+        url: 'https://calendly.com/contact-utilistech/30min',
+        text: 'Book a Free Call',
+        color: '#42dec3',
+        textColor: '#000000',
+        branding: false
+      });
+        }
+      } catch(e) {}
+    }
+  </script>
   <style>
-    * {
+    *, *::before, *::after {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
+    }
+
+    :root {
+      --primary: #42dec3;
+      --primary-dark: #2db3a3;
+      --secondary: #a4c9ff;
+      --accent-pink: #ff4f8f;
+      --surface-1: #0a0a0a;
+      --surface-2: #121212;
+      --surface-3: #1a1a1a;
+      --surface-4: #242424;
+      --text-primary: #ffffff;
+      --text-secondary: #b0b0b0;
+      --text-tertiary: #707070;
+      --border-color: rgba(255, 255, 255, 0.08);
+      --border-hover: rgba(255, 255, 255, 0.16);
+      --glass-bg: rgba(18, 18, 18, 0.5);
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
+      background: var(--surface-1);
+      color: var(--text-primary);
       font-family: 'Inter', sans-serif;
-      background: #0a0a0a;
-      color: #ffffff;
+      font-size: 16px;
       line-height: 1.6;
       overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
     }
 
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1.5rem 2rem;
-      background: rgba(10, 10, 10, 0.8);
-      backdrop-filter: blur(10px);
-      position: sticky;
-      top: 0;
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.02'/%3E%3C/svg%3E");
+      pointer-events: none;
       z-index: 1000;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
-    .navbar-logo {
+    .grid-bg {
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 20px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color);
+      background: rgba(10, 10, 10, 0.8);
+    }
+
+    .nav-logo {
       font-family: 'Space Grotesk', sans-serif;
       font-weight: 700;
-      font-size: 1.5rem;
-      color: #00d9ff;
+      font-size: 18px;
+      color: var(--text-primary);
       text-decoration: none;
+      letter-spacing: -0.3px;
     }
+    .nav-logo span { color: var(--primary); }
 
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-    }
-
+    .nav-links { display: flex; gap: 36px; list-style: none; }
     .nav-links a {
-      color: #ffffff;
+      font-size: 14px;
+      color: var(--text-tertiary);
       text-decoration: none;
-      font-size: 0.95rem;
-      transition: color 0.3s ease;
+      font-weight: 400;
+      letter-spacing: 0.2px;
+      transition: color 0.2s;
     }
+    .nav-links a:hover { color: var(--text-primary); }
 
-    .nav-links a:hover {
-      color: #00d9ff;
+    .nav-cta {
+      background: var(--primary);
+      color: #000 !important;
+      padding: 9px 20px;
+      border-radius: 6px;
+      font-weight: 500 !important;
+      font-size: 13px !important;
+      transition: opacity 0.2s !important;
     }
+    .nav-cta:hover { opacity: 0.85; color: #000 !important; }
 
-    .hero-section {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(135deg, #0a0a0a 0%, #1a0033 100%);
-      position: relative;
-      overflow: hidden;
-    }
+    section { position: relative; z-index: 1; }
 
-    .hero-section::before {
-      content: '';
-      position: absolute;
-      width: 400px;
-      height: 400px;
-      background: radial-gradient(circle, rgba(0, 217, 255, 0.2) 0%, transparent 70%);
-      border-radius: 50%;
-      top: 10%;
-      left: 10%;
-      animation: float 6s ease-in-out infinite;
-    }
-
-    .hero-section::after {
-      content: '';
-      position: absolute;
-      width: 300px;
-      height: 300px;
-      background: radial-gradient(circle, rgba(153, 0, 255, 0.2) 0%, transparent 70%);
-      border-radius: 50%;
-      bottom: 10%;
-      right: 10%;
-      animation: float 8s ease-in-out infinite;
-    }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(20px); }
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      text-align: center;
-      max-width: 800px;
-      padding: 2rem;
-    }
-
-    .hero-content h1 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(2.5rem, 5vw, 4rem);
-      font-weight: 700;
-      margin-bottom: 1.5rem;
-      color: #00d9ff;
-      letter-spacing: -1px;
-    }
-
-    .hero-content p {
-      font-size: 1.2rem;
-      color: #cccccc;
-      margin-bottom: 2rem;
-      line-height: 1.8;
-    }
-
-    .cta-button {
-      display: inline-block;
-      padding: 1rem 2.5rem;
-      background: linear-gradient(135deg, #00d9ff 0%, #0099cc 100%);
-      color: #000;
-      text-decoration: none;
-      border-radius: 50px;
-      font-weight: 600;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      font-family: 'Space Grotesk', sans-serif;
-    }
-
-    .cta-button:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 30px rgba(0, 217, 255, 0.3);
-    }
-
-    .about-section {
-      padding: 6rem 2rem;
-      background: #0a0a0a;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-
-    .about-section h2 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 700;
-      color: #00d9ff;
-      margin-bottom: 2rem;
-      text-align: center;
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      align-items: center;
-      margin-bottom: 4rem;
-    }
-
-    .about-text {
-      font-size: 1.05rem;
-      color: #cccccc;
-      line-height: 1.8;
-    }
-
-    .about-text p {
-      margin-bottom: 1.5rem;
-    }
-
-    .about-text strong {
-      color: #00d9ff;
-    }
-
-    .about-image {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-      border: 2px solid rgba(0, 217, 255, 0.3);
-      object-fit: cover;
-    }
-
-    .expertise-section {
-      padding: 6rem 2rem;
-      background: linear-gradient(135deg, #0a0a0a 0%, #1a0033 100%);
-      text-align: center;
-    }
-
-    .expertise-section h2 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 700;
-      color: #00d9ff;
-      margin-bottom: 3rem;
-    }
-
-    .expertise-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
+    .container {
       max-width: 1200px;
       margin: 0 auto;
+      padding: 0 48px;
     }
 
-    .expertise-card {
-      padding: 2rem;
-      background: rgba(0, 217, 255, 0.05);
-      border: 1px solid rgba(0, 217, 255, 0.2);
-      border-radius: 10px;
-      transition: all 0.3s ease;
-    }
-
-    .expertise-card:hover {
-      border-color: #00d9ff;
-      box-shadow: 0 0 20px rgba(0, 217, 255, 0.1);
-      transform: translateY(-5px);
-    }
-
-    .expertise-card h3 {
+    /* ── SHARED TYPE ── */
+    .section-label {
       font-family: 'Space Grotesk', sans-serif;
-      color: #00d9ff;
-      margin-bottom: 1rem;
-      font-size: 1.3rem;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: 16px;
     }
 
-    .expertise-card p {
-      color: #cccccc;
-      font-size: 0.95rem;
-      line-height: 1.6;
+    h1, h2, h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      letter-spacing: -1px;
+      color: var(--text-primary);
     }
 
+    h1 {
+      font-size: clamp(40px, 5vw, 64px);
+      font-weight: 700;
+      line-height: 1.05;
+      margin-bottom: 24px;
+    }
+
+    h2 {
+      font-size: clamp(32px, 4vw, 52px);
+      font-weight: 700;
+      line-height: 1.08;
+      margin-bottom: 32px;
+    }
+
+    h3 {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+      margin-bottom: 8px;
+    }
+
+    .accent-word { color: var(--primary); }
+
+    p { color: var(--text-secondary); line-height: 1.75; }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--primary);
+      color: #000;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 14px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: opacity 0.2s, transform 0.2s;
+      letter-spacing: 0.2px;
+    }
+    .btn-primary:hover { opacity: 0.88; transform: translateY(-1px); }
+
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: var(--text-primary);
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 13px 28px;
+      border-radius: 8px;
+      border: 1px solid var(--border-hover);
+      text-decoration: none;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .btn-ghost:hover { border-color: var(--primary); transform: translateY(-1px); }
+
+    /* ── GLASS CARD ── */
+    .glass-card {
+      background: var(--glass-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 32px;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+    .glass-card:hover {
+      border-color: var(--border-hover);
+      transform: translateY(-2px);
+    }
+
+    /* ── REVEAL ANIMATION ── */
     .reveal {
-      opacity: 0;
-      transform: translateY(30px);
+      opacity: 1;
+      transform: translateY(0);
       transition: opacity 0.6s ease, transform 0.6s ease;
     }
-
-    .reveal.visible {
+    body.js-loaded .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    body.js-loaded .reveal.visible {
       opacity: 1;
       transform: translateY(0);
     }
 
-    .footer {
-      padding: 3rem 2rem;
-      background: #000;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    body.js-loaded .reveal-delay-1 { transition-delay: 0.1s; }
+    body.js-loaded .reveal.visible.reveal-delay-1 { transition-delay: 0.1s; }
+
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    body.js-loaded .reveal-delay-2 { transition-delay: 0.2s; }
+    body.js-loaded .reveal.visible.reveal-delay-2 { transition-delay: 0.2s; }
+
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    body.js-loaded .reveal-delay-3 { transition-delay: 0.3s; }
+    body.js-loaded .reveal.visible.reveal-delay-3 { transition-delay: 0.3s; }
+
+    .reveal-delay-4 { transition-delay: 0.4s; }
+    body.js-loaded .reveal-delay-4 { transition-delay: 0.4s; }
+    body.js-loaded .reveal.visible.reveal-delay-4 { transition-delay: 0.4s; }
+
+    .reveal-delay-5 { transition-delay: 0.5s; }
+    body.js-loaded .reveal-delay-5 { transition-delay: 0.5s; }
+    body.js-loaded .reveal.visible.reveal-delay-5 { transition-delay: 0.5s; }
+
+    /* ── PAGE HERO ── */
+    .page-hero {
+      padding: 160px 0 80px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .page-hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .page-hero-content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .page-hero p {
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--text-secondary);
+      font-weight: 300;
+      margin-bottom: 36px;
+      max-width: 520px;
+    }
+
+    .page-hero-actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    /* Location badge */
+    .location-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--glass-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 100px;
+      padding: 8px 16px;
+      font-size: 13px;
+      color: var(--text-tertiary);
+      margin-bottom: 24px;
+      width: fit-content;
+    }
+
+    .location-badge span { color: var(--primary); font-size: 14px; }
+
+    /* Photo card */
+    .photo-card {
+      background: var(--surface-2);
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      overflow: hidden;
+      aspect-ratio: 3/4;
+      position: relative;
+    }
+
+    .photo-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+    }
+
+    /* ── STORY SECTION ── */
+    #story { padding: 100px 0; }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .story-text h2 { margin-bottom: 32px; }
+
+    .story-text p {
+      margin-bottom: 20px;
+      font-size: 16px;
+      color: var(--text-secondary);
+      font-weight: 300;
+    }
+
+    .story-text p strong { color: var(--text-primary); font-weight: 500; }
+
+    .story-aside { display: flex; flex-direction: column; gap: 20px; padding-top: 8px; }
+
+    /* Stat cards */
+    .stat-card {
+      background: var(--glass-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 28px;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+    .stat-card:hover {
+      border-color: var(--border-hover);
+      transform: translateY(-2px);
+    }
+
+    .stat-number {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 40px;
+      font-weight: 700;
+      color: var(--primary);
+      letter-spacing: -1px;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .stat-label {
+      font-size: 14px;
+      color: var(--text-tertiary);
+      font-weight: 300;
+    }
+
+    /* ── CREDENTIALS ── */
+    #credentials { padding: 0 0 100px; }
+
+    .credentials-header {
+      margin-bottom: 48px;
+    }
+
+    .credentials-header h2 {
+      margin-bottom: 0;
+    }
+
+    .cred-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .cred-card {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .cred-card-inner {
+      background: var(--glass-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 32px;
+      transition: border-color 0.3s, transform 0.3s;
+      height: 100%;
+    }
+
+    .cred-card:hover .cred-card-inner {
+      border-color: var(--border-hover);
+      transform: translateY(-2px);
+    }
+
+    .cred-icon {
+      font-size: 28px;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      background: rgba(66, 222, 195, 0.1);
+      border-radius: 8px;
+    }
+
+    .cred-card h3 {
+      margin-bottom: 12px;
+    }
+
+    .cred-body {
+      font-size: 14px;
+      color: var(--text-tertiary);
+      line-height: 1.65;
+      font-weight: 300;
+    }
+
+    /* ── HOW I WORK ── */
+    #how-i-work {
+      padding: 100px 0;
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .how-i-work-header {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: end;
+      margin-bottom: 64px;
+    }
+
+    .how-i-work-header h2 {
+      margin-bottom: 0;
+    }
+
+    .how-i-work-header p {
+      font-size: 16px;
+      color: var(--text-secondary);
+      font-weight: 300;
+      line-height: 1.75;
+    }
+
+    .principles-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .principle-card {
+      background: var(--glass-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 32px;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+
+    .principle-card:hover {
+      border-color: var(--border-hover);
+      transform: translateY(-2px);
+    }
+
+    .principle-number {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 48px;
+      font-weight: 700;
+      color: var(--primary);
+      letter-spacing: -2px;
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+
+    .principle-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--text-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+    }
+
+    .principle-desc {
+      font-size: 14px;
+      color: var(--text-tertiary);
+      font-weight: 300;
+      line-height: 1.65;
+    }
+
+    /* ── CTA ── */
+    #cta {
+      padding: 100px 0;
       text-align: center;
-      color: #999;
+      border-top: 1px solid var(--border-color);
     }
 
-    .footer p {
-      margin-bottom: 0.5rem;
+    #cta h2 { margin-bottom: 16px; }
+    #cta p { font-size: 17px; margin-bottom: 40px; font-weight: 300; }
+
+    .cta-actions {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
     }
 
-    .footer a {
-      color: #00d9ff;
+    /* ── FOOTER ── */
+    footer {
+      padding: 40px 48px;
+      border-top: 1px solid var(--border-color);
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 40px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer-col h4 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .footer-links { display: flex; flex-direction: column; gap: 12px; list-style: none; }
+    .footer-links a {
+      font-size: 13px;
+      color: var(--text-tertiary);
       text-decoration: none;
-      transition: color 0.3s ease;
+      transition: color 0.2s;
     }
+    .footer-links a:hover { color: var(--text-primary); }
 
-    .footer a:hover {
-      color: #fff;
+    .footer-copy { font-size: 12px; color: var(--text-tertiary); }
+
+    /* ── MOBILE ── */
+    @media (max-width: 1024px) {
+      .principles-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     @media (max-width: 768px) {
-      .navbar {
-        flex-direction: column;
-        gap: 1rem;
-      }
-
-      .nav-links {
-        flex-direction: column;
-        gap: 1rem;
-        width: 100%;
-        text-align: center;
-      }
-
-      .about-grid {
+      nav { padding: 16px 24px; }
+      .nav-links { display: none; }
+      .container { padding: 0 24px; }
+      .page-hero { padding: 120px 0 60px; }
+      .page-hero-inner { grid-template-columns: 1fr; gap: 48px; }
+      .photo-card { aspect-ratio: 1/1; max-width: 320px; }
+      .story-grid { grid-template-columns: 1fr; gap: 48px; }
+      .cred-grid { grid-template-columns: 1fr; }
+      .how-i-work-header { grid-template-columns: 1fr; gap: 24px; }
+      footer {
         grid-template-columns: 1fr;
-        gap: 2rem;
-      }
-
-      .hero-content h1 {
-        font-size: 2rem;
-      }
-
-      .expertise-grid {
-        grid-template-columns: 1fr;
+        gap: 32px;
+        padding: 32px 24px;
       }
     }
+
+    /* ── MOBILE NAV (pure CSS checkbox hack) ── */
+    #nav-toggle { display: none; }
+
+    .nav-label {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 12px;
+      z-index: 1001;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .nav-label span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--text-primary);
+      border-radius: 2px;
+      transition: all 0.3s;
+      pointer-events: none;
+    }
+
+    @media (max-width: 900px) {
+      .nav-label { display: flex; }
+      .nav-links {
+        display: none;
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: #0a0a0a;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0;
+        z-index: 1000;
+        list-style: none;
+        padding: 80px 0 40px;
+      }
+      .nav-links li {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid rgba(255,255,255,0.07);
+      }
+      .nav-links li:first-child {
+        border-top: 1px solid rgba(255,255,255,0.07);
+      }
+      .nav-links li a {
+        display: block;
+        padding: 20px 40px !important;
+        font-size: 18px !important;
+        color: #fff !important;
+        font-weight: 500 !important;
+        letter-spacing: 0.3px;
+        text-decoration: none;
+      }
+      .nav-links li:last-child {
+        border-bottom: none;
+        margin-top: 32px;
+      }
+      .nav-links .nav-cta {
+        display: inline-block !important;
+        padding: 14px 40px !important;
+        font-size: 16px !important;
+        border-radius: 8px !important;
+      }
+      #nav-toggle:checked ~ nav .nav-links { display: flex; }
+      #nav-toggle:checked ~ nav .nav-label span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      #nav-toggle:checked ~ nav .nav-label span:nth-child(2) { opacity: 0; }
+      #nav-toggle:checked ~ nav .nav-label span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    }
+
   </style>
 </head>
 <body>
-  <nav class="navbar">
-    <a href="/" class="navbar-logo">Utilis Technologies</a>
-    <ul class="nav-links">
-      <li><a href="/">Home</a></li>
-      <li><a href="/about.html">About</a></li>
-      <li><a href="/">Services</a></li>
-      <li><a href="/">Contact</a></li>
+<div class="grid-bg"></div>
+
+<!-- NAV -->
+<input type="checkbox" id="nav-toggle" aria-hidden="true">
+<nav>
+  <a href="/index.html" class="nav-logo">Utilis<span>.</span>Tech</a>
+  <label class="nav-label" for="nav-toggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </label>
+  <ul class="nav-links">
+    <li><a href="/index.html#services">Services</a></li>
+    <li><a href="/solutions.html">Solutions</a></li>
+    <li><a href="/how-we-work.html">How We Work</a></li>
+    <li><a href="/about.html">About</a></li>
+    <li><a href="/contact.html">Contact</a></li>
+    <li><a href="https://calendly.com/contact-utilistech" target="_blank" rel="noopener" class="nav-cta">Book a Call</a></li>
+  </ul>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-inner">
+      <div class="page-hero-content">
+        <div class="location-badge reveal">
+          <span>📍</span> UK
+        </div>
+        <p class="section-label reveal">About</p>
+        <h1 class="reveal">Hi, I'm <span class="accent-word">Dean.</span></h1>
+        <p class="reveal">I help UK businesses adopt AI safely and effectively — from figuring out where it fits, to building the tools, to making sure your team actually uses them. All backed by 25+ years of hands-on IT experience.</p>
+        <div class="page-hero-actions reveal">
+          <a href="https://calendly.com/contact-utilistech" target="_blank" rel="noopener" class="btn-primary">
+            Book a Free Call
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/dean-k-275b94133/" target="_blank" rel="noopener" class="btn-ghost">
+            LinkedIn
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Photo -->
+      <div class="photo-card reveal">
+        <img src="/dean-photo.png" alt="Dean Kewley — Founder, Utilis Technologies" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section id="story">
+  <div class="container">
+    <div class="story-grid">
+      <div class="story-text reveal">
+        <p class="section-label">My Story</p>
+        <h2>Real-world IT experience.<br><span class="accent-word">AI done properly.</span></h2>
+        <br/>
+        <p>My career started in the trenches of IT — configuring networks, managing cloud environments, hardening security, and delivering infrastructure projects for businesses across the UK. That background isn't incidental to what I do now. <strong>It's the reason I do it differently.</strong></p>
+        <p>When I founded Utilis Technologies, I'd spent years watching businesses struggle to get value from technology — not because the tools weren't good enough, but because they were bolted on without understanding the environment they were landing in. Too many AI projects fail for exactly the same reason.</p>
+        <p>I work differently. Every AI solution I design is built with governance, data handling, and real-world constraints considered from day one — not as an afterthought. Whether you're on Microsoft 365, Google Workspace, or something else entirely, I focus on making AI work safely within your existing setup.</p>
+        <p><strong>The result is AI that actually gets deployed, used, and delivers measurable value</strong> — not a proof of concept that sits in a folder.</p>
+      </div>
+
+      <div class="story-aside">
+        <div class="stat-card reveal reveal-delay-1">
+          <div class="stat-number">6</div>
+          <div class="stat-label">Years running Utilis Technologies</div>
+        </div>
+        <div class="stat-card reveal reveal-delay-2">
+          <div class="stat-number">25+</div>
+          <div class="stat-label">Years in IT — infrastructure, security, and cloud environments</div>
+        </div>
+        <div class="stat-card reveal reveal-delay-3">
+          <div class="stat-number">AI</div>
+          <div class="stat-label">Safe AI integration — strategy, governance, tools, and training</div>
+        </div>
+        <div class="stat-card reveal reveal-delay-4">
+          <div class="stat-number">UK</div>
+          <div class="stat-label">Based in the UK, GDPR-ready, and focused on businesses like yours</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CREDENTIALS -->
+<section id="credentials">
+  <div class="container">
+    <div class="credentials-header reveal">
+      <p class="section-label">Credentials</p>
+      <h2>Qualified across the <span class="accent-word">full picture.</span></h2>
+    </div>
+    <div class="cred-grid">
+
+      <div class="cred-card reveal reveal-delay-1">
+        <div class="cred-card-inner">
+          <div class="cred-icon">
+            <span class="material-symbols-outlined">verified</span>
+          </div>
+          <h3>Microsoft Certified</h3>
+          <p class="cred-body">Holds Microsoft certifications covering Azure, Microsoft 365, and the wider cloud stack — practical expertise for businesses running Microsoft environments.</p>
+        </div>
+      </div>
+
+      <div class="cred-card reveal reveal-delay-2">
+        <div class="cred-card-inner">
+          <div class="cred-icon">
+            <span class="material-symbols-outlined">security</span>
+          </div>
+          <h3>Cyber Essentials</h3>
+          <p class="cred-body">Certified in Cyber Essentials — the UK government-backed security standard. Every AI deployment is designed with security and data governance built in from day one.</p>
+        </div>
+      </div>
+
+      <div class="cred-card reveal reveal-delay-3">
+        <div class="cred-card-inner">
+          <div class="cred-icon">
+            <span class="material-symbols-outlined">psychology</span>
+          </div>
+          <h3>AI Development</h3>
+          <p class="cred-body">Hands-on experience building production AI tools — including custom integrations, automated workflows, and AI applications connected to business systems.</p>
+        </div>
+      </div>
+
+      <div class="cred-card reveal reveal-delay-1">
+        <div class="cred-card-inner">
+          <div class="cred-icon">
+            <span class="material-symbols-outlined">cloud</span>
+          </div>
+          <h3>Cloud Infrastructure</h3>
+          <p class="cred-body">Extensive experience designing and managing cloud environments — identity, networking, storage, and cost management for businesses of all sizes.</p>
+        </div>
+      </div>
+
+      <div class="cred-card reveal reveal-delay-2">
+        <div class="cred-card-inner">
+          <div class="cred-icon">
+            <span class="material-symbols-outlined">router</span>
+          </div>
+          <h3>Network & Infrastructure</h3>
+          <p class="cred-body">Deep background in network design and implementation — firewalls, switching, wireless, and VPN across office and hybrid environments.</p>
+        </div>
+      </div>
+
+      <div class="cred-card reveal reveal-delay-3">
+        <div class="cred-card-inner">
+          <div class="cred-icon">
+            <span class="material-symbols-outlined">policy</span>
+          </div>
+          <h3>UK GDPR Aware</h3>
+          <p class="cred-body">ICO registered. All AI work is delivered with data minimisation, appropriate legal bases, and UK GDPR compliance considered as standard — not bolted on at the end.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- HOW I WORK -->
+<section id="how-i-work">
+  <div class="container">
+    <div class="how-i-work-header">
+      <div>
+        <p class="section-label reveal">How I Work</p>
+        <h2 class="reveal">Principles I don't <span class="accent-word">compromise on.</span></h2>
+      </div>
+      <p class="reveal">These aren't values written for a website. They're the working principles behind every project I take on — and the reason clients come back.</p>
+    </div>
+
+    <div class="principles-grid">
+      <div class="principle-card reveal reveal-delay-1">
+        <div class="principle-number">01</div>
+        <div class="principle-title">Security and governance first</div>
+        <p class="principle-desc">AI that bypasses your security posture isn't a solution — it's a liability. Every integration I build respects your existing controls, data boundaries, and compliance obligations.</p>
+      </div>
+
+      <div class="principle-card reveal reveal-delay-2">
+        <div class="principle-number">02</div>
+        <div class="principle-title">No solutions looking for problems</div>
+        <p class="principle-desc">I start with your workflows, not with technology. If AI isn't the right answer for a particular process, I'll tell you. The goal is genuine business value, not impressive demos.</p>
+      </div>
+
+      <div class="principle-card reveal reveal-delay-3">
+        <div class="principle-number">03</div>
+        <div class="principle-title">Work with what you've got</div>
+        <p class="principle-desc">Most businesses have more capability in their existing tools than they realise. I prefer to extend and enhance what you already have rather than introduce unnecessary new systems and vendors.</p>
+      </div>
+
+      <div class="principle-card reveal reveal-delay-4">
+        <div class="principle-number">04</div>
+        <div class="principle-title">Outcomes over outputs</div>
+        <p class="principle-desc">A working integration that nobody uses is a failed project. I stay involved through adoption, measure what's actually changed, and iterate until the value is real and measurable.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta">
+  <div class="container">
+    <p class="section-label reveal">Get In Touch</p>
+    <h2 class="reveal">Let's have a <span class="accent-word">conversation.</span></h2>
+    <p class="reveal">No pitch, no jargon. Just an honest discussion about where AI could make a real difference in your business.</p>
+    <div class="cta-actions reveal">
+      <a href="https://calendly.com/contact-utilistech" target="_blank" rel="noopener" class="btn-primary">
+        Book a Free Discovery Call
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+      </a>
+      <a href="#" onclick="window.location='mai'+'lto:contact@utilistech.co.uk'; return false;" class="btn-ghost">
+        <span class="__cf_email__" data-cfemail="62010d0c160301162217160b0e0b111607010a4c010d4c1709">[email&#160;protected]</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-col">
+    <h4>Product</h4>
+    <ul class="footer-links">
+      <li><a href="/index.html#services">Services</a></li>
+      <li><a href="/solutions.html">Solutions</a></li>
+      <li><a href="/how-we-work.html">How We Work</a></li>
     </ul>
-  </nav>
+  </div>
+  <div class="footer-col">
+    <h4>Company</h4>
+    <ul class="footer-links">
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+      <li><a href="https://www.linkedin.com/in/dean-k-275b94133/" target="_blank" rel="noopener">LinkedIn</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h4>Legal</h4>
+    <ul class="footer-links">
+      <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+      <li><a href="https://ico.org.uk/" target="_blank" rel="noopener">ICO Registration: 00013348807</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <p class="footer-copy">© 2026 Utilis Technologies Limited. Registered in England & Wales.</p>
+  </div>
+</footer>
 
-  <section class="hero-section">
-    <div class="hero-content">
-      <h1>About Dean Kewley</h1>
-      <p>AI Integration Consultant & Founder of Utilis Technologies</p>
-    </div>
-  </section>
-
-  <section class="about-section">
-    <h2>Who I Am</h2>
-    <div class="about-grid">
-      <div class="about-text reveal">
-        <p>
-          <strong>Hello. I'm Dean Kewley</strong>, an IT consultant specialising in AI integration and digital transformation. Based in the UK, I help organizations across various sectors—from healthcare to finance to manufacturing—navigate the rapidly evolving landscape of artificial intelligence.
-        </p>
-        <p>
-          I founded <strong>Utilis Technologies</strong> to bring practical, thoughtful AI solutions to businesses of all sizes. My approach is grounded in real-world experience: I don't just talk about AI—I implement it, manage it, and help teams work alongside it effectively.
-        </p>
-      </div>
-      <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop" alt="Dean Kewley" class="about-image reveal" />
-    </div>
-  </section>
-
-  <section class="expertise-section">
-    <h2>My Expertise</h2>
-    <div class="expertise-grid">
-      <div class="expertise-card reveal">
-        <h3>AI Strategy & Governance</h3>
-        <p>Help organizations develop responsible AI strategies, implement governance frameworks, and ensure compliance with emerging regulations like the UK AI Bill.</p>
-      </div>
-      <div class="expertise-card reveal">
-        <h3>AI Integration & Implementation</h3>
-        <p>End-to-end implementation of AI solutions—from selecting the right tools to integrating them into existing systems and training teams on adoption.</p>
-      </div>
-      <div class="expertise-card reveal">
-        <h3>GenAI Solutions</h3>
-        <p>Custom solutions using generative AI technologies, including LLM integrations, automation workflows, and intelligent customer-facing applications.</p>
-      </div>
-      <div class="expertise-card reveal">
-        <h3>Risk & Compliance</h3>
-        <p>Comprehensive risk assessments, bias audits, security evaluations, and ensuring AI systems meet regulatory and ethical standards.</p>
-      </div>
-      <div class="expertise-card reveal">
-        <h3>Training & Upskilling</h3>
-        <p>Tailored workshops and training programs to help teams understand AI capabilities, best practices, and responsible use in their workflows.</p>
-      </div>
-      <div class="expertise-card reveal">
-        <h3>Technology Leadership</h3>
-        <p>CTO advisory services, technical due diligence, and hands-on consulting to guide informed decisions about AI adoption and implementation.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="about-section">
-    <h2>Why Work With Me?</h2>
-    <div class="about-grid">
-      <div class="about-text reveal">
-        <p>
-          <strong>Experience That Matters:</strong> I've worked across multiple sectors and organizations—from startups to enterprises. I understand the unique challenges you face.
-        </p>
-        <p>
-          <strong>Practical Solutions:</strong> I focus on solving real problems with real technology. No hype, no unnecessary complexity—just effective AI that works for your business.
-        </p>
-        <p>
-          <strong>Ethical Foundation:</strong> AI should be trustworthy, transparent, and responsible. I help ensure your AI systems are built on solid ethical principles and comply with regulations.
-        </p>
-        <p>
-          <strong>Partnership Approach:</strong> I'm not just a consultant—I'm a partner in your success. I work closely with your team, build relationships, and ensure you understand every step of the journey.
-        </p>
-      </div>
-      <div class="about-text reveal">
-        <p>
-          <strong>Continuous Learning:</strong> The AI landscape changes constantly. I stay at the cutting edge of developments in machine learning, large language models, and responsible AI practices.
-        </p>
-        <p>
-          <strong>Technical Depth:</strong> With hands-on technical experience across Azure, Python, PowerShell, Bash, and various AI frameworks, I can bridge the gap between strategy and implementation.
-        </p>
-        <p>
-          <strong>Clear Communication:</strong> I believe in explaining complex concepts clearly—whether you're a technical team or business stakeholders, I make sure everyone understands the path forward.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section class="expertise-section">
-    <h2>Ready to Get Started?</h2>
-    <p style="font-size: 1.1rem; color: #cccccc; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
-      Whether you're exploring AI opportunities or tackling a specific challenge, I'd love to chat. Let's discuss how AI can create value for your organization.
-    </p>
-    <a href="mailto:dean@utilistech.co.uk" class="cta-button">Get in Touch</a>
-  </section>
-
-  <footer class="footer">
-    <p>&copy; 2026 Utilis Technologies. All rights reserved.</p>
-    <p><a href="/">Home</a> | <a href="/about.html">About</a> | <a href="/">Privacy Policy</a></p>
-  </footer>
-
-  <script>
+<script>
+  document.body.classList.add('js-loaded');
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
