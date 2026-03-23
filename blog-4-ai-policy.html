@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Why every business needs an AI usage policy (and what to put in it) — Utilis Technologies</title>
+  <meta name="description" content="Unmanaged AI adoption creates real risks: data leaks, inconsistent outputs, compliance issues. Here's what a pragmatic AI policy looks like — and how to build one without stalling progress." />
+  <link rel="canonical" href="https://utilistech.co.uk/blog-4-ai-policy.html" />
+  <meta property="og:title" content="Why every business needs an AI usage policy (and what to put in it)" />
+  <meta property="og:description" content="Unmanaged AI adoption creates real risks: data leaks, inconsistent outputs, compliance issues. Here's what a pragmatic AI policy looks like — and how to build one without stalling progress." />
+  <meta property="og:url" content="https://utilistech.co.uk/blog-4-ai-policy.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Utilis Technologies" />
+  <meta property="og:image" content="https://utilistech.co.uk/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Why every business needs an AI usage policy (and what to put in it)" />
+  <meta name="twitter:description" content="Unmanaged AI adoption creates real risks: data leaks, inconsistent outputs, compliance issues. Here's what a pragmatic AI policy looks like — and how to build one without stalling progress." />
+  <meta name="twitter:image" content="https://utilistech.co.uk/og-image.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
+  <script>
+    window.addEventListener('load', function() {
+      try {
+        if (typeof Calendly !== 'undefined') {
+          Calendly.initBadgeWidget({ url: 'https://calendly.com/contact-utilistech/30min', text: 'Book a Free Call', color: '#00c2a8', textColor: '#000000', branding: false });
+        }
+      } catch(e) {}
+    });
+  </script>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface": "#131313",
+            "surface-dim": "#131313",
+            "surface-container-lowest": "#0e0e0e",
+            "surface-container-low": "#1c1b1b",
+            "surface-container": "#201f1f",
+            "surface-container-high": "#2a2a2a",
+            "surface-container-highest": "#353534",
+            "surface-variant": "#353534",
+            "surface-bright": "#3a3939",
+            "on-surface": "#e5e2e1",
+            "on-surface-variant": "#bbcac4",
+            "primary": "#42dec3",
+            "primary-container": "#00c2a8",
+            "on-primary": "#00382f",
+            "secondary": "#a4c9ff",
+            "secondary-container": "#1a92ff",
+            "outline": "#85948f",
+            "outline-variant": "#3c4a46",
+            "background": "#131313",
+            "on-background": "#e5e2e1",
+            "error": "#ffb4ab",
+          },
+          fontFamily: {
+            "headline": ["Space Grotesk", "sans-serif"],
+            "body": ["Inter", "sans-serif"],
+          },
+          borderRadius: { DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem" },
+        },
+      },
+    };
+  </script>
+  <style>
+    body { background-color: #131313; color: #e5e2e1; font-family: 'Inter', sans-serif; }
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+    .glass-card { background: rgba(53, 53, 52, 0.4); backdrop-filter: blur(20px); }
+    .glow-primary { box-shadow: 0 0 20px rgba(66, 222, 195, 0.15); }
+    .text-glow { text-shadow: 0 0 30px rgba(66, 222, 195, 0.3); }
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+    #nav-toggle { display: none; }
+    #nav-toggle:checked ~ .mobile-menu { display: flex; }
+    #nav-toggle:checked ~ nav .hamburger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    #nav-toggle:checked ~ nav .hamburger span:nth-child(2) { opacity: 0; }
+    #nav-toggle:checked ~ nav .hamburger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Why every business needs an AI usage policy (and what to put in it)",
+  "datePublished": "2026-03-01",
+  "dateModified": "2026-03-12",
+  "author": {
+    "@type": "Person",
+    "name": "Dean Kewley"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Utilis Technologies",
+    "url": "https://utilistech.co.uk"
+  },
+  "description": "Unmanaged AI adoption creates real risks: data leaks, inconsistent outputs, compliance issues. Here's what a pragmatic AI policy looks like — and how to build one without stalling progress.",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://utilistech.co.uk/blog-4-ai-policy.html"
+  }
+}
+  </script>
+</head>
+<body class="bg-background text-on-surface selection:bg-primary selection:text-on-primary overflow-x-hidden">
+
+<div class="fixed inset-0 z-0 pointer-events-none opacity-20">
+  <div class="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-primary/20 blur-[120px] rounded-full"></div>
+  <div class="absolute bottom-[-10%] left-[-5%] w-[500px] h-[500px] bg-secondary/10 blur-[100px] rounded-full"></div>
+</div>
+
+<input type="checkbox" id="nav-toggle" aria-hidden="true" />
+<nav class="fixed top-0 left-0 w-full z-50 bg-zinc-950/60 backdrop-blur-2xl border-b border-zinc-800/30">
+  <div class="flex justify-between items-center w-full px-6 md:px-10 py-4 max-w-[1440px] mx-auto">
+    <a href="/index.html" class="text-xl font-bold tracking-tighter text-primary uppercase font-headline no-underline">Utilis<span class="text-on-surface">.</span>Tech</a>
+    <div class="hidden md:flex items-center gap-10 font-headline font-medium tracking-tight text-sm">
+      <a class="text-zinc-400 hover:text-primary transition-colors" href="/index.html#services">Services</a>
+      <a class="text-zinc-400 hover:text-primary transition-colors" href="/solutions.html">Solutions</a>
+      <a class="text-zinc-400 hover:text-primary transition-colors" href="/how-we-work.html">How We Work</a>
+      <a class="text-zinc-400 hover:text-primary transition-colors" href="/about.html">About</a>
+      <a class="text-zinc-400 hover:text-primary transition-colors" href="/contact.html">Contact</a>
+    </div>
+    <div class="flex items-center gap-4">
+      <a href="https://calendly.com/contact-utilistech" target="_blank" rel="noopener" class="hidden md:inline-flex bg-primary text-on-primary px-6 py-2.5 font-headline font-bold tracking-tight text-sm rounded-sm hover:brightness-110 transition-all active:scale-95 glow-primary no-underline">Book a Call</a>
+      <label for="nav-toggle" class="hamburger md:hidden flex flex-col gap-[5px] cursor-pointer p-2 z-[1001]" aria-label="Menu">
+        <span class="block w-6 h-0.5 bg-on-surface rounded transition-all"></span>
+        <span class="block w-6 h-0.5 bg-on-surface rounded transition-all"></span>
+        <span class="block w-6 h-0.5 bg-on-surface rounded transition-all"></span>
+      </label>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu hidden fixed inset-0 z-40 bg-surface flex-col items-center justify-center gap-0">
+  <a class="w-full text-center py-5 text-lg font-headline font-medium text-on-surface border-b border-zinc-800/30 hover:text-primary transition-colors" href="/index.html#services">Services</a>
+  <a class="w-full text-center py-5 text-lg font-headline font-medium text-on-surface border-b border-zinc-800/30 hover:text-primary transition-colors" href="/solutions.html">Solutions</a>
+  <a class="w-full text-center py-5 text-lg font-headline font-medium text-on-surface border-b border-zinc-800/30 hover:text-primary transition-colors" href="/how-we-work.html">How We Work</a>
+  <a class="w-full text-center py-5 text-lg font-headline font-medium text-on-surface border-b border-zinc-800/30 hover:text-primary transition-colors" href="/about.html">About</a>
+  <a class="w-full text-center py-5 text-lg font-headline font-medium text-on-surface border-b border-zinc-800/30 hover:text-primary transition-colors" href="/contact.html">Contact</a>
+  <a href="https://calendly.com/contact-utilistech" target="_blank" rel="noopener" class="mt-8 bg-primary text-on-primary px-10 py-4 font-headline font-bold text-base rounded-sm no-underline">Book a Call</a>
+</div>
+
+<!-- Blog Content -->
+<article class="relative z-10 pt-32 pb-24 md:pb-32">
+  <div class="max-w-3xl mx-auto px-6 md:px-10">
+
+    <!-- Back Link -->
+    <a href="/#insights" class="inline-flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors mb-8 no-underline text-sm reveal">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      Back to Insights
+    </a>
+
+    <!-- Category Badge -->
+    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-outline-variant/30 bg-surface-container-lowest mb-8 reveal reveal-delay-1">
+      <span class="w-2 h-2 rounded-full bg-primary"></span>
+      <span class="text-[10px] uppercase tracking-[0.2em] font-bold text-primary">AI Governance</span>
+    </div>
+
+    <!-- Article Title -->
+    <h1 class="font-headline text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.05] tracking-tighter mb-8 text-on-surface reveal reveal-delay-2">
+      Why every business needs an AI usage policy <span class="text-primary text-glow">(and what to put in it)</span>
+    </h1>
+
+    <!-- Article Meta -->
+    <div class="flex flex-wrap items-center gap-4 mb-12 pb-8 border-b border-zinc-800/30 reveal reveal-delay-3">
+      <span class="text-sm text-on-surface-variant font-body">March 2026</span>
+      <span class="text-xs text-on-surface-variant">•</span>
+      <span class="text-sm text-on-surface-variant font-body">8 min read</span>
+    </div>
+
+    <!-- Prose Content -->
+    <div class="prose prose-invert space-y-8 text-on-surface-variant text-lg leading-relaxed font-body">
+
+      <p class="reveal reveal-delay-4">
+        AI adoption is moving faster than policy. Right now, across most UK businesses, employees are using ChatGPT, Copilot, and other AI tools with minimal oversight. Some are sharing sensitive client data. Some are pasting entire contracts into consumer-grade AI. Some are using AI outputs in client deliverables without review. Meanwhile, nobody in leadership has actually thought about the compliance implications or decided whether this is acceptable.
+      </p>
+
+      <p class="reveal reveal-delay-1">
+        This isn't scaremongering. It's a predictable outcome of useful technology arriving before the governance framework does. The fix isn't to ban AI — that's both unenforceable and wasteful of a valuable tool. The fix is a pragmatic AI usage policy that sets boundaries on what's acceptable while enabling the legitimate value that AI creates.
+      </p>
+
+      <!-- Section 1 -->
+      <h2 class="font-headline text-3xl md:text-4xl font-bold tracking-tighter uppercase text-on-surface mt-12 pt-4 reveal reveal-delay-2">
+        What can go wrong if you don't have one
+      </h2>
+
+      <p class="reveal reveal-delay-1">
+        <strong class="text-on-surface">Data leakage through consumer-grade AI.</strong> If an employee is using free ChatGPT or an unmanaged cloud service to process business data, that data is being sent to third-party servers, potentially used for model training, and isn't covered by any data processing agreement. GDPR compliance just went out the window. The ICO doesn't take this kindly.
+      </p>
+
+      <p class="reveal reveal-delay-2">
+        <strong class="text-on-surface">Inconsistent or unreliable outputs being delivered to clients.</strong> When there's no defined process for AI-assisted work, some teams review AI outputs carefully before use. Others don't. Some run outputs through a lawyer. Others treat them as final. The result is inconsistent quality and risk exposure. You also can't audit what actually happened.
+      </p>
+
+      <p class="reveal reveal-delay-3">
+        <strong class="text-on-surface">Hidden IP and confidentiality problems.</strong> An employee pastes your proprietary process documentation into an AI tool. An architect copies a contract template into a generative AI to get a quick first draft. A support team uses AI to handle customer queries without clearly distinguishing between AI-generated and human responses. Each creates risk.
+      </p>
+
+      <p class="reveal reveal-delay-4">
+        <strong class="text-on-surface">Compliance and regulatory exposure.</strong> If you operate in a regulated industry — finance, healthcare, legal services — and your people are using AI without any governance, you've probably already violated your obligations. The issue isn't whether AI helps; it's whether you can prove the AI was used appropriately and its outputs were verified.
+      </p>
+
+      <!-- Section 2 -->
+      <h2 class="font-headline text-3xl md:text-4xl font-bold tracking-tighter uppercase text-on-surface mt-12 pt-4 reveal reveal-delay-1">
+        What a pragmatic AI policy actually covers
+      </h2>
+
+      <p class="reveal reveal-delay-2">
+        A good AI policy doesn't need to be complex. It needs to answer a few clear questions that employees can understand and follow.
+      </p>
+
+      <!-- Subsection 1 -->
+      <h3 class="font-headline text-xl md:text-2xl font-bold text-on-surface mt-8 reveal reveal-delay-3">
+        Which AI tools are approved for which types of work?
+      </h3>
+
+      <p class="reveal reveal-delay-4">
+        This is the first boundary. You don't need to ban all consumer AI — that's often impractical and kills productivity. Instead, define categories: "Approved for brainstorming and general writing assistance" (ChatGPT, Copilot). "Approved for approved-systems-only data processing" (enterprise Claude, tools with data processing agreements). "Not approved" (any tool that doesn't have a clear data handling commitment).
+      </p>
+
+      <p class="reveal reveal-delay-1">
+        Make this specific to your business. If you're running on Google Workspace, Google's Duet AI might be fine for your scenario. If you're on Microsoft 365, Copilot with the right permissions settings works. If you're integrated with third-party systems, you might need API-based tools instead. But be explicit about the choice and why.
+      </p>
+
+      <!-- Subsection 2 -->
+      <h3 class="font-headline text-xl md:text-2xl font-bold text-on-surface mt-8 reveal reveal-delay-2">
+        What data can go into each tool?
+      </h3>
+
+      <p class="reveal reveal-delay-3">
+        This is the critical protection. Your policy should clearly state: "Client data cannot go into unapproved AI tools." "Employee personal data cannot be processed by external AI." "Confidential business strategy must not be pasted into any public AI." And the positive: "General, non-confidential queries can be run through approved tools."
+      </p>
+
+      <p class="reveal reveal-delay-4">
+        Use your existing data classification (public, internal, confidential, restricted) and map it directly to what can be processed where. If you don't have a data classification system yet, this is a good moment to create one. It doesn't need to be elaborate — three or four categories work fine.
+      </p>
+
+      <!-- Subsection 3 -->
+      <h3 class="font-headline text-xl md:text-2xl font-bold text-on-surface mt-8 reveal reveal-delay-1">
+        What's the process for AI-assisted outputs before they're used?
+      </h3>
+
+      <p class="reveal reveal-delay-2">
+        This depends on risk. For a marketing team using AI to draft social media content, the review might be quick — "read it, make sure it's on-brand, post it." For client-facing deliverables, the standard should be higher. For regulated work (financial advice, legal opinions, medical guidance), the standard is much higher still.
+      </p>
+
+      <p class="reveal reveal-delay-3">
+        Your policy should define which roles are responsible for review, and for what types of output. Make it clear that "AI-generated" doesn't mean "AI-reviewed" or "verified." If an AI output is used in a client deliverable, someone with relevant expertise should have actually checked it.
+      </p>
+
+      <!-- Subsection 4 -->
+      <h3 class="font-headline text-xl md:text-2xl font-bold text-on-surface mt-8 reveal reveal-delay-4">
+        How do you handle third-party data?
+      </h3>
+
+      <p class="reveal reveal-delay-1">
+        If your business handles client or customer data, the policy needs to be explicit: "Client data must not be processed by any external AI tool without explicit written consent and a data processing agreement." This applies to legal firms sharing contracts, consultancies sharing project docs, anyone with customer information. It's not negotiable under GDPR.
+      </p>
+
+      <p class="reveal reveal-delay-2">
+        For employee personal data, the bar is similarly high. You cannot routinely process employee data through consumer AI.
+      </p>
+
+      <!-- Subsection 5 -->
+      <h3 class="font-headline text-xl md:text-2xl font-bold text-on-surface mt-8 reveal reveal-delay-3">
+        What about AI use in your own products or deliverables?
+      </h3>
+
+      <p class="reveal reveal-delay-4">
+        If you're using AI to generate content, analysis, or recommendations that you then deliver to clients or use in your own products, the policy needs to address this explicitly. The question isn't whether you're allowed to use AI — you are. The question is: how do you ensure it's been reviewed, it's accurate, and your clients (if applicable) know it's AI-assisted.
+      </p>
+
+      <p class="reveal reveal-delay-1">
+        This is worth being transparent about. More and more clients expect to know if content was AI-assisted. Some will want assurance that it was reviewed by a human. Being upfront about your process actually builds confidence.
+      </p>
+
+      <!-- Section 3 -->
+      <h2 class="font-headline text-3xl md:text-4xl font-bold tracking-tighter uppercase text-on-surface mt-12 pt-4 reveal reveal-delay-2">
+        How to create one without it becoming theatre
+      </h2>
+
+      <p class="reveal reveal-delay-3">
+        The easiest way to build a policy nobody follows is to create a document so restrictive that it's impractical. Something like "all AI outputs must be reviewed by management before use" sounds good until your team is supposed to be generating fifty customer responses a day.
+      </p>
+
+      <p class="reveal reveal-delay-4">
+        A better approach:
+      </p>
+
+      <p class="reveal reveal-delay-1">
+        <strong class="text-on-surface">Start with a real conversation.</strong> Ask teams what they're actually doing with AI right now. You'll probably find some are already using tools appropriately, and others are using them recklessly. Listen to both. Understand what genuine problems they're solving.
+      </p>
+
+      <p class="reveal reveal-delay-2">
+        <strong class="text-on-surface">Make approval criteria, not restrictions.</strong> Instead of "you can't use X," say "you can use X for Y types of work, with these constraints." This gives people flexibility while setting boundaries.
+      </p>
+
+      <p class="reveal reveal-delay-3">
+        <strong class="text-on-surface">Keep it operational.</strong> Your policy should be a checklist an employee can actually use. "If data is confidential, don't send it to external AI. If it's client data, you need their consent first. If it's going to a client, check it." That's actionable. A 20-page policy about data governance principles is not.
+      </p>
+
+      <p class="reveal reveal-delay-4">
+        <strong class="text-on-surface">Build in an exception process.</strong> There will be edge cases where someone legitimately needs to use AI in a way your standard policy doesn't quite cover. Make it easy to ask for an exception rather than just ignoring the policy. Give a person in leadership (usually your data protection lead or IT manager) authority to approve exceptions with documentation.
+      </p>
+
+      <p class="reveal reveal-delay-1">
+        <strong class="text-on-surface">Review it regularly.</strong> AI is moving fast. Your policy from 2026 will be outdated in 18 months. Schedule a review every quarter or six months. As new tools become available and new risks emerge, adjust accordingly.
+      </p>
+
+      <!-- Callout -->
+      <div class="glass-card border-l-4 border-primary px-6 md:px-8 py-8 my-12 reveal reveal-delay-2 glow-primary">
+        <p class="text-on-surface-variant text-base md:text-lg leading-relaxed">
+          <strong class="text-on-surface">A note on enforcement:</strong> A policy is only useful if people actually follow it. This means training (even just 15 minutes of clarity goes a long way), making the tools easy to use appropriately, and creating a culture where breaking the policy feels risky. If someone shares client data in the wrong tool, that should result in a conversation and retraining, not a firing. But it should still be a conversation.
+        </p>
+      </div>
+
+      <!-- Section 4 -->
+      <h2 class="font-headline text-3xl md:text-4xl font-bold tracking-tighter uppercase text-on-surface mt-12 pt-4 reveal reveal-delay-3">
+        The bottom line
+      </h2>
+
+      <p class="reveal reveal-delay-4">
+        You don't need to choose between embracing AI and protecting your business. A simple, clear, operational AI policy does both. It gives your team confidence that they're using tools appropriately, it protects you from the most obvious data and compliance risks, and it buys you time to become genuinely AI-mature over the next couple of years.
+      </p>
+
+      <p class="reveal reveal-delay-1">
+        Without a policy, you have unmanaged AI adoption. With a pragmatic one, you have managed risk and ongoing productivity benefit. The cost of writing the policy is a few hours of leadership time. The benefit is potentially millions of pounds worth of exposure avoided.
+      </p>
+
+    </div>
+
+    <!-- CTA Card -->
+    <div class="glass-card glow-primary border border-outline-variant/30 rounded-lg px-8 md:px-12 py-12 md:py-16 mt-16 md:mt-20 text-center reveal reveal-delay-2">
+      <h3 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mb-4">
+        Ready to create an AI policy that actually works?
+      </h3>
+      <p class="text-on-surface-variant text-base md:text-lg mb-8 leading-relaxed max-w-2xl mx-auto">
+        We can help you design a pragmatic policy that sets clear boundaries while enabling your team to use AI effectively. Book a discussion to walk through your specific risks and use cases.
+      </p>
+      <a href="mailto:contact@utilistech.co.uk" class="inline-flex items-center gap-2 bg-primary text-on-primary px-8 py-3 font-headline font-bold tracking-tight rounded-sm hover:brightness-110 transition-all active:scale-95 no-underline">
+        Get in Touch
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+      </a>
+    </div>
+
+  </div>
+</article>
+
+<!-- Footer -->
+<footer class="relative z-10 border-t border-zinc-800/30 mt-24 md:mt-32 py-12 md:py-16 px-6 md:px-10">
+  <div class="max-w-[1440px] mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8 mb-12 md:mb-16">
+      <!-- Brand Column -->
+      <div class="md:col-span-1">
+        <a href="/index.html" class="font-headline text-lg font-bold text-on-surface no-underline">Utilis<span class="text-primary">.</span>Tech</a>
+        <p class="text-on-surface-variant text-sm mt-4 leading-relaxed">AI integration consultancy for UK businesses.</p>
+        <a href="https://www.linkedin.com/company/utilis-technologies/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors mt-4 text-sm no-underline">
+          <span class="material-symbols-outlined text-base">link</span>
+          LinkedIn
+        </a>
+      </div>
+      <!-- Services Column -->
+      <div>
+        <h4 class="font-headline font-bold text-on-surface text-sm uppercase tracking-wider mb-6">Services</h4>
+        <ul class="space-y-3 text-sm">
+          <li><a href="/index.html#services" class="text-on-surface-variant hover:text-primary transition-colors no-underline">AI Integration</a></li>
+          <li><a href="/solutions.html" class="text-on-surface-variant hover:text-primary transition-colors no-underline">Solutions</a></li>
+          <li><a href="/how-we-work.html" class="text-on-surface-variant hover:text-primary transition-colors no-underline">How We Work</a></li>
+        </ul>
+      </div>
+      <!-- Company Column -->
+      <div>
+        <h4 class="font-headline font-bold text-on-surface text-sm uppercase tracking-wider mb-6">Company</h4>
+        <ul class="space-y-3 text-sm">
+          <li><a href="/about.html" class="text-on-surface-variant hover:text-primary transition-colors no-underline">About</a></li>
+          <li><a href="/contact.html" class="text-on-surface-variant hover:text-primary transition-colors no-underline">Contact</a></li>
+          <li><a href="/privacy-policy.html" class="text-on-surface-variant hover:text-primary transition-colors no-underline">Privacy</a></li>
+        </ul>
+      </div>
+      <!-- Insights Column -->
+      <div>
+        <h4 class="font-headline font-bold text-on-surface text-sm uppercase tracking-wider mb-6">Insights</h4>
+        <ul class="space-y-3 text-sm">
+          <li><a href="/#insights" class="text-on-surface-variant hover:text-primary transition-colors no-underline">Blog</a></li>
+          <li><a href="/#insights" class="text-on-surface-variant hover:text-primary transition-colors no-underline">Articles</a></li>
+          <li><a href="/#insights" class="text-on-surface-variant hover:text-primary transition-colors no-underline">Guides</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- Copyright Bar -->
+    <div class="border-t border-zinc-800/30 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-on-surface-variant">
+      <p>&copy; 2026 Utilis Technologies Limited. Registered in England &amp; Wales.</p>
+      <a href="https://ico.org.uk/" target="_blank" rel="noopener" class="hover:text-primary transition-colors no-underline">ICO Registration: 00013348807</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // IntersectionObserver for reveal animations
+  const revealElements = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  revealElements.forEach((el) => {
+    observer.observe(el);
+  });
+</script>
+
+<script>
+  window.chatbaseConfig = {
+    chatbotId: "3nq0jRR8L0rHIxz-opcM4",
+  };
+</script>
+<script src="https://www.chatbase.co/embed.min.js" id="3nq0jRR8L0rHIxz-opcM4" defer></script>
+
+</body>
+</html>
