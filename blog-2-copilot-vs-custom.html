@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Off-the-shelf AI vs custom-built: when to use which — Utilis Technologies</title>
+  <meta name="description" content="Productivity AI like Copilot is brilliant for general work — but for specific, high-value business processes, a bespoke tool wins every time. Here's how to decide." />
+  <link rel="canonical" href="https://utilistech.co.uk/blog-2-copilot-vs-custom.html" />
+  <meta property="og:title" content="Off-the-shelf AI vs custom-built: when to use which" />
+  <meta property="og:description" content="Productivity AI like Copilot is brilliant for general work — but for specific, high-value business processes, a bespoke tool wins every time. Here's how to decide." />
+  <meta property="og:url" content="https://utilistech.co.uk/blog-2-copilot-vs-custom.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Utilis Technologies" />
+  <meta property="og:image" content="https://utilistech.co.uk/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Off-the-shelf AI vs custom-built: when to use which" />
+  <meta name="twitter:description" content="Productivity AI like Copilot is brilliant for general work — but for specific, high-value business processes, a bespoke tool wins every time. Here's how to decide." />
+  <meta name="twitter:image" content="https://utilistech.co.uk/og-image.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            surface: '#131313',
+            'surface-container-high': '#1e1e1e',
+            'surface-variant': '#4a4a4a',
+            'on-surface-variant': '#c8c8c8',
+            primary: '#42dec3',
+            secondary: '#a4c9ff',
+            outline: '#565656',
+            'outline-variant': '#3c3c3c',
+          },
+          fontFamily: {
+            headline: ['Space Grotesk', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+          },
+          borderRadius: {
+            DEFAULT: '0.5rem',
+            sm: '0.375rem',
+            md: '0.5rem',
+            lg: '0.75rem',
+            xl: '1rem',
+            '2xl': '1.25rem',
+            full: '9999px',
+          },
+        },
+      },
+    }
+  </script>
+
+  <style>
+    @layer base {
+      body {
+        @apply bg-surface text-on-surface-variant font-body antialiased;
+        background-image:
+          radial-gradient(circle at 80% 20%, rgba(66, 222, 195, 0.08) 0%, transparent 50%),
+          radial-gradient(circle at 10% 80%, rgba(164, 201, 255, 0.08) 0%, transparent 50%);
+        pointer-events-none;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+    }
+
+    .glass-card {
+      @apply rounded-lg border border-outline-variant bg-surface-container-high/40 backdrop-blur-md;
+    }
+
+    .glow-primary {
+      box-shadow: 0 0 32px rgba(66, 222, 195, 0.2);
+    }
+
+    .text-glow {
+      text-shadow: 0 0 20px rgba(66, 222, 195, 0.4);
+    }
+
+    .reveal {
+      opacity: 0;
+      animation: reveal 0.6s ease-out forwards;
+    }
+
+    @keyframes reveal {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Nav toggle checkbox hack */
+    #nav-toggle {
+      display: none;
+    }
+
+    #nav-toggle:checked ~ nav .nav-links {
+      display: flex;
+    }
+
+    #nav-toggle:checked ~ nav .hamburger span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    #nav-toggle:checked ~ nav .hamburger span:nth-child(2) {
+      opacity: 0;
+    }
+
+    #nav-toggle:checked ~ nav .hamburger span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+  </style>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Off-the-shelf AI vs custom-built: when to use which",
+  "datePublished": "2026-01-15",
+  "dateModified": "2026-03-12",
+  "author": {
+    "@type": "Person",
+    "name": "Dean Kewley"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Utilis Technologies",
+    "url": "https://utilistech.co.uk"
+  },
+  "description": "Productivity AI like Copilot is brilliant for general work — but for specific, high-value business processes, a bespoke tool wins every time. Here's how to decide.",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://utilistech.co.uk/blog-2-copilot-vs-custom.html"
+  }
+}
+  </script>
+</head>
+<body class="dark">
+  <!-- Background glow blobs -->
+  <div class="fixed inset-0 pointer-events-none z-0">
+    <div class="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl"></div>
+  </div>
+
+  <!-- Navbar -->
+  <input type="checkbox" id="nav-toggle" aria-hidden="true" />
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-zinc-950/60 backdrop-blur-2xl border-b border-outline-variant">
+    <div class="px-6 md:px-12 py-4 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="/" class="font-headline font-bold text-lg md:text-xl text-white">
+        Utilis<span class="text-primary">.Tech</span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <ul class="hidden lg:flex items-center gap-8 list-none">
+        <li><a href="/index.html#services" class="text-sm text-outline hover:text-on-surface-variant transition-colors">Services</a></li>
+        <li><a href="/solutions.html" class="text-sm text-outline hover:text-on-surface-variant transition-colors">Solutions</a></li>
+        <li><a href="/how-we-work.html" class="text-sm text-outline hover:text-on-surface-variant transition-colors">How We Work</a></li>
+        <li><a href="/about.html" class="text-sm text-outline hover:text-on-surface-variant transition-colors">About</a></li>
+        <li><a href="/contact.html" class="text-sm text-outline hover:text-on-surface-variant transition-colors">Contact</a></li>
+        <li><a href="https://calendly.com/contact-utilistech" target="_blank" rel="noopener" class="bg-primary text-surface font-semibold text-xs px-5 py-2 rounded hover:opacity-90 transition-opacity">Book a Call</a></li>
+      </ul>
+
+      <!-- Mobile Hamburger -->
+      <label for="nav-toggle" class="lg:hidden cursor-pointer z-50" aria-label="Menu">
+        <div class="hamburger flex flex-col gap-1.5">
+          <span class="block w-6 h-0.5 bg-white rounded transition-all duration-300"></span>
+          <span class="block w-6 h-0.5 bg-white rounded transition-all duration-300"></span>
+          <span class="block w-6 h-0.5 bg-white rounded transition-all duration-300"></span>
+        </div>
+      </label>
+    </div>
+
+    <!-- Mobile Nav Links -->
+    <ul class="nav-links hidden lg:hidden absolute inset-0 top-16 left-0 right-0 bottom-0 bg-surface/95 backdrop-blur-xl flex-col items-center justify-start pt-12 gap-0 list-none z-40">
+      <li class="w-full border-b border-outline-variant"><a href="/index.html#services" class="block py-4 px-6 text-center text-white font-semibold">Services</a></li>
+      <li class="w-full border-b border-outline-variant"><a href="/solutions.html" class="block py-4 px-6 text-center text-white font-semibold">Solutions</a></li>
+      <li class="w-full border-b border-outline-variant"><a href="/how-we-work.html" class="block py-4 px-6 text-center text-white font-semibold">How We Work</a></li>
+      <li class="w-full border-b border-outline-variant"><a href="/about.html" class="block py-4 px-6 text-center text-white font-semibold">About</a></li>
+      <li class="w-full border-b border-outline-variant"><a href="/contact.html" class="block py-4 px-6 text-center text-white font-semibold">Contact</a></li>
+      <li class="w-full mt-8"><a href="https://calendly.com/contact-utilistech" target="_blank" rel="noopener" class="block py-3 px-6 text-center bg-primary text-surface font-bold rounded">Book a Call</a></li>
+    </ul>
+  </nav>
+
+  <!-- Article Content -->
+  <main class="relative z-10 max-w-2xl mx-auto px-6 md:px-12 pt-32 md:pt-40 pb-24">
+
+    <!-- Back Link -->
+    <a href="/#insights" class="inline-flex items-center gap-2 text-xs text-outline hover:text-on-surface-variant transition-colors mb-12 reveal">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      Back to Insights
+    </a>
+
+    <!-- Category Badge -->
+    <div class="inline-flex items-center gap-2 text-xs font-semibold tracking-widest uppercase text-primary mb-6 reveal">
+      <span class="inline-block w-5 h-px bg-primary"></span>
+      Strategy
+    </div>
+
+    <!-- Title -->
+    <h1 class="font-headline font-bold uppercase tracking-tighter text-4xl md:text-5xl lg:text-6xl text-white mb-8 leading-tight reveal">
+      Off-the-shelf AI vs custom-built: when to use which
+    </h1>
+
+    <!-- Meta Info -->
+    <div class="flex items-center gap-4 mb-16 pb-8 border-b border-outline-variant reveal">
+      <span class="text-xs text-outline">January 2026</span>
+      <span class="w-1 h-1 rounded-full bg-outline"></span>
+      <span class="text-xs text-outline">8 min read</span>
+    </div>
+
+    <!-- Article Body -->
+    <article class="prose prose-invert space-y-8 reveal">
+      <p class="text-lg text-on-surface-variant leading-relaxed">It's one of the most common questions we're asked: "Should we just roll out Copilot (or Duet AI, or Workspace AI), or do we need something custom?" It's a reasonable question, and the answer is almost always "both, but for different things." Understanding which tool belongs where will save you significant money and avoid the frustration of deploying an expensive AI product that doesn't deliver on its promise.</p>
+
+      <p class="text-lg text-on-surface-variant leading-relaxed">Whether you're on Microsoft 365, Google Workspace, or another platform, the decision framework is the same. Let's walk through what each category of tool does well, where it falls short, and how to decide.</p>
+
+      <h2 class="font-headline font-bold uppercase tracking-tighter text-2xl md:text-3xl text-white mt-12">What off-the-shelf productivity AI actually is</h2>
+
+      <p class="text-lg text-on-surface-variant leading-relaxed">The major vendors — Microsoft (Copilot in M365), Google (Duet AI in Workspace), and a few others — have each launched productivity AI assistants. These are AI tools woven through existing office suites. They use your organisation's data (emails, documents, meetings, spreadsheets) as context, apply large language models under the hood, and help you draft documents, summarise meetings, generate presentations, and query data in natural language.</p>
+
+      <p class="text-lg text-on-surface-variant leading-relaxed">Pricing typically ranges from £15-30 per user per month. The value proposition is compelling in theory: every knowledge worker gets an AI assistant that knows your company's context. In practice, the return on that investment depends heavily on how well your existing suite is set up, how your team actually works, and whether the tasks the tool is good at are the ones your business most needs to accelerate.</p>
+
+      <h2 class="font-headline font-bold uppercase tracking-tighter text-2xl md:text-3xl text-white mt-12">Where off-the-shelf AI genuinely excels</h2>
+
+      <p class="text-lg text-on-surface-variant leading-relaxed">These tools earn their licence fee when the work is general, varied, and closely tied to the suite you're already using. Specific areas where they consistently deliver:</p>
+
+      <ul class="space-y-3 my-8 list-none pl-0">
+        <li class="text-lg text-on-surface-variant leading-relaxed pl-8 relative border-l-2 border-primary">
+          <span class="absolute left-0 top-1 text-primary">→</span>
+          Summarising long email threads, Slack conversations, and video meetings — particularly valuable for managers who attend many meetings
+        </li>
+        <li class="text-lg text-on-surface-variant leading-relaxed pl-8 relative border-l-2 border-primary">
+          <span class="absolute left-0 top-1 text-primary">→</span>
+          First drafts of documents, proposals, and presentations from bullet-point briefs
+        </li>
+        <li class="text-lg text-on-surface-variant leading-relaxed pl-8 relative border-l-2 border-primary">
+          <span class="absolute left-0 top-1 text-primary">→</span>
+          Natural language queries across your existing content repositories ("find everything we have on the Henderson account from last year")
+        </li>
+        <li class="text-lg text-on-surface-variant leading-relaxed pl-8 relative border-l-2 border-primary">
+          <span class="absolute left-0 top-1 text-primary">→</span>
+          Spreadsheet data analysis and formula generation for users who aren't fluent in the underlying tool
+        </li>
+        <li class="text-lg text-on-surface-variant leading-relaxed pl-8 relative border-l-2 border-primary">
+          <span class="absolute left-0 top-1 text-primary">→</span>
+          Drafting and improving email or message responses
+        </li>
+        <li class="text-lg text-on-surface-variant leading-relaxed pl-8 relative border-l-2 border-primary">
+          <span class="absolute left-0 top-1 text-primary">→</span>
+          Brainstorming and ideation in collaborative documents
+        </li>
+      </ul>
+
+      <p class="text-lg text-on-surface-variant leading-relaxed">For knowledge workers doing varied desk-based work, a well-deployed productivity AI can genuinely save 30–60 minutes a day. Across a team, that compounds quickly. The strength is breadth — it touches everything the knowledge worker touches.</p>
+
+      <h2 class="font-headline font-bold uppercase tracking-tighter text-2xl md:text-3xl text-white mt-12">Where off-the-shelf AI falls short</h2>
+
+      <p class="text-lg text-on-surface-variant leading-relaxed">These tools are general-purpose assistants. They are not designed for, and cannot replace, a purpose-built AI tool that does one specific thing extremely well. The limitations show up in a few predictable places.</p>
+
+      <p class="text-lg text-on-surface-variant leading-relaxed"><strong class="text-white">It can't integrate with systems outside its ecosystem.</strong> If your business runs on a CRM, an ERP, a bespoke database, or any system that isn't part of the platform, the AI can't see it, can't read from it, and can't write to it. This is a significant constraint for most businesses, which operate across multiple platforms.</p>
+
+      <p class="text-lg text-on-surface-variant leading-relaxed"><strong class="text-white">You can't control its behaviour with precision.</strong> You can't instruct it to always respond in a specific format, always apply a specific set of business rules, or always follow a defined workflow. It's a conversational assistant, not a governed process engine.</p>
+
+      <p class="text-lg text-on-surface-variant leading-relaxed"><strong class="text-white">The outputs aren't auditable in the way compliance requires.</strong> For regulated industries, financial services, legal work, or anywhere that an AI decision needs to be explainable and logged, these tools' general-purpose nature makes auditability difficult.</p>
+
+      <p class="text-lg text-on-surface-variant leading-relaxed"><strong class="text-white">It won't automate end-to-end processes.</strong> These tools help individuals work faster. They don't replace a workflow — they accelerate parts of one. Genuinely automating a multi-step business process (receiving an invoice, extracting data, matching to a PO, flagging exceptions, updating your finance system) requires a different architecture entirely.</p>
+
+      <h2 class="font-headline font-bold uppercase tracking-tighter text-2xl md:text-3xl text-white mt-12">When a custom AI tool is the right answer</h2>
+
+      <p class="text-lg text-on-surface-variant leading-relaxed">Custom AI tools — built on models like Claude or GPT-4 via API, or using low-code platforms like Power Automate, or bespoke code — make sense when:</p>
+
+      <ul class="space-y-3 my-8 list-none pl-0">
+        <li class="text-lg text-on-surface-variant leading-relaxed pl-8 relative border-l-2 border-primary">
+          <span class="absolute left-0 top-1 text-primary">→</span>
+          The process is specific, repeatable, and high-volume enough to justify the build cost
+        </li>
+        <li class="text-lg text-on-surface-variant leading-relaxed pl-8 relative border-l-2 border-primary">
+          <span class="absolute left-0 top-1 text-primary">→</span>
+          The AI needs to interact with systems outside your main suite (your CRM, finance system, website, ticketing tool, or proprietary databases)
+        </li>
+        <li class="text-lg text-on-surface-variant leading-relaxed pl-8 relative border-l-2 border-primary">
+          <span class="absolute left-0 top-1 text-primary">→</span>
+          The outputs need to conform to a defined format or schema every time
+        </li>
+        <li class="text-lg text-on-surface-variant leading-relaxed pl-8 relative border-l-2 border-primary">
+          <span class="absolute left-0 top-1 text-primary">→</span>
+          You need consistent, auditable behaviour rather than generative flexibility
+        </li>
+        <li class="text-lg text-on-surface-variant leading-relaxed pl-8 relative border-l-2 border-primary">
+          <span class="absolute left-0 top-1 text-primary">→</span>
+          The stakes are high enough that you need the AI to follow strict rules rather than use judgement
+        </li>
+        <li class="text-lg text-on-surface-variant leading-relaxed pl-8 relative border-l-2 border-primary">
+          <span class="absolute left-0 top-1 text-primary">→</span>
+          You want to create a capability that gives you a competitive advantage — not just productivity gains available to every business paying for the same subscription
+        </li>
+      </ul>
+
+      <h2 class="font-headline font-bold uppercase tracking-tighter text-2xl md:text-3xl text-white mt-12">A practical comparison</h2>
+
+      <div class="overflow-x-auto my-12">
+        <table class="w-full border border-outline-variant rounded-lg">
+          <thead>
+            <tr class="bg-surface-container-high">
+              <th class="font-headline font-bold uppercase text-xs tracking-widest text-outline-variant px-6 py-4 text-left border-b border-outline-variant">Scenario</th>
+              <th class="font-headline font-bold uppercase text-xs tracking-widest text-outline-variant px-6 py-4 text-left border-b border-outline-variant">Off-the-shelf</th>
+              <th class="font-headline font-bold uppercase text-xs tracking-widest text-outline-variant px-6 py-4 text-left border-b border-outline-variant">Custom AI</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-zinc-800/30">
+            <tr>
+              <td class="px-6 py-4 font-semibold text-on-surface-variant">Summarise this meeting recording</td>
+              <td class="px-6 py-4 text-on-surface-variant"><span class="text-secondary font-semibold text-xs">✓ Off-the-shelf</span> — native integration, instant</td>
+              <td class="px-6 py-4 text-on-surface-variant">Overkill</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 font-semibold text-on-surface-variant">Process 200 invoices per month, extract line items, match to POs</td>
+              <td class="px-6 py-4 text-on-surface-variant">Cannot do this end-to-end</td>
+              <td class="px-6 py-4 text-on-surface-variant"><span class="text-primary font-semibold text-xs">✓ Custom</span> — built once, runs automatically</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 font-semibold text-on-surface-variant">Draft a first version of a client proposal</td>
+              <td class="px-6 py-4 text-on-surface-variant"><span class="text-secondary font-semibold text-xs">✓ Off-the-shelf</span> — good for general drafting</td>
+              <td class="px-6 py-4 text-on-surface-variant">Possible, but unnecessary</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 font-semibold text-on-surface-variant">Answer customer queries using your specific product knowledge base</td>
+              <td class="px-6 py-4 text-on-surface-variant">Possible, but inconsistent</td>
+              <td class="px-6 py-4 text-on-surface-variant"><span class="text-primary font-semibold text-xs">✓ Custom</span> — reliable, on-brand, auditable</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 font-semibold text-on-surface-variant">Analyse sales data in your CRM and flag anomalies</td>
+              <td class="px-6 py-4 text-on-surface-variant">Good for ad-hoc queries, but can't access external systems</td>
+              <td class="px-6 py-4 text-on-surface-variant"><span class="text-primary font-semibold text-xs">✓ Custom</span> for scheduled automated analysis</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 font-semibold text-on-surface-variant">Onboard new employees with guided Q&amp;A</td>
+              <td class="px-6 py-4 text-on-surface-variant">Partial — can surface documents only</td>
+              <td class="px-6 py-4 text-on-surface-variant"><span class="text-primary font-semibold text-xs">✓ Custom</span> — structured, consistent, connected to systems</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 class="font-headline font-bold uppercase tracking-tighter text-2xl md:text-3xl text-white mt-12">The right answer for most businesses</h2>
+
+      <p class="text-lg text-on-surface-variant leading-relaxed">For most UK SMEs, the optimal AI strategy combines both. Roll out productivity AI (Copilot, Duet AI, or equivalent) to knowledge workers who will benefit from general productivity gains — it's a strong product for that use case and the suite integration is genuinely useful. Simultaneously, identify your two or three highest-value, most repetitive specific processes and build custom AI tools for those.</p>
+
+      <p class="text-lg text-on-surface-variant leading-relaxed">The custom tools will typically deliver a more measurable and significant ROI than the productivity tool, because they're solving a defined problem with a defined outcome. But the productivity tool will broadly raise the floor of AI capability across your team without requiring any bespoke development.</p>
+
+      <!-- Callout -->
+      <div class="glass-card border-l-4 border-primary pl-6 pr-6 py-6 my-12 bg-surface-container-high/60">
+        <p class="text-on-surface-variant leading-relaxed"><strong class="text-white">The question we ask every client:</strong> "What does your team do every week that takes significant time, follows a consistent pattern, and produces a predictable output?" Those are your custom AI opportunities. Everything else is probably off-the-shelf territory.</p>
+      </div>
+
+      <h2 class="font-headline font-bold uppercase tracking-tighter text-2xl md:text-3xl text-white mt-12">What we do</h2>
+
+      <p class="text-lg text-on-surface-variant leading-relaxed">We help businesses deploy productivity AI properly — which means assessing your current environment, ensuring the right permissions and data classification are in place before AI can access sensitive content, and training your team to get the most out of it. We also design and build custom AI tools for the specific processes where off-the-shelf tools aren't the right fit.</p>
+
+      <p class="text-lg text-on-surface-variant leading-relaxed">If you're weighing up whether a productivity AI subscription is worth it for your business, or wondering what a custom tool for a specific process might cost and deliver, that's exactly the kind of conversation we have on a discovery call.</p>
+    </article>
+
+    <!-- CTA Section -->
+    <div class="glass-card p-12 mt-20 text-center bg-surface-container-high/50 reveal">
+      <h3 class="font-headline font-bold text-2xl md:text-3xl text-white mb-4">Not sure which approach is right for you?</h3>
+      <p class="text-on-surface-variant text-lg mb-8">Book a 60-minute conversation with us — no sales pitch, just a clear assessment of where productivity AI makes sense and which processes could be custom-built for higher ROI.</p>
+      <a href="mailto:contact@utilistech.co.uk" class="inline-flex items-center gap-2 bg-primary text-surface font-bold px-8 py-3 rounded-lg hover:opacity-90 transition-opacity">
+        Get in Touch
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+      </a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="relative z-10 border-t border-outline-variant mt-32">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+        <!-- Brand -->
+        <div class="space-y-4">
+          <a href="/" class="font-headline font-bold text-lg text-white">
+            Utilis<span class="text-primary">.Tech</span>
+          </a>
+          <p class="text-xs text-outline">Building custom AI solutions for modern enterprises.</p>
+          <a href="https://linkedin.com/company/utilis-tech" target="_blank" rel="noopener" class="text-primary text-xs hover:text-secondary transition-colors">LinkedIn →</a>
+        </div>
+
+        <!-- Services -->
+        <div>
+          <h4 class="font-semibold text-white text-sm mb-4 uppercase tracking-wider">Services</h4>
+          <ul class="space-y-2 text-xs text-outline">
+            <li><a href="#" class="hover:text-on-surface-variant transition-colors">Custom AI Development</a></li>
+            <li><a href="#" class="hover:text-on-surface-variant transition-colors">Productivity AI Deployment</a></li>
+            <li><a href="#" class="hover:text-on-surface-variant transition-colors">AI Consulting</a></li>
+            <li><a href="#" class="hover:text-on-surface-variant transition-colors">Automation</a></li>
+          </ul>
+        </div>
+
+        <!-- Company -->
+        <div>
+          <h4 class="font-semibold text-white text-sm mb-4 uppercase tracking-wider">Company</h4>
+          <ul class="space-y-2 text-xs text-outline">
+            <li><a href="/about.html" class="hover:text-on-surface-variant transition-colors">About</a></li>
+            <li><a href="/how-we-work.html" class="hover:text-on-surface-variant transition-colors">How We Work</a></li>
+            <li><a href="/contact.html" class="hover:text-on-surface-variant transition-colors">Contact</a></li>
+            <li><a href="/#insights" class="hover:text-on-surface-variant transition-colors">Insights</a></li>
+          </ul>
+        </div>
+
+        <!-- Insights -->
+        <div>
+          <h4 class="font-semibold text-white text-sm mb-4 uppercase tracking-wider">Insights</h4>
+          <ul class="space-y-2 text-xs text-outline">
+            <li><a href="/blog-1.html" class="hover:text-on-surface-variant transition-colors">Blog Post 1</a></li>
+            <li><a href="/blog-2-copilot-vs-custom.html" class="hover:text-on-surface-variant transition-colors">Copilot vs Custom</a></li>
+            <li><a href="/blog-3.html" class="hover:text-on-surface-variant transition-colors">Blog Post 3</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="border-t border-outline-variant pt-8 text-center text-xs text-outline">
+        <p>© 2026 Utilis Technologies Limited. Registered in England &amp; Wales. | <a href="https://ico.org.uk/" target="_blank" rel="noopener" class="hover:text-on-surface-variant transition-colors">ICO Registration: 00013348807</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const reveals = document.querySelectorAll('.reveal');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.animationDelay = (Array.from(reveals).indexOf(entry.target) * 0.1) + 's';
+          }
+        });
+      }, { threshold: 0.1 });
+
+      reveals.forEach(el => observer.observe(el));
+    });
+  </script>
+
+  <!-- Chatbase Widget -->
+  <script>
+    window.chatbaseConfig = {
+      chatbotId: "3nq0jRR8L0rHIxz-opcM4",
+    };
+  </script>
+  <script src="https://www.chatbase.co/embed.min.js" id="3nq0jRR8L0rHIxz-opcM4" defer></script>
+</body>
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to choose the right AI model for your business — Utilis Technologies</title>
+  <meta name="description" content="Evaluating large language models for business use? Here's how to assess safety, data handling, consistency, and cost — and why the choice matters more than you think." />
+  <link rel="canonical" href="https://utilistech.co.uk/blog-1-claude-api.html" />
+  <meta property="og:title" content="How to choose the right AI model for your business" />
+  <meta property="og:description" content="Evaluating large language models for business use? Here's how to assess safety, data handling, consistency, and cost — and why the choice matters more than you think." />
+  <meta property="og:url" content="https://utilistech.co.uk/blog-1-claude-api.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Utilis Technologies" />
+  <meta property="og:image" content="https://utilistech.co.uk/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="How to choose the right AI model for your business" />
+  <meta name="twitter:description" content="Evaluating large language models for business use? Here's how to assess safety, data handling, consistency, and cost — and why the choice matters more than you think." />
+  <meta name="twitter:image" content="https://utilistech.co.uk/og-image.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0" />
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface": "#131313",
+            "surface-dim": "#131313",
+            "surface-container-lowest": "#0e0e0e",
+            "surface-container-low": "#1c1b1b",
+            "surface-container": "#201f1f",
+            "surface-container-high": "#2a2a2a",
+            "surface-container-highest": "#353534",
+            "surface-variant": "#353534",
+            "surface-bright": "#3a3939",
+            "on-surface": "#e5e2e1",
+            "on-surface-variant": "#bbcac4",
+            "primary": "#42dec3",
+            "primary-container": "#00c2a8",
+            "on-primary": "#00382f",
+            "secondary": "#a4c9ff",
+            "secondary-container": "#1a92ff",
+            "outline": "#85948f",
+            "outline-variant": "#3c4a46",
+            "background": "#131313",
+            "on-background": "#e5e2e1",
+            "error": "#ffb4ab",
+          },
+          fontFamily: {
+            "headline": ["Space Grotesk", "sans-serif"],
+            "body": ["Inter", "sans-serif"],
+          },
+          borderRadius: { DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem" },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    body {
+      background-color: #131313;
+      color: #e5e2e1;
+      font-family: 'Inter', sans-serif;
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    }
+    .glass-card {
+      background: rgba(53, 53, 52, 0.4);
+      backdrop-filter: blur(20px);
+    }
+    .glow-primary {
+      box-shadow: 0 0 20px rgba(66, 222, 195, 0.15);
+    }
+    .text-glow {
+      text-shadow: 0 0 30px rgba(66, 222, 195, 0.3);
+    }
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+    #nav-toggle { display: none; }
+    #nav-toggle:checked ~ .mobile-menu { display: flex; }
+    #nav-toggle:checked ~ nav .hamburger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    #nav-toggle:checked ~ nav .hamburger span:nth-child(2) { opacity: 0; }
+    #nav-toggle:checked ~ nav .hamburger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  </style>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to choose the right AI model for your business",
+  "datePublished": "2026-02-01",
+  "dateModified": "2026-03-12",
+  "author": {
+    "@type": "Person",
+    "name": "Dean Kewley"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Utilis Technologies",
+    "url": "https://utilistech.co.uk"
+  },
+  "description": "Evaluating large language models for business use? Here's how to assess safety, data handling, consistency, and cost — and why the choice matters more than you think.",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://utilistech.co.uk/blog-1-claude-api.html"
+  }
+}
+  </script>
+</head>
+
+<body class="bg-background text-on-surface selection:bg-primary selection:text-on-primary overflow-x-hidden">
+  <!-- Background Blobs -->
+  <div class="fixed inset-0 pointer-events-none overflow-hidden">
+    <div class="absolute top-0 right-0 w-96 h-96 bg-primary opacity-5 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-secondary opacity-3 rounded-full blur-3xl"></div>
+  </div>
+
+  <!-- Navigation -->
+  <input type="checkbox" id="nav-toggle" aria-hidden="true" />
+  <nav class="fixed top-0 left-0 w-full z-50 bg-zinc-950/60 backdrop-blur-2xl border-b border-zinc-800/30">
+    <div class="flex justify-between items-center w-full px-6 md:px-10 py-4 max-w-[1440px] mx-auto">
+      <a href="/index.html" class="text-xl font-bold tracking-tighter text-primary uppercase font-headline no-underline">Utilis<span class="text-on-surface">.</span>Tech</a>
+      <div class="hidden md:flex items-center gap-10 font-headline font-medium tracking-tight text-sm">
+        <a class="text-zinc-400 hover:text-primary transition-colors" href="/index.html#services">Services</a>
+        <a class="text-zinc-400 hover:text-primary transition-colors" href="/solutions.html">Solutions</a>
+        <a class="text-zinc-400 hover:text-primary transition-colors" href="/how-we-work.html">How We Work</a>
+        <a class="text-zinc-400 hover:text-primary transition-colors" href="/about.html">About</a>
+        <a class="text-zinc-400 hover:text-primary transition-colors" href="/contact.html">Contact</a>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="https://calendly.com/contact-utilistech" target="_blank" rel="noopener" class="hidden md:inline-flex bg-primary text-on-primary px-6 py-2.5 font-headline font-bold tracking-tight text-sm rounded-sm hover:brightness-110 transition-all active:scale-95 glow-primary no-underline">Book a Call</a>
+        <label for="nav-toggle" class="hamburger md:hidden flex flex-col gap-[5px] cursor-pointer p-2 z-[1001]" aria-label="Menu">
+          <span class="block w-6 h-0.5 bg-on-surface rounded transition-all"></span>
+          <span class="block w-6 h-0.5 bg-on-surface rounded transition-all"></span>
+          <span class="block w-6 h-0.5 bg-on-surface rounded transition-all"></span>
+        </label>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-menu hidden fixed inset-0 z-40 bg-surface flex-col items-center justify-center gap-0">
+    <a class="w-full text-center py-5 text-lg font-headline font-medium text-on-surface border-b border-zinc-800/30 hover:text-primary transition-colors" href="/index.html#services">Services</a>
+    <a class="w-full text-center py-5 text-lg font-headline font-medium text-on-surface border-b border-zinc-800/30 hover:text-primary transition-colors" href="/solutions.html">Solutions</a>
+    <a class="w-full text-center py-5 text-lg font-headline font-medium text-on-surface border-b border-zinc-800/30 hover:text-primary transition-colors" href="/how-we-work.html">How We Work</a>
+    <a class="w-full text-center py-5 text-lg font-headline font-medium text-on-surface border-b border-zinc-800/30 hover:text-primary transition-colors" href="/about.html">About</a>
+    <a class="w-full text-center py-5 text-lg font-headline font-medium text-on-surface border-b border-zinc-800/30 hover:text-primary transition-colors" href="/contact.html">Contact</a>
+    <a href="https://calendly.com/contact-utilistech" target="_blank" rel="noopener" class="mt-8 bg-primary text-on-primary px-10 py-4 font-headline font-bold text-base rounded-sm no-underline">Book a Call</a>
+  </div>
+
+  <!-- Article Content -->
+  <main class="relative z-10 max-w-2xl mx-auto px-6 md:px-10 py-32 md:py-40">
+    <!-- Back Link -->
+    <a href="/#insights" class="reveal inline-flex items-center gap-3 text-on-surface-variant hover:text-primary transition-colors mb-12 text-sm font-headline tracking-tight no-underline group">
+      <span class="material-symbols-outlined text-lg group-hover:-translate-x-1 transition-transform">arrow_back</span>
+      Back to Insights
+    </a>
+
+    <!-- Category Badge -->
+    <div class="reveal reveal-delay-1 inline-block mb-6">
+      <span class="text-xs font-headline font-bold uppercase tracking-widest text-primary">AI Foundation</span>
+    </div>
+
+    <!-- Title -->
+    <h1 class="reveal reveal-delay-2 font-headline font-bold uppercase tracking-tighter text-4xl md:text-5xl lg:text-6xl text-on-surface mb-8 leading-tight">How to choose the right AI model for your business</h1>
+
+    <!-- Meta -->
+    <div class="reveal reveal-delay-3 flex items-center gap-4 mb-12 pb-8 border-b border-zinc-800/30">
+      <span class="text-sm text-on-surface-variant font-body">February 2026</span>
+      <span class="w-1.5 h-1.5 rounded-full bg-on-surface-variant"></span>
+      <span class="text-sm text-on-surface-variant font-body">7 min read</span>
+    </div>
+
+    <!-- Prose Content -->
+    <div class="reveal reveal-delay-4 space-y-8 font-body text-on-surface-variant leading-relaxed">
+      <p class="text-lg">When a business decides to embed AI into its operations, the first and most consequential decision is which model to build on. Choose wrong and you'll spend the next eighteen months unpicking a foundation that doesn't meet your governance requirements, can't be audited, or simply doesn't perform consistently enough to trust with real business processes.</p>
+
+      <p class="text-lg">The market now has several serious options — OpenAI's GPT-4, Google's Gemini, Anthropic's Claude, and open-source models like Llama. Each has genuine strengths. But for UK businesses operating under GDPR, with real data governance obligations and a need for consistent, controllable behaviour from their AI systems, the selection criteria are clear. This guide walks you through how to evaluate them — and why the choice matters.</p>
+
+      <h2 class="font-headline font-bold text-2xl md:text-3xl uppercase tracking-tighter text-on-surface mt-16 mb-6">Criterion 1: Safety and reliability architecture</h2>
+
+      <p class="text-lg">Different models handle safety differently. Some use Constitutional AI (where safety constraints are built into training). Others apply safety measures as a layer on top of the base model. This matters because it affects how the model behaves in edge cases — particularly with sensitive business data.</p>
+
+      <p class="text-lg">The practical question: is the model less likely to produce confident but incorrect outputs ("hallucinations")? Will it say "I don't know" rather than fabricate an answer? Is it consistent in refusing to do things it shouldn't — whether that's leaking data or generating outputs that expose your business to risk?</p>
+
+      <p class="text-lg">For a document processing tool, customer-facing assistant, or internal knowledge system, this reliability isn't incidental. It's the difference between a tool your team trusts and one they quietly stop using. Evaluate models on their documented approach to safety training and their real-world track record in your use case.</p>
+
+      <h2 class="font-headline font-bold text-2xl md:text-3xl uppercase tracking-tighter text-on-surface mt-16 mb-6">Criterion 2: Data handling and compliance</h2>
+
+      <p class="text-lg">This is where many AI tools fall apart in a UK business context. GDPR isn't optional, and the ICO takes data mishandling seriously. When you send data through an AI API, you need clarity on what happens to it — whether it's used to train future models, where it's stored, for how long, and under what legal basis.</p>
+
+      <p class="text-lg">Look for explicit API terms that commit to not using your data for model training. Some providers do this clearly; others make it optional or buried in fine print. Enterprise-grade data processing agreements should be available, and the provider should maintain infrastructure in UK or EU regions that satisfy your data residency requirements.</p>
+
+      <p class="text-lg">When we build custom AI tools for clients, we document every data flow — what goes into the API call, what comes back, what gets stored and where. This is only possible if the provider's terms are genuinely clear and committed. If you're still uncertain about data handling after reading the policy, it's a red flag.</p>
+
+      <h2 class="font-headline font-bold text-2xl md:text-3xl uppercase tracking-tighter text-on-surface mt-16 mb-6">Criterion 3: Consistency and controllability</h2>
+
+      <p class="text-lg">Business processes require predictable outputs. If you're automating the triage of customer support emails, you need the AI to categorise them consistently — not to behave differently depending on subtle phrasing variations, or to change behaviour after a model update.</p>
+
+      <p class="text-lg">Evaluate how much control the API gives you over model behaviour. Can you use system prompts to define specific instructions? Are there options for temperature and other parameters to tune consistency? Can you constrain responses to structured output formats (JSON schemas)? Can you version-lock to specific model releases so updates don't break production tools?</p>
+
+      <p class="text-lg">Some models are stronger at following complex, multi-step instructions without losing the thread — which is essential for document processing, structured data extraction, and workflows where the AI needs to apply several rules simultaneously. Test this with your actual use case before committing.</p>
+
+      <h2 class="font-headline font-bold text-2xl md:text-3xl uppercase tracking-tighter text-on-surface mt-16 mb-6">Criterion 4: Context window size</h2>
+
+      <p class="text-lg">Context window is the amount of text a model can process in a single interaction. This has real practical implications for business tools. A large context window means you can feed an entire contract, a full email thread, a lengthy policy document, or a batch of invoices into a single API call and get coherent analysis across the whole thing.</p>
+
+      <p class="text-lg">Smaller context windows force you to chunk documents, manage state across multiple API calls, and build significantly more complex applications to achieve the same result. For most UK SME use cases — processing supplier contracts, summarising board papers, extracting data from application forms — a large context window (200K+ tokens) handles the job in a single pass and makes the build simpler.</p>
+
+      <h2 class="font-headline font-bold text-2xl md:text-3xl uppercase tracking-tighter text-on-surface mt-16 mb-6">Criterion 5: Cost and performance trade-offs</h2>
+
+      <p class="text-lg">Cheaper doesn't mean better for business applications. Compare pricing per token, but weight that against output quality, reliability, and the hidden costs of needing more complex application code to work around limitations. Sometimes paying more for a more capable model saves money overall by reducing the engineering required.</p>
+
+      <p class="text-lg">Consider the actual cost of an unreliable output in your use case. If a support email is miscategorised, what's the cost? If a document extraction misses a key field, how much manual rework does that create? These hidden costs often dwarf the API pricing difference.</p>
+
+      <h2 class="font-headline font-bold text-2xl md:text-3xl uppercase tracking-tighter text-on-surface mt-16 mb-6">Making the choice</h2>
+
+      <p class="text-lg">Evaluate each model against these five criteria. You'll often find that no single model is ideal for all metrics — but you can identify which factors matter most for your specific use case. A high-volume, low-stakes query system might prioritise cost; a compliance-critical workflow prioritises auditability and data handling. The tool that's right for one business isn't necessarily right for another.</p>
+
+      <!-- Callout -->
+      <div class="glass-card border-l-4 border-primary p-8 my-12 rounded-lg">
+        <p class="text-lg"><strong class="text-on-surface font-medium">Pro tip:</strong> Don't commit to a model for your entire product roadmap based on a POC with one use case. Pilot your top two options with realistic data volumes and genuine production constraints before deciding. The cost of testing at this stage is trivial compared to the cost of migrating the wrong foundation later.</p>
+      </div>
+
+      <p class="text-lg">If you're evaluating AI models for your business and want a clear assessment of what's actually achievable with each option — and what it would cost and take to build — we offer a no-obligation discovery conversation. We'll walk through your use case against these criteria, help you pilot the top options, and give you a straight recommendation based on your specific needs.</p>
+
+      <p class="text-lg">The AI integration space moves quickly, and the gap between businesses that make smart foundation choices now and those that don't is widening. But it doesn't have to be complicated or expensive to evaluate properly.</p>
+    </div>
+
+    <!-- CTA Card -->
+    <div class="glass-card border border-zinc-800/30 rounded-xl p-12 mt-20 text-center">
+      <h3 class="font-headline font-bold text-2xl md:text-3xl uppercase tracking-tighter text-on-surface mb-4">Not sure which model to choose?</h3>
+      <p class="text-lg text-on-surface-variant mb-8">Let's evaluate your requirements against these criteria and help you pilot the right option. Book a free 60-minute call — no pitch, just a clear assessment of what makes sense for your business.</p>
+      <a href="https://calendly.com/contact-utilistech" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-primary text-on-primary px-8 py-3 font-headline font-bold tracking-tight rounded-sm hover:brightness-110 transition-all active:scale-95 glow-primary no-underline">
+        <span>Book a Discovery Call</span>
+        <span class="material-symbols-outlined text-lg">arrow_outward</span>
+      </a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-surface-container-lowest border-t border-zinc-900 relative z-10">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-6 md:px-12 py-16 max-w-[1440px] mx-auto">
+      <div class="flex flex-col gap-4">
+        <a href="/index.html" class="text-xl font-bold text-primary font-headline tracking-tighter uppercase no-underline">Utilis<span class="text-on-surface">.</span>Tech</a>
+        <p class="text-sm text-zinc-500 leading-relaxed">AI integration consultancy for UK businesses. Strategy, custom tools, deployment, and training.</p>
+        <a href="https://www.linkedin.com/in/dean-k-275b94133/" target="_blank" rel="noopener" class="w-8 h-8 rounded-full border border-zinc-800 flex items-center justify-center text-zinc-500 hover:text-primary transition-colors"><span class="material-symbols-outlined text-lg">person</span></a>
+      </div>
+      <div class="flex flex-col gap-6">
+        <h5 class="font-headline font-bold text-sm uppercase tracking-widest text-zinc-200">Services</h5>
+        <ul class="space-y-3">
+          <li><a class="text-sm text-zinc-500 hover:text-zinc-200 hover:underline decoration-primary underline-offset-4 transition-all" href="/index.html#services">AI &amp; Automation</a></li>
+          <li><a class="text-sm text-zinc-500 hover:text-zinc-200 hover:underline decoration-primary underline-offset-4 transition-all" href="/solutions.html">Solutions</a></li>
+          <li><a class="text-sm text-zinc-500 hover:text-zinc-200 hover:underline decoration-primary underline-offset-4 transition-all" href="/how-we-work.html">How We Work</a></li>
+        </ul>
+      </div>
+      <div class="flex flex-col gap-6">
+        <h5 class="font-headline font-bold text-sm uppercase tracking-widest text-zinc-200">Company</h5>
+        <ul class="space-y-3">
+          <li><a class="text-sm text-zinc-500 hover:text-zinc-200 hover:underline decoration-primary underline-offset-4 transition-all" href="/about.html">About</a></li>
+          <li><a class="text-sm text-zinc-500 hover:text-zinc-200 hover:underline decoration-primary underline-offset-4 transition-all" href="/contact.html">Contact</a></li>
+          <li><a class="text-sm text-zinc-500 hover:text-zinc-200 hover:underline decoration-primary underline-offset-4 transition-all" href="/privacy-policy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="flex flex-col gap-6">
+        <h5 class="font-headline font-bold text-sm uppercase tracking-widest text-zinc-200">Insights</h5>
+        <ul class="space-y-3">
+          <li><a class="text-sm text-zinc-500 hover:text-zinc-200 hover:underline decoration-primary underline-offset-4 transition-all" href="/blog-1-claude-api.html">Choosing an AI Model</a></li>
+          <li><a class="text-sm text-zinc-500 hover:text-zinc-200 hover:underline decoration-primary underline-offset-4 transition-all" href="/blog-2-copilot-vs-custom.html">Copilot vs Custom AI</a></li>
+          <li><a class="text-sm text-zinc-500 hover:text-zinc-200 hover:underline decoration-primary underline-offset-4 transition-all" href="/blog-3-five-processes.html">5 Processes to Automate</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="px-6 md:px-12 py-6 border-t border-zinc-900 flex flex-col md:flex-row justify-between items-center gap-4">
+      <span class="text-[10px] tracking-[0.2em] text-zinc-600">&copy; 2026 UTILIS TECHNOLOGIES LIMITED. REGISTERED IN ENGLAND &amp; WALES.</span>
+      <div class="flex items-center gap-2">
+        <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+        <a href="https://ico.org.uk/" target="_blank" rel="noopener" class="text-[10px] tracking-[0.2em] text-zinc-400 hover:text-primary transition-colors">ICO REGISTRATION: 00013348807</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    reveals.forEach(el => observer.observe(el));
+  </script>
+  <script>window.chatbaseConfig = { chatbotId: "3nq0jRR8L0rHIxz-opcM4" };</script>
+  <script src="https://www.chatbase.co/embed.min.js" id="3nq0jRR8L0rHIxz-opcM4" defer></script>
+</body>
+</html>
