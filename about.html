@@ -1,1 +1,437 @@
-placeholder-about
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Dean Kewley — AI Integration Consultant UK — Utilis Technologies</title>
+  <meta name="description" content="Dean Kewley is an AI integration consultant and founder of Utilis Technologies, helping UK businesses adopt AI safely and effectively — from strategy and governance to hands-on implementation." />
+  <link rel="canonical" href="https://utilistech.co.uk/about.html" />
+  <meta property="og:title" content="About Dean Kewley — AI Integration Consultant UK" />
+  <meta property="og:description" content="Dean Kewley is an AI integration consultant and founder of Utilis Technologies, helping UK businesses adopt AI safely and effectively — from strategy and governance to hands-on implementation." />
+  <meta property="og:url" content="https://utilistech.co.uk/about.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Utilis Technologies" />
+  <meta property="og:image" content="https://utilistech.co.uk/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="About Dean Kewley — AI Integration Consultant UK" />
+  <meta name="twitter:description" content="Dean Kewley is an AI integration consultant and founder of Utilis Technologies, helping UK businesses adopt AI safely and effectively — from strategy and governance to hands-on implementation." />
+  <meta name="twitter:image" content="https://utilistech.co.uk/og-image.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #ffffff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 2rem;
+      background: rgba(10, 10, 10, 0.8);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .navbar-logo {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: #00d9ff;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #00d9ff;
+    }
+
+    .hero-section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a0033 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(0, 217, 255, 0.2) 0%, transparent 70%);
+      border-radius: 50%;
+      top: 10%;
+      left: 10%;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .hero-section::after {
+      content: '';
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(153, 0, 255, 0.2) 0%, transparent 70%);
+      border-radius: 50%;
+      bottom: 10%;
+      right: 10%;
+      animation: float 8s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(20px); }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 800px;
+      padding: 2rem;
+    }
+
+    .hero-content h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: #00d9ff;
+      letter-spacing: -1px;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      color: #cccccc;
+      margin-bottom: 2rem;
+      line-height: 1.8;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 1rem 2.5rem;
+      background: linear-gradient(135deg, #00d9ff 0%, #0099cc 100%);
+      color: #000;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      font-family: 'Space Grotesk', sans-serif;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(0, 217, 255, 0.3);
+    }
+
+    .about-section {
+      padding: 6rem 2rem;
+      background: #0a0a0a;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .about-section h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      color: #00d9ff;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+      margin-bottom: 4rem;
+    }
+
+    .about-text {
+      font-size: 1.05rem;
+      color: #cccccc;
+      line-height: 1.8;
+    }
+
+    .about-text p {
+      margin-bottom: 1.5rem;
+    }
+
+    .about-text strong {
+      color: #00d9ff;
+    }
+
+    .about-image {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      border: 2px solid rgba(0, 217, 255, 0.3);
+      object-fit: cover;
+    }
+
+    .expertise-section {
+      padding: 6rem 2rem;
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a0033 100%);
+      text-align: center;
+    }
+
+    .expertise-section h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      color: #00d9ff;
+      margin-bottom: 3rem;
+    }
+
+    .expertise-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .expertise-card {
+      padding: 2rem;
+      background: rgba(0, 217, 255, 0.05);
+      border: 1px solid rgba(0, 217, 255, 0.2);
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .expertise-card:hover {
+      border-color: #00d9ff;
+      box-shadow: 0 0 20px rgba(0, 217, 255, 0.1);
+      transform: translateY(-5px);
+    }
+
+    .expertise-card h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      color: #00d9ff;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+
+    .expertise-card p {
+      color: #cccccc;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .footer {
+      padding: 3rem 2rem;
+      background: #000;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      text-align: center;
+      color: #999;
+    }
+
+    .footer p {
+      margin-bottom: 0.5rem;
+    }
+
+    .footer a {
+      color: #00d9ff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer a:hover {
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        text-align: center;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .hero-content h1 {
+        font-size: 2rem;
+      }
+
+      .expertise-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="/" class="navbar-logo">Utilis Technologies</a>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/">Services</a></li>
+      <li><a href="/">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1>About Dean Kewley</h1>
+      <p>AI Integration Consultant & Founder of Utilis Technologies</p>
+    </div>
+  </section>
+
+  <section class="about-section">
+    <h2>Who I Am</h2>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>
+          <strong>Hello. I'm Dean Kewley</strong>, an IT consultant specialising in AI integration and digital transformation. Based in the UK, I help organizations across various sectors—from healthcare to finance to manufacturing—navigate the rapidly evolving landscape of artificial intelligence.
+        </p>
+        <p>
+          I founded <strong>Utilis Technologies</strong> to bring practical, thoughtful AI solutions to businesses of all sizes. My approach is grounded in real-world experience: I don't just talk about AI—I implement it, manage it, and help teams work alongside it effectively.
+        </p>
+      </div>
+      <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop" alt="Dean Kewley" class="about-image reveal" />
+    </div>
+  </section>
+
+  <section class="expertise-section">
+    <h2>My Expertise</h2>
+    <div class="expertise-grid">
+      <div class="expertise-card reveal">
+        <h3>AI Strategy & Governance</h3>
+        <p>Help organizations develop responsible AI strategies, implement governance frameworks, and ensure compliance with emerging regulations like the UK AI Bill.</p>
+      </div>
+      <div class="expertise-card reveal">
+        <h3>AI Integration & Implementation</h3>
+        <p>End-to-end implementation of AI solutions—from selecting the right tools to integrating them into existing systems and training teams on adoption.</p>
+      </div>
+      <div class="expertise-card reveal">
+        <h3>GenAI Solutions</h3>
+        <p>Custom solutions using generative AI technologies, including LLM integrations, automation workflows, and intelligent customer-facing applications.</p>
+      </div>
+      <div class="expertise-card reveal">
+        <h3>Risk & Compliance</h3>
+        <p>Comprehensive risk assessments, bias audits, security evaluations, and ensuring AI systems meet regulatory and ethical standards.</p>
+      </div>
+      <div class="expertise-card reveal">
+        <h3>Training & Upskilling</h3>
+        <p>Tailored workshops and training programs to help teams understand AI capabilities, best practices, and responsible use in their workflows.</p>
+      </div>
+      <div class="expertise-card reveal">
+        <h3>Technology Leadership</h3>
+        <p>CTO advisory services, technical due diligence, and hands-on consulting to guide informed decisions about AI adoption and implementation.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-section">
+    <h2>Why Work With Me?</h2>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>
+          <strong>Experience That Matters:</strong> I've worked across multiple sectors and organizations—from startups to enterprises. I understand the unique challenges you face.
+        </p>
+        <p>
+          <strong>Practical Solutions:</strong> I focus on solving real problems with real technology. No hype, no unnecessary complexity—just effective AI that works for your business.
+        </p>
+        <p>
+          <strong>Ethical Foundation:</strong> AI should be trustworthy, transparent, and responsible. I help ensure your AI systems are built on solid ethical principles and comply with regulations.
+        </p>
+        <p>
+          <strong>Partnership Approach:</strong> I'm not just a consultant—I'm a partner in your success. I work closely with your team, build relationships, and ensure you understand every step of the journey.
+        </p>
+      </div>
+      <div class="about-text reveal">
+        <p>
+          <strong>Continuous Learning:</strong> The AI landscape changes constantly. I stay at the cutting edge of developments in machine learning, large language models, and responsible AI practices.
+        </p>
+        <p>
+          <strong>Technical Depth:</strong> With hands-on technical experience across Azure, Python, PowerShell, Bash, and various AI frameworks, I can bridge the gap between strategy and implementation.
+        </p>
+        <p>
+          <strong>Clear Communication:</strong> I believe in explaining complex concepts clearly—whether you're a technical team or business stakeholders, I make sure everyone understands the path forward.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="expertise-section">
+    <h2>Ready to Get Started?</h2>
+    <p style="font-size: 1.1rem; color: #cccccc; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+      Whether you're exploring AI opportunities or tackling a specific challenge, I'd love to chat. Let's discuss how AI can create value for your organization.
+    </p>
+    <a href="mailto:dean@utilistech.co.uk" class="cta-button">Get in Touch</a>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2026 Utilis Technologies. All rights reserved.</p>
+    <p><a href="/">Home</a> | <a href="/about.html">About</a> | <a href="/">Privacy Policy</a></p>
+  </footer>
+
+  <script>
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(el => observer.observe(el));
+</script>
+
+<script>
+  window.chatbaseConfig = {
+    chatbotId: "3nq0jRR8L0rHIxz-opcM4",
+  };
+</script>
+<script src="https://www.chatbase.co/embed.min.js" id="3nq0jRR8L0rHIxz-opcM4" defer></script>
+</body>
+</html>
