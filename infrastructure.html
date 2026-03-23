@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Enterprise-grade IT infrastructure design, deployment, and management for UK businesses. Cloud, networking, security, and hybrid environments built to last." />
+  <meta name="description" content="Reliable IT infrastructure for growing UK businesses. Cloud, networking, security, and hybrid environments — designed to scale with you, not hold you back." />
   <meta name="theme-color" content="#42dec3" />
 
   <!-- SEO & OpenGraph -->
   <link rel="canonical" href="https://utilistech.co.uk/infrastructure.html" />
   <meta property="og:title" content="IT Infrastructure — Utilis Technologies" />
-  <meta property="og:description" content="Enterprise-grade IT infrastructure design, deployment, and management for UK businesses." />
+  <meta property="og:description" content="Reliable IT infrastructure for growing UK businesses — cloud, networking, security, and hybrid environments." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://utilistech.co.uk/infrastructure.html" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="IT Infrastructure — Utilis Technologies" />
-  <meta name="twitter:description" content="Enterprise-grade IT infrastructure design, deployment, and management for UK businesses." />
+  <meta name="twitter:description" content="Reliable IT infrastructure for growing UK businesses — cloud, networking, security, and hybrid environments." />
 
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
@@ -29,7 +29,7 @@
       "telephone": "+44-unknown",
       "areaServed": "GB"
     },
-    "description": "Enterprise-grade IT infrastructure design, deployment, and management for UK businesses.",
+    "description": "Reliable IT infrastructure for growing UK businesses — cloud, networking, security, and hybrid environments.",
     "serviceType": "IT Infrastructure Consulting"
   }
   </script>
@@ -217,127 +217,40 @@
       align-items: center;
       justify-content: center;
       padding: 0.75rem 1.5rem;
-      border: 1px solid rgba(66, 222, 195, 0.3);
-      border-radius: 50px;
-      background: rgba(66, 222, 195, 0.05);
+      border: 1px solid rgba(66, 222, 195, 0.2);
+      border-radius: 0.125rem;
+      background: rgba(53, 53, 52, 0.3);
       font-size: 0.875rem;
       font-weight: 500;
-      color: #42dec3;
+      color: #e5e2e1;
       transition: all 0.3s ease;
     }
     .tech-badge:hover {
       border-color: rgba(66, 222, 195, 0.6);
-      background: rgba(66, 222, 195, 0.1);
-      box-shadow: 0 0 15px rgba(66, 222, 195, 0.2);
+      background: rgba(66, 222, 195, 0.05);
+      color: #42dec3;
     }
 
-    /* Service cards */
-    .service-card {
-      position: relative;
-      overflow: hidden;
-      border-radius: 16px;
+    /* Location card */
+    .location-card {
+      padding: 1.5rem;
       border: 1px solid rgba(66, 222, 195, 0.15);
-      background: rgba(30, 30, 30, 0.6);
-      backdrop-filter: blur(10px);
-      padding: 2rem;
-      transition: all 0.4s ease;
+      border-radius: 0.125rem;
+      background: rgba(53, 53, 52, 0.4);
+      backdrop-filter: blur(20px);
+      transition: all 0.3s ease;
     }
-    .service-card::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      right: -50%;
-      width: 300px;
-      height: 300px;
-      background: radial-gradient(circle, rgba(66, 222, 195, 0.1) 0%, transparent 70%);
-      border-radius: 50%;
-      transition: all 0.6s ease;
-    }
-    .service-card:hover::before {
-      top: -25%;
-      right: -25%;
-    }
-    .service-card:hover {
+    .location-card:hover {
       border-color: rgba(66, 222, 195, 0.4);
-      background: rgba(30, 30, 30, 0.8);
-      transform: translateY(-8px);
-      box-shadow: 0 20px 40px rgba(66, 222, 195, 0.1);
-    }
-    .service-card > * {
-      position: relative;
-      z-index: 2;
-    }
-
-    /* Icon styles */
-    .icon-circle {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      background: rgba(66, 222, 195, 0.1);
-      border: 2px solid rgba(66, 222, 195, 0.3);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #42dec3;
-      margin-bottom: 1.5rem;
-      transition: all 0.3s ease;
-    }
-    .service-card:hover .icon-circle {
-      background: rgba(66, 222, 195, 0.2);
-      border-color: rgba(66, 222, 195, 0.6);
-      box-shadow: 0 0 20px rgba(66, 222, 195, 0.2);
-    }
-
-    /* CTA Button */
-    .cta-button {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.75rem;
-      padding: 1rem 2rem;
-      background: #42dec3;
-      color: #131313;
-      border: none;
-      border-radius: 50px;
-      font-weight: 600;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      text-decoration: none;
-    }
-    .cta-button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 25px rgba(66, 222, 195, 0.3);
-    }
-    .cta-button:active {
-      transform: translateY(0);
-    }
-
-    /* Feature comparison */
-    .comparison-row {
-      display: grid;
-      grid-template-columns: 200px 1fr 1fr;
-      gap: 1rem;
-      padding: 1.5rem 0;
-      border-bottom: 1px solid rgba(66, 222, 195, 0.1);
-      align-items: center;
-    }
-    .comparison-row:last-child {
-      border-bottom: none;
-    }
-
-    /* Stat counter animation */
-    .stat-number {
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: #42dec3;
-      font-family: 'Space Grotesk', sans-serif;
+      box-shadow: 0 0 20px rgba(66, 222, 195, 0.15);
     }
   </style>
 </head>
-<body>
-  <!-- Background blur elements -->
-  <div class="fixed inset-0 pointer-events-none overflow-hidden">
-    <div class="absolute top-[-20%] right-[-10%] w-[600px] h-[600px] bg-primary/5 blur-[120px] rounded-full"></div>
+
+<body class="bg-surface text-on-surface overflow-x-hidden">
+  <!-- Background blobs -->
+  <div class="fixed inset-0 z-0 pointer-events-none opacity-20">
+    <div class="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-primary/20 blur-[120px] rounded-full"></div>
     <div class="absolute bottom-[-10%] left-[-5%] w-[500px] h-[500px] bg-secondary/10 blur-[100px] rounded-full"></div>
   </div>
 
@@ -349,401 +262,494 @@
       <div class="hidden md:flex items-center gap-10 font-headline font-medium tracking-tight text-sm">
         <a class="text-zinc-400 hover:text-primary transition-colors" href="/index.html#services">Services</a>
         <a class="text-zinc-400 hover:text-primary transition-colors" href="/solutions.html">Solutions</a>
-        <a class="text-zinc-400 hover:text-primary transition-colors" href="/infrastructure.html">Infrastructure</a>
-        <a class="text-zinc-400 hover:text-primary transition-colors" href="/index.html#contact">Contact</a>
+        <a class="text-zinc-400 hover:text-primary transition-colors" href="/how-we-work.html">How We Work</a>
+        <a class="text-zinc-400 hover:text-primary transition-colors" href="/about.html">About</a>
+        <a class="text-zinc-400 hover:text-primary transition-colors" href="/contact.html">Contact</a>
       </div>
-      <label for="nav-toggle" class="md:hidden flex items-center cursor-pointer">
-        <div class="hamburger flex flex-col gap-1.5">
-          <span class="w-6 h-0.5 bg-primary transition-transform duration-300"></span>
-          <span class="w-6 h-0.5 bg-primary transition-opacity duration-300"></span>
-          <span class="w-6 h-0.5 bg-primary transition-transform duration-300"></span>
-        </div>
-      </label>
-    </div>
-    <div class="mobile-menu hidden flex-col absolute top-full left-0 w-full bg-zinc-950 border-b border-zinc-800/30 px-6 py-4 gap-4">
-      <a class="text-zinc-400 hover:text-primary transition-colors" href="/index.html#services">Services</a>
-      <a class="text-zinc-400 hover:text-primary transition-colors" href="/solutions.html">Solutions</a>
-      <a class="text-zinc-400 hover:text-primary transition-colors" href="/infrastructure.html">Infrastructure</a>
-      <a class="text-zinc-400 hover:text-primary transition-colors" href="/index.html#contact">Contact</a>
+      <div class="flex items-center gap-4">
+        <a href="https://calendly.com/contact-utilistech" target="_blank" rel="noopener" class="hidden md:inline-flex bg-primary text-on-primary px-6 py-2.5 font-headline font-bold tracking-tight text-sm rounded-sm hover:brightness-110 transition-all active:scale-95 glow-primary no-underline">Book a Call</a>
+        <label for="nav-toggle" class="hamburger md:hidden flex flex-col gap-[5px] cursor-pointer p-2 z-[1001]" aria-label="Menu">
+          <span class="block w-6 h-0.5 bg-on-surface rounded transition-all"></span>
+          <span class="block w-6 h-0.5 bg-on-surface rounded transition-all"></span>
+          <span class="block w-6 h-0.5 bg-on-surface rounded transition-all"></span>
+        </label>
+      </div>
     </div>
   </nav>
 
-  <main class="relative z-10">
-    <!-- Hero Section -->
-    <section class="min-h-screen pt-32 pb-20 px-6 md:px-10 relative overflow-hidden">
-      <div class="max-w-[1440px] mx-auto">
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-          <div class="reveal">
-            <span class="tech-badge">Enterprise Infrastructure</span>
-            <h1 class="text-5xl md:text-7xl font-bold mt-6 leading-tight text-glow">IT Infrastructure Built for Scale</h1>
-            <p class="text-on-surface-variant text-lg mt-6 leading-relaxed max-w-lg">Design, deploy, and manage enterprise-grade infrastructure across cloud, hybrid, and on-premise environments with zero downtime and maximum resilience.</p>
-            <div class="flex flex-col sm:flex-row gap-4 mt-10">
-              <a href="#contact" class="cta-button">Schedule Consultation <span class="material-symbols-outlined" style="font-size: 20px;">arrow_forward</span></a>
-              <button class="px-6 py-3 border border-primary text-primary hover:bg-primary/10 rounded-full font-semibold transition-all">View Case Studies</button>
+  <div class="mobile-menu hidden fixed inset-0 z-40 bg-surface flex-col items-center justify-center gap-0">
+    <a class="w-full text-center py-5 text-lg font-headline font-medium text-on-surface border-b border-zinc-800/30 hover:text-primary transition-colors" href="/index.html#services">Services</a>
+    <a class="w-full text-center py-5 text-lg font-headline font-medium text-on-surface border-b border-zinc-800/30 hover:text-primary transition-colors" href="/solutions.html">Solutions</a>
+    <a class="w-full text-center py-5 text-lg font-headline font-medium text-on-surface border-b border-zinc-800/30 hover:text-primary transition-colors" href="/how-we-work.html">How We Work</a>
+    <a class="w-full text-center py-5 text-lg font-headline font-medium text-on-surface border-b border-zinc-800/30 hover:text-primary transition-colors" href="/about.html">About</a>
+    <a class="w-full text-center py-5 text-lg font-headline font-medium text-on-surface border-b border-zinc-800/30 hover:text-primary transition-colors" href="/contact.html">Contact</a>
+    <a href="https://calendly.com/contact-utilistech" target="_blank" rel="noopener" class="mt-8 bg-primary text-on-primary px-10 py-4 font-headline font-bold text-base rounded-sm no-underline">Book a Call</a>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="relative w-full min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-24 z-10">
+    <!-- Parallax background -->
+    <div class="absolute inset-0 hero-bg" style="background: linear-gradient(135deg, rgba(19, 19, 19, 0.85) 0%, rgba(19, 19, 19, 0.7) 100%), url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1920&q=80'); background-size: cover; background-position: center; z-index: -1;"></div>
+
+    <div class="relative w-full max-w-[1440px] px-6 md:px-12 py-32 md:py-48 flex flex-col items-center justify-center text-center">
+      <!-- Main headline -->
+      <h1 class="reveal font-headline text-5xl md:text-7xl font-bold leading-tight tracking-tighter mb-6 max-w-4xl">
+        INFRASTRUCTURE THAT SCALES WITH <span class="text-primary">YOUR AMBITION</span>
+      </h1>
+
+      <!-- Subtext -->
+      <p class="reveal reveal-delay-1 text-lg md:text-xl text-zinc-400 max-w-2xl mb-12 leading-relaxed">
+        Reliable IT infrastructure built for businesses that are growing, moving to the cloud, or just tired of things breaking. We handle the foundations so you can focus on the work.
+      </p>
+
+      <!-- CTA Buttons -->
+      <div class="reveal reveal-delay-2 flex flex-col md:flex-row gap-4 mb-20">
+        <a href="https://calendly.com/contact-utilistech" target="_blank" rel="noopener" class="bg-primary text-on-primary px-8 py-3.5 font-headline font-bold tracking-tight rounded-sm hover:brightness-110 transition-all active:scale-95 glow-primary no-underline text-center">
+          Book a Discovery Call
+        </a>
+        <a href="/contact.html" class="border-2 border-primary text-primary px-8 py-3.5 font-headline font-bold tracking-tight rounded-sm hover:bg-primary/10 transition-all no-underline text-center">
+          Get in Touch
+        </a>
+      </div>
+
+      <!-- Floating stats panel -->
+      <div class="reveal reveal-delay-3 glass-card glow-primary border border-zinc-700/20 rounded-sm p-8 max-w-2xl w-full float stat-pulse">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+          <div class="flex flex-col items-center">
+            <div class="text-3xl md:text-4xl font-bold text-primary font-headline mb-2">
+              <span data-target="25" data-suffix="+">25</span>
             </div>
+            <p class="text-xs md:text-sm text-zinc-400 tracking-wider uppercase">Years Experience</p>
           </div>
-          <div class="reveal reveal-delay-1 hidden md:block">
-            <div class="relative h-[500px] rounded-2xl bg-gradient-to-br from-primary/20 to-transparent border border-primary/30 overflow-hidden group">
-              <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
-              <div class="absolute -inset-1 bg-gradient-to-r from-primary via-transparent to-primary opacity-0 group-hover:opacity-20 transition-opacity duration-500 blur-xl"></div>
-              <div class="absolute inset-0 flex items-center justify-center">
-                <div class="w-24 h-24 rounded-2xl border-2 border-primary/50 flex items-center justify-center animate-pulse">
-                  <span class="material-symbols-outlined" style="font-size: 56px; color: var(--color-primary);">cloud_queue</span>
-                </div>
+          <div class="flex flex-col items-center">
+            <div class="text-3xl md:text-4xl font-bold text-primary font-headline mb-2">
+              <span data-target="99.9" data-suffix="%">99.9</span>
+            </div>
+            <p class="text-xs md:text-sm text-zinc-400 tracking-wider uppercase">Uptime Target</p>
+          </div>
+          <div class="flex flex-col items-center">
+            <div class="text-3xl md:text-4xl font-bold text-primary font-headline mb-2">
+              <span data-target="500" data-suffix="+">500</span>
+            </div>
+            <p class="text-xs md:text-sm text-zinc-400 tracking-wider uppercase">Endpoints Managed</p>
+          </div>
+          <div class="flex flex-col items-center">
+            <div class="text-3xl md:text-4xl font-bold text-primary font-headline mb-2">
+              <span>24/7</span>
+            </div>
+            <p class="text-xs md:text-sm text-zinc-400 tracking-wider uppercase">Monitoring</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES BENTO GRID -->
+  <section class="relative w-full py-24 md:py-32 px-6 md:px-12 z-10">
+    <div class="max-w-[1440px] mx-auto">
+      <!-- Section header -->
+      <div class="mb-16 md:mb-20 reveal">
+        <h2 class="font-headline text-4xl md:text-5xl font-bold mb-6 tracking-tighter">
+          INFRASTRUCTURE <span class="text-primary">SERVICES</span>
+        </h2>
+        <div class="w-12 h-1 bg-primary rounded-full"></div>
+      </div>
+
+      <!-- Bento grid -->
+      <div class="bento-grid stagger-children">
+        <!-- Cloud Infrastructure -->
+        <div class="bento-large card-hover glass-card glow-primary border border-zinc-700/20 rounded-sm overflow-hidden group relative">
+          <div class="absolute inset-0 z-0" style="background: linear-gradient(135deg, rgba(66, 222, 195, 0.1) 0%, rgba(66, 222, 195, 0) 100%), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80'); background-size: cover; background-position: center; opacity: 0.6; group-hover:opacity: 0.8; transition: opacity 0.3s ease;"></div>
+          <div class="relative z-10 p-8 md:p-10">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-12 h-12 rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center">
+                <span class="material-symbols-outlined text-primary">cloud_upload</span>
               </div>
+              <h3 class="font-headline text-2xl font-bold">Cloud Infrastructure</h3>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Infrastructure Pillars -->
-    <section class="py-20 px-6 md:px-10 relative">
-      <div class="max-w-[1440px] mx-auto">
-        <div class="text-center mb-16 reveal">
-          <h2 class="text-4xl md:text-5xl font-bold mb-4">The Four Pillars of Enterprise Infrastructure</h2>
-          <p class="text-on-surface-variant text-lg max-w-2xl mx-auto">A comprehensive approach built on proven principles and industry best practices.</p>
-        </div>
-        <div class="bento-grid">
-          <div class="service-card reveal reveal-delay-1">
-            <div class="icon-circle">
-              <span class="material-symbols-outlined" style="font-size: 32px;">dns</span>
-            </div>
-            <h3 class="text-2xl font-bold mb-2">Cloud Architecture</h3>
-            <p class="text-on-surface-variant mb-4">Multi-cloud strategies with AWS, Azure, and Google Cloud for flexibility and cost optimization.</p>
-            <ul class="text-sm text-on-surface-variant space-y-2">
-              <li>Auto-scaling & load balancing</li>
-              <li>Containerization & orchestration</li>
-              <li>Serverless computing models</li>
-            </ul>
-          </div>
-
-          <div class="service-card reveal reveal-delay-2">
-            <div class="icon-circle">
-              <span class="material-symbols-outlined" style="font-size: 32px;">router</span>
-            </div>
-            <h3 class="text-2xl font-bold mb-2">Network Design</h3>
-            <p class="text-on-surface-variant mb-4">High-performance networks with redundancy, segmentation, and advanced routing protocols.</p>
-            <ul class="text-sm text-on-surface-variant space-y-2">
-              <li>SD-WAN implementations</li>
-              <li>VPN & secure tunneling</li>
-              <li>Network monitoring & analytics</li>
-            </ul>
-          </div>
-
-          <div class="service-card reveal reveal-delay-3">
-            <div class="icon-circle">
-              <span class="material-symbols-outlined" style="font-size: 32px;">lock</span>
-            </div>
-            <h3 class="text-2xl font-bold mb-2">Security Infrastructure</h3>
-            <p class="text-on-surface-variant mb-4">Zero-trust architecture and comprehensive security frameworks protecting your entire infrastructure.</p>
-            <ul class="text-sm text-on-surface-variant space-y-2">
-              <li>Identity & access management</li>
-              <li>Data encryption at rest & transit</li>
-              <li>Threat detection & response</li>
-            </ul>
-          </div>
-
-          <div class="service-card reveal reveal-delay-4">
-            <div class="icon-circle">
-              <span class="material-symbols-outlined" style="font-size: 32px;">backup</span>
-            </div>
-            <h3 class="text-2xl font-bold mb-2">Disaster Recovery</h3>
-            <p class="text-on-surface-variant mb-4">Resilient backup and recovery strategies ensuring business continuity under any circumstances.</p>
-            <ul class="text-sm text-on-surface-variant space-y-2">
-              <li>Automated backups & snapshots</li>
-              <li>Geo-redundant storage</li>
-              <li>RTO/RPO optimization</li>
+            <p class="text-zinc-400 leading-relaxed mb-6">
+              Azure, AWS, or Google Cloud — set up properly for your size and budget. Whether you're migrating from an old server or tidying up an existing cloud setup, we make it work.
+            </p>
+            <ul class="space-y-2 text-sm text-zinc-300">
+              <li class="flex items-center gap-2"><span class="w-1 h-1 bg-primary rounded-full"></span> Azure native workloads</li>
+              <li class="flex items-center gap-2"><span class="w-1 h-1 bg-primary rounded-full"></span> Hybrid cloud architecture</li>
+              <li class="flex items-center gap-2"><span class="w-1 h-1 bg-primary rounded-full"></span> Cost management & optimization</li>
             </ul>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Deployment Models -->
-    <section class="py-20 px-6 md:px-10 relative bg-gradient-to-b from-zinc-900/0 to-zinc-900/30">
-      <div class="max-w-[1440px] mx-auto">
-        <div class="text-center mb-16 reveal">
-          <h2 class="text-4xl md:text-5xl font-bold mb-4">Flexible Deployment Models</h2>
-          <p class="text-on-surface-variant text-lg max-w-2xl mx-auto">Choose the infrastructure model that fits your business needs perfectly.</p>
+        <!-- Network Design & Security -->
+        <div class="card-hover glass-card glow-primary border border-zinc-700/20 rounded-sm p-8 md:p-10">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-12 h-12 rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center">
+              <span class="material-symbols-outlined text-primary">shield</span>
+            </div>
+            <h3 class="font-headline text-xl font-bold">Network Design & Security</h3>
+          </div>
+          <p class="text-zinc-400 leading-relaxed mb-6">
+            Firewalls, VPNs, Wi-Fi, and secure remote access. Properly designed networks for offices, multi-site setups, and hybrid teams.
+          </p>
+          <ul class="space-y-2 text-sm text-zinc-300">
+            <li class="flex items-center gap-2"><span class="w-1 h-1 bg-primary rounded-full"></span> Secure remote access</li>
+            <li class="flex items-center gap-2"><span class="w-1 h-1 bg-primary rounded-full"></span> Firewall management</li>
+            <li class="flex items-center gap-2"><span class="w-1 h-1 bg-primary rounded-full"></span> Network monitoring</li>
+          </ul>
         </div>
-        <div class="grid md:grid-cols-3 gap-6">
-          <div class="service-card reveal reveal-delay-1 bento-large" style="grid-column: auto;">
-            <span class="tech-badge">On-Premise</span>
-            <h3 class="text-2xl font-bold mt-4 mb-3">Private Data Center</h3>
-            <p class="text-on-surface-variant mb-4">Full control and sovereignty for sensitive workloads with dedicated infrastructure and compliance requirements.</p>
-            <div class="text-sm text-primary font-semibold flex items-center gap-2 mt-6">Explore <span class="material-symbols-outlined" style="font-size: 18px;">arrow_forward</span></div>
-          </div>
 
-          <div class="service-card reveal reveal-delay-2 bento-large" style="grid-column: auto;">
-            <span class="tech-badge">Cloud</span>
-            <h3 class="text-2xl font-bold mt-4 mb-3">Public Cloud</h3>
-            <p class="text-on-surface-variant mb-4">Unlimited scalability and agility with pay-as-you-grow pricing. Perfect for dynamic workloads and global reach.</p>
-            <div class="text-sm text-primary font-semibold flex items-center gap-2 mt-6">Explore <span class="material-symbols-outlined" style="font-size: 18px;">arrow_forward</span></div>
+        <!-- Server & Endpoint Management -->
+        <div class="card-hover glass-card glow-primary border border-zinc-700/20 rounded-sm p-8 md:p-10">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-12 h-12 rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center">
+              <span class="material-symbols-outlined text-primary">servers</span>
+            </div>
+            <h3 class="font-headline text-xl font-bold">Server & Endpoint Management</h3>
           </div>
-
-          <div class="service-card reveal reveal-delay-3 bento-large" style="grid-column: auto;">
-            <span class="tech-badge">Hybrid</span>
-            <h3 class="text-2xl font-bold mt-4 mb-3">Hybrid Infrastructure</h3>
-            <p class="text-on-surface-variant mb-4">Best of both worlds—combine on-premise control with cloud flexibility for optimal cost and performance.</p>
-            <div class="text-sm text-primary font-semibold flex items-center gap-2 mt-6">Explore <span class="material-symbols-outlined" style="font-size: 18px;">arrow_forward</span></div>
-          </div>
+          <p class="text-zinc-400 leading-relaxed mb-6">
+            Laptops, desktops, servers — kept patched, secured, and running properly. Whether you've got 10 devices or 200, we keep everything consistent and managed.
+          </p>
+          <ul class="space-y-2 text-sm text-zinc-300">
+            <li class="flex items-center gap-2"><span class="w-1 h-1 bg-primary rounded-full"></span> Centralized management</li>
+            <li class="flex items-center gap-2"><span class="w-1 h-1 bg-primary rounded-full"></span> Automated patching</li>
+            <li class="flex items-center gap-2"><span class="w-1 h-1 bg-primary rounded-full"></span> Configuration compliance</li>
+          </ul>
         </div>
-      </div>
-    </section>
 
-    <!-- Implementation Process -->
-    <section class="py-20 px-6 md:px-10 relative">
-      <div class="max-w-[1440px] mx-auto">
-        <div class="text-center mb-16 reveal">
-          <h2 class="text-4xl md:text-5xl font-bold mb-4">Our Implementation Approach</h2>
-          <p class="text-on-surface-variant text-lg max-w-2xl mx-auto">A structured methodology ensuring smooth deployment and long-term success.</p>
-        </div>
-        <div class="grid md:grid-cols-4 gap-4 relative">
-          <div class="timeline-step reveal reveal-delay-1" data-number="1">
-            <h3 class="text-xl font-bold mt-4 mb-2">Assessment</h3>
-            <p class="text-on-surface-variant text-sm">Comprehensive audit of current systems, capacity planning, and requirements gathering from all stakeholders.</p>
-          </div>
-          <div class="timeline-step reveal reveal-delay-2" data-number="2">
-            <h3 class="text-xl font-bold mt-4 mb-2">Design</h3>
-            <p class="text-on-surface-variant text-sm">Architect detailed solutions with redundancy, security, and performance parameters. Create migration roadmaps.</p>
-          </div>
-          <div class="timeline-step reveal reveal-delay-3" data-number="3">
-            <h3 class="text-xl font-bold mt-4 mb-2">Implementation</h3>
-            <p class="text-on-surface-variant text-sm">Deploy infrastructure with minimal disruption. Conduct testing, validation, and performance optimization.</p>
-          </div>
-          <div class="timeline-step reveal reveal-delay-4" data-number="4">
-            <h3 class="text-xl font-bold mt-4 mb-2">Optimization</h3>
-            <p class="text-on-surface-variant text-sm">Continuous monitoring, tuning, and improvement. 24/7 support and proactive maintenance protocols.</p>
+        <!-- Microsoft 365 & Identity -->
+        <div class="bento-large card-hover glass-card glow-primary border border-zinc-700/20 rounded-sm overflow-hidden group relative">
+          <div class="absolute inset-0 z-0" style="background: linear-gradient(135deg, rgba(66, 222, 195, 0.1) 0%, rgba(66, 222, 195, 0) 100%), url('https://images.unsplash.com/photo-1633419461186-7d40a38105ec?w=800&q=80'); background-size: cover; background-position: center; opacity: 0.6; group-hover:opacity: 0.8; transition: opacity 0.3s ease;"></div>
+          <div class="relative z-10 p-8 md:p-10">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-12 h-12 rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center">
+                <span class="material-symbols-outlined text-primary">person_check</span>
+              </div>
+              <h3 class="font-headline text-2xl font-bold">Microsoft 365 & Identity</h3>
+            </div>
+            <p class="text-zinc-400 leading-relaxed mb-6">
+              Entra ID, Teams, Exchange Online, and SharePoint — configured properly so your team can actually work. User onboarding, security policies, and licensing sorted.
+            </p>
+            <ul class="space-y-2 text-sm text-zinc-300">
+              <li class="flex items-center gap-2"><span class="w-1 h-1 bg-primary rounded-full"></span> Entra ID & user management</li>
+              <li class="flex items-center gap-2"><span class="w-1 h-1 bg-primary rounded-full"></span> Teams & SharePoint setup</li>
+              <li class="flex items-center gap-2"><span class="w-1 h-1 bg-primary rounded-full"></span> Licensing & security policies</li>
+            </ul>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Technology Stack -->
-    <section class="py-20 px-6 md:px-10 relative bg-gradient-to-b from-zinc-900/0 to-zinc-900/30">
-      <div class="max-w-[1440px] mx-auto">
-        <div class="text-center mb-16 reveal">
-          <h2 class="text-4xl md:text-5xl font-bold mb-4">Enterprise-Grade Technology Stack</h2>
-          <p class="text-on-surface-variant text-lg max-w-2xl mx-auto">Proven, battle-tested technologies deployed across thousands of organizations globally.</p>
+        <!-- Backup & Disaster Recovery -->
+        <div class="card-hover glass-card glow-primary border border-zinc-700/20 rounded-sm p-8 md:p-10">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-12 h-12 rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center">
+              <span class="material-symbols-outlined text-primary">backup</span>
+            </div>
+            <h3 class="font-headline text-xl font-bold">Backup & Disaster Recovery</h3>
+          </div>
+          <p class="text-zinc-400 leading-relaxed mb-6">
+            Proper backups that actually work when you need them. Offsite copies, ransomware protection, and tested recovery plans — not just ticked boxes.
+          </p>
+          <ul class="space-y-2 text-sm text-zinc-300">
+            <li class="flex items-center gap-2"><span class="w-1 h-1 bg-primary rounded-full"></span> 3-2-1 backup strategy</li>
+            <li class="flex items-center gap-2"><span class="w-1 h-1 bg-primary rounded-full"></span> RTO/RPO optimization</li>
+            <li class="flex items-center gap-2"><span class="w-1 h-1 bg-primary rounded-full"></span> Ransomware protection</li>
+          </ul>
         </div>
-        <div class="flex flex-wrap justify-center gap-4">
-          <span class="tech-badge reveal reveal-delay-1">AWS & Azure</span>
-          <span class="tech-badge reveal reveal-delay-2">Kubernetes</span>
-          <span class="tech-badge reveal reveal-delay-3">VMware vSphere</span>
-          <span class="tech-badge reveal reveal-delay-4">Cisco Networking</span>
-          <span class="tech-badge reveal reveal-delay-1">NetApp Storage</span>
-          <span class="tech-badge reveal reveal-delay-2">Fortinet Security</span>
-          <span class="tech-badge reveal reveal-delay-3">Palo Alto Networks</span>
-          <span class="tech-badge reveal reveal-delay-4">HashiCorp Vault</span>
-          <span class="tech-badge reveal reveal-delay-1">Terraform & Ansible</span>
-          <span class="tech-badge reveal reveal-delay-2">Prometheus & Grafana</span>
-          <span class="tech-badge reveal reveal-delay-3">ELK Stack</span>
-          <span class="tech-badge reveal reveal-delay-4">GitOps & DevOps</span>
-        </div>
-      </div>
-    </section>
 
-    <!-- Performance Metrics -->
-    <section class="py-20 px-6 md:px-10 relative">
-      <div class="max-w-[1440px] mx-auto">
-        <div class="grid md:grid-cols-4 gap-6">
-          <div class="service-card reveal reveal-delay-1 stat-pulse" style="text-align: center;">
-            <div class="text-5xl font-bold text-primary mb-2">99.99%</div>
-            <p class="text-on-surface-variant">Uptime SLA Guaranteed</p>
+        <!-- Monitoring & Support -->
+        <div class="card-hover glass-card glow-primary border border-zinc-700/20 rounded-sm p-8 md:p-10">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="w-12 h-12 rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center">
+              <span class="material-symbols-outlined text-primary">monitoring</span>
+            </div>
+            <h3 class="font-headline text-xl font-bold">Monitoring & Support</h3>
           </div>
-          <div class="service-card reveal reveal-delay-2 stat-pulse" style="text-align: center;">
-            <div class="text-5xl font-bold text-primary mb-2">500ms</div>
-            <p class="text-on-surface-variant">Failover Time (RTO)</p>
-          </div>
-          <div class="service-card reveal reveal-delay-3 stat-pulse" style="text-align: center;">
-            <div class="text-5xl font-bold text-primary mb-2">50TB+</div>
-            <p class="text-on-surface-variant">Data Capacity Managed</p>
-          </div>
-          <div class="service-card reveal reveal-delay-4 stat-pulse" style="text-align: center;">
-            <div class="text-5xl font-bold text-primary mb-2">24/7</div>
-            <p class="text-on-surface-variant">Expert Support Available</p>
-          </div>
+          <p class="text-zinc-400 leading-relaxed mb-6">
+            We keep an eye on things so you don't have to. Proactive alerts, quick response times, and someone who actually picks up when something goes wrong.
+          </p>
+          <ul class="space-y-2 text-sm text-zinc-300">
+            <li class="flex items-center gap-2"><span class="w-1 h-1 bg-primary rounded-full"></span> 24/7 monitoring</li>
+            <li class="flex items-center gap-2"><span class="w-1 h-1 bg-primary rounded-full"></span> Alert management</li>
+            <li class="flex items-center gap-2"><span class="w-1 h-1 bg-primary rounded-full"></span> SLA-backed support</li>
+          </ul>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Case Study Preview -->
-    <section class="py-20 px-6 md:px-10 relative bg-gradient-to-b from-zinc-900/0 to-zinc-900/30">
-      <div class="max-w-[1440px] mx-auto">
-        <div class="text-center mb-16 reveal">
-          <h2 class="text-4xl md:text-5xl font-bold mb-4">Proven Track Record</h2>
-          <p class="text-on-surface-variant text-lg max-w-2xl mx-auto">Real results from enterprise clients across UK and Europe.</p>
-        </div>
-        <div class="grid md:grid-cols-2 gap-8">
-          <div class="service-card reveal reveal-delay-1 card-hover">
-            <span class="tech-badge">Case Study</span>
-            <h3 class="text-2xl font-bold mt-4 mb-3">Financial Services Migration</h3>
-            <p class="text-on-surface-variant mb-6">Successfully migrated 200+ servers from legacy infrastructure to hybrid cloud with zero downtime during migration window.</p>
-            <div class="space-y-3 text-sm text-on-surface-variant mb-6">
-              <p><strong class="text-primary">Challenge:</strong> Outdated infrastructure costing £50k/month with critical compliance requirements</p>
-              <p><strong class="text-primary">Solution:</strong> Hybrid cloud architecture with dedicated compliance controls</p>
-              <p><strong class="text-primary">Result:</strong> 40% cost reduction, maintained 99.99% uptime during migration</p>
-            </div>
-            <a href="#" class="text-primary font-semibold flex items-center gap-2 hover:gap-3 transition-all">Read Full Case Study <span class="material-symbols-outlined" style="font-size: 18px;">arrow_forward</span></a>
-          </div>
-
-          <div class="service-card reveal reveal-delay-2 card-hover">
-            <span class="tech-badge">Case Study</span>
-            <h3 class="text-2xl font-bold mt-4 mb-3">E-Commerce Scale-Out</h3>
-            <p class="text-on-surface-variant mb-6">Architected elastic infrastructure handling 10x traffic growth during peak seasons with automatic scaling.</p>
-            <div class="space-y-3 text-sm text-on-surface-variant mb-6">
-              <p><strong class="text-primary">Challenge:</strong> Performance bottlenecks during peak shopping periods affecting revenue</p>
-              <p><strong class="text-primary">Solution:</strong> Kubernetes-based auto-scaling with CDN and caching strategies</p>
-              <p><strong class="text-primary">Result:</strong> 300% traffic capacity increase, zero downtime scaling events</p>
-            </div>
-            <a href="#" class="text-primary font-semibold flex items-center gap-2 hover:gap-3 transition-all">Read Full Case Study <span class="material-symbols-outlined" style="font-size: 18px;">arrow_forward</span></a>
-          </div>
-        </div>
+  <!-- APPROACH SECTION -->
+  <section class="relative w-full py-24 md:py-32 px-6 md:px-12 z-10">
+    <div class="max-w-[1440px] mx-auto">
+      <!-- Section header -->
+      <div class="mb-16 md:mb-24 reveal text-center">
+        <h2 class="font-headline text-4xl md:text-5xl font-bold mb-6 tracking-tighter">
+          OUR <span class="text-primary">APPROACH</span>
+        </h2>
+        <p class="text-zinc-400 text-lg max-w-2xl mx-auto">
+          No surprises. We follow a clear process so you know exactly what's happening and when.
+        </p>
       </div>
-    </section>
 
-    <!-- Support & Services -->
-    <section class="py-20 px-6 md:px-10 relative">
-      <div class="max-w-[1440px] mx-auto">
-        <div class="text-center mb-16 reveal">
-          <h2 class="text-4xl md:text-5xl font-bold mb-4">Ongoing Support & Services</h2>
-          <p class="text-on-surface-variant text-lg max-w-2xl mx-auto">Continuous optimization and expert support to keep your infrastructure running at peak performance.</p>
+      <!-- Timeline -->
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-4 relative">
+        <div class="reveal reveal-delay-1">
+          <div class="timeline-step" data-number="01">
+            <h3 class="font-headline text-xl font-bold mb-3">Audit & Assessment</h3>
+            <p class="text-zinc-400 text-sm leading-relaxed">
+              We look at what you've got, what's working, what isn't, and where the gaps are. You get a clear report with honest recommendations — no upselling.
+            </p>
+          </div>
         </div>
-        <div class="grid md:grid-cols-3 gap-6">
-          <div class="service-card reveal reveal-delay-1">
-            <div class="icon-circle">
-              <span class="material-symbols-outlined" style="font-size: 32px;">headset_mic</span>
-            </div>
-            <h3 class="text-2xl font-bold mb-2">24/7 Support</h3>
-            <p class="text-on-surface-variant mb-4">Round-the-clock monitoring and immediate response to any infrastructure issues, ensuring minimal downtime.</p>
-          </div>
 
-          <div class="service-card reveal reveal-delay-2">
-            <div class="icon-circle">
-              <span class="material-symbols-outlined" style="font-size: 32px;">trending_up</span>
-            </div>
-            <h3 class="text-2xl font-bold mb-2">Performance Tuning</h3>
-            <p class="text-on-surface-variant mb-4">Continuous optimization through capacity planning, load balancing adjustments, and resource allocation refinement.</p>
+        <div class="reveal reveal-delay-2">
+          <div class="timeline-step" data-number="02">
+            <h3 class="font-headline text-xl font-bold mb-3">Architecture & Design</h3>
+            <p class="text-zinc-400 text-sm leading-relaxed">
+              A practical plan that fits your budget and your business. We design around what you actually need now, with room to grow later.
+            </p>
           </div>
+        </div>
 
-          <div class="service-card reveal reveal-delay-3">
-            <div class="icon-circle">
-              <span class="material-symbols-outlined" style="font-size: 32px;">security</span>
-            </div>
-            <h3 class="text-2xl font-bold mb-2">Security Updates</h3>
-            <p class="text-on-surface-variant mb-4">Proactive patching, vulnerability management, and security audits to keep your infrastructure protected.</p>
+        <div class="reveal reveal-delay-3">
+          <div class="timeline-step" data-number="03">
+            <h3 class="font-headline text-xl font-bold mb-3">Implementation & Migration</h3>
+            <p class="text-zinc-400 text-sm leading-relaxed">
+              Hands-on deployment with minimal disruption. We do the heavy lifting, test everything, train your team, and document the lot.
+            </p>
           </div>
+        </div>
 
-          <div class="service-card reveal reveal-delay-4">
-            <div class="icon-circle">
-              <span class="material-symbols-outlined" style="font-size: 32px;">school</span>
-            </div>
-            <h3 class="text-2xl font-bold mb-2">Team Training</h3>
-            <p class="text-on-surface-variant mb-4">Comprehensive training programs enabling your team to manage and optimize the infrastructure independently.</p>
-          </div>
-
-          <div class="service-card reveal reveal-delay-1">
-            <div class="icon-circle">
-              <span class="material-symbols-outlined" style="font-size: 32px;">rule</span>
-            </div>
-            <h3 class="text-2xl font-bold mb-2">Compliance Support</h3>
-            <p class="text-on-surface-variant mb-4">Ensuring adherence to GDPR, ISO 27001, SOC 2, and industry-specific compliance requirements throughout your infrastructure.</p>
-          </div>
-
-          <div class="service-card reveal reveal-delay-2">
-            <div class="icon-circle">
-              <span class="material-symbols-outlined" style="font-size: 32px;">assess</span>
-            </div>
-            <h3 class="text-2xl font-bold mb-2">Regular Assessments</h3>
-            <p class="text-on-surface-variant mb-4">Quarterly infrastructure reviews identifying optimization opportunities, cost savings, and emerging risks.</p>
+        <div class="reveal reveal-delay-4">
+          <div class="timeline-step" data-number="04">
+            <h3 class="font-headline text-xl font-bold mb-3">Monitoring & Optimisation</h3>
+            <p class="text-zinc-400 text-sm leading-relaxed">
+              Ongoing monitoring, regular check-ins, and proactive maintenance. We catch problems before your team even notices.
+            </p>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- CTA Section -->
-    <section class="py-20 px-6 md:px-10 relative bg-gradient-to-b from-zinc-900/0 to-zinc-900/50">
-      <div class="max-w-[1440px] mx-auto text-center reveal">
-        <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to Transform Your Infrastructure?</h2>
-        <p class="text-on-surface-variant text-xl max-w-2xl mx-auto mb-10">Let's discuss how enterprise-grade infrastructure can accelerate your business and reduce operational costs.</p>
-        <div class="flex flex-col sm:flex-row justify-center gap-4">
-          <a href="#contact" class="cta-button">Schedule Free Consultation <span class="material-symbols-outlined" style="font-size: 20px;">arrow_forward</span></a>
-          <button class="px-6 py-3 border border-primary text-primary hover:bg-primary/10 rounded-full font-semibold transition-all">Download Infrastructure Guide</button>
+  <!-- TECHNOLOGY PARTNERS SECTION -->
+  <section class="relative w-full py-24 md:py-32 px-6 md:px-12 z-10">
+    <div class="max-w-[1440px] mx-auto">
+      <!-- Section header -->
+      <div class="mb-16 md:mb-20 reveal text-center">
+        <h2 class="font-headline text-4xl md:text-5xl font-bold mb-6 tracking-tighter">
+          TECHNOLOGY <span class="text-primary">PARTNERS</span>
+        </h2>
+        <p class="text-zinc-400 text-lg">Industry-leading platforms and tools we deploy and manage daily.</p>
+      </div>
+
+      <!-- Tech badges grid -->
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6 stagger-children">
+        <div class="flex justify-center">
+          <div class="tech-badge">
+            <span class="material-symbols-outlined mr-2 text-primary">cloud</span> Microsoft Azure
+          </div>
+        </div>
+        <div class="flex justify-center">
+          <div class="tech-badge">
+            <span class="material-symbols-outlined mr-2 text-primary">cloud</span> Amazon AWS
+          </div>
+        </div>
+        <div class="flex justify-center">
+          <div class="tech-badge">
+            <span class="material-symbols-outlined mr-2 text-primary">cloud</span> Google Cloud
+          </div>
+        </div>
+        <div class="flex justify-center">
+          <div class="tech-badge">
+            <span class="material-symbols-outlined mr-2 text-primary">router</span> Cisco
+          </div>
+        </div>
+        <div class="flex justify-center">
+          <div class="tech-badge">
+            <span class="material-symbols-outlined mr-2 text-primary">shield</span> Fortinet
+          </div>
+        </div>
+        <div class="flex justify-center">
+          <div class="tech-badge">
+            <span class="material-symbols-outlined mr-2 text-primary">router</span> Ubiquiti
+          </div>
+        </div>
+        <div class="flex justify-center">
+          <div class="tech-badge">
+            <span class="material-symbols-outlined mr-2 text-primary">server_person</span> VMware
+          </div>
+        </div>
+        <div class="flex justify-center">
+          <div class="tech-badge">
+            <span class="material-symbols-outlined mr-2 text-primary">backup</span> Veeam
+          </div>
+        </div>
+        <div class="flex justify-center">
+          <div class="tech-badge">
+            <span class="material-symbols-outlined mr-2 text-primary">security</span> SentinelOne
+          </div>
+        </div>
+        <div class="flex justify-center">
+          <div class="tech-badge">
+            <span class="material-symbols-outlined mr-2 text-primary">security</span> CrowdStrike
+          </div>
         </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
+
+  <!-- COVERAGE SECTION -->
+  <section class="relative w-full py-24 md:py-32 px-6 md:px-12 z-10">
+    <div class="max-w-[1440px] mx-auto">
+      <!-- Section header -->
+      <div class="mb-16 md:mb-20 reveal">
+        <h2 class="font-headline text-4xl md:text-5xl font-bold mb-6 tracking-tighter">
+          INFRASTRUCTURE SUPPORT ACROSS <span class="text-primary">THE UK</span>
+        </h2>
+        <p class="text-zinc-400 text-lg max-w-2xl">
+          Remote-first support with on-site capability when you need it. We work with businesses across England, Scotland, Wales, and Northern Ireland.
+        </p>
+      </div>
+
+      <!-- Location cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 stagger-children">
+        <div class="location-card reveal">
+          <h4 class="font-headline text-lg font-bold text-primary mb-2">London</h4>
+          <p class="text-sm text-zinc-400">Same-day on-site support available across Greater London and the South East.</p>
+        </div>
+        <div class="location-card reveal">
+          <h4 class="font-headline text-lg font-bold text-primary mb-2">Manchester</h4>
+          <p class="text-sm text-zinc-400">Serving the North West. Regional support for manufacturing, retail, and professional services.</p>
+        </div>
+        <div class="location-card reveal">
+          <h4 class="font-headline text-lg font-bold text-primary mb-2">Birmingham</h4>
+          <p class="text-sm text-zinc-400">Midlands coverage with on-site technical resources and rapid response capability.</p>
+        </div>
+        <div class="location-card reveal">
+          <h4 class="font-headline text-lg font-bold text-primary mb-2">Bristol</h4>
+          <p class="text-sm text-zinc-400">South West coverage for growing businesses across Bristol, Bath, and the wider region.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA SECTION -->
+  <section class="relative w-full py-24 md:py-32 px-6 md:px-12 z-10">
+    <div class="max-w-[1440px] mx-auto glass-card glow-primary border border-zinc-700/20 rounded-sm p-12 md:p-16 reveal text-center">
+      <h2 class="font-headline text-4xl md:text-5xl font-bold mb-6 tracking-tighter">
+        LET'S BUILD <span class="text-primary">YOUR INFRASTRUCTURE</span>
+      </h2>
+      <p class="text-lg md:text-xl text-zinc-400 max-w-2xl mx-auto mb-10">
+        Whether you're outgrowing your current setup, moving to the cloud, or just need someone reliable to look after things — let's talk.
+      </p>
+      <div class="flex flex-col md:flex-row gap-4 justify-center">
+        <a href="https://calendly.com/contact-utilistech" target="_blank" rel="noopener" class="bg-primary text-on-primary px-8 py-3.5 font-headline font-bold tracking-tight rounded-sm hover:brightness-110 transition-all active:scale-95 glow-primary no-underline">
+          Book a Discovery Call
+        </a>
+        <a href="/contact.html" class="border-2 border-primary text-primary px-8 py-3.5 font-headline font-bold tracking-tight rounded-sm hover:bg-primary/10 transition-all no-underline">
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </section>
 
   <!-- Footer -->
-  <footer class="relative z-10 border-t border-zinc-800/30 py-12 px-6 md:px-10">
-    <div class="max-w-[1440px] mx-auto">
-      <div class="grid md:grid-cols-4 gap-8 mb-12">
-        <div>
-          <h3 class="text-xl font-bold mb-4 uppercase text-primary">Utilis.<span class="text-on-surface">Tech</span></h3>
-          <p class="text-on-surface-variant text-sm">Enterprise IT infrastructure and consulting for forward-thinking businesses.</p>
-        </div>
-        <div>
-          <h4 class="font-semibold mb-4">Services</h4>
-          <ul class="space-y-2 text-sm text-on-surface-variant">
-            <li><a href="#" class="hover:text-primary transition-colors">Cloud Architecture</a></li>
-            <li><a href="#" class="hover:text-primary transition-colors">Infrastructure Design</a></li>
-            <li><a href="#" class="hover:text-primary transition-colors">Security Solutions</a></li>
-            <li><a href="#" class="hover:text-primary transition-colors">Managed Services</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="font-semibold mb-4">Company</h4>
-          <ul class="space-y-2 text-sm text-on-surface-variant">
-            <li><a href="#" class="hover:text-primary transition-colors">About</a></li>
-            <li><a href="#" class="hover:text-primary transition-colors">Case Studies</a></li>
-            <li><a href="#" class="hover:text-primary transition-colors">Blog</a></li>
-            <li><a href="#" class="hover:text-primary transition-colors">Contact</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="font-semibold mb-4">Legal</h4>
-          <ul class="space-y-2 text-sm text-on-surface-variant">
-            <li><a href="#" class="hover:text-primary transition-colors">Privacy Policy</a></li>
-            <li><a href="#" class="hover:text-primary transition-colors">Terms of Service</a></li>
-            <li><a href="#" class="hover:text-primary transition-colors">Cookies</a></li>
-            <li><a href="#" class="hover:text-primary transition-colors">GDPR</a></li>
-          </ul>
-        </div>
+  <footer class="w-full border-t border-zinc-800/30 bg-zinc-950 relative z-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 px-6 md:px-12 py-16 md:py-20 w-full">
+      <div class="flex flex-col gap-6">
+        <a href="/index.html" class="text-xl font-bold text-primary font-headline tracking-tighter uppercase no-underline">Utilis<span class="text-on-surface">.</span>Tech</a>
+        <p class="text-sm text-zinc-500 leading-relaxed">AI integration consultancy for UK businesses. Strategy, custom tools, deployment, and training.</p>
+        <a href="https://www.linkedin.com/in/dean-k-275b94133/" target="_blank" rel="noopener" class="w-8 h-8 rounded-full border border-zinc-800 flex items-center justify-center text-zinc-500 hover:text-primary transition-colors"><span class="material-symbols-outlined text-lg">person</span></a>
       </div>
-      <div class="border-t border-zinc-800/30 pt-8 flex flex-col md:flex-row justify-between items-center text-on-surface-variant text-sm">
-        <p>&copy; 2026 Utilis Technologies. All rights reserved.</p>
-        <div class="flex gap-4 mt-4 md:mt-0">
-          <a href="#" class="hover:text-primary transition-colors">LinkedIn</a>
-          <a href="#" class="hover:text-primary transition-colors">Twitter</a>
-          <a href="#" class="hover:text-primary transition-colors">GitHub</a>
-        </div>
+      <div class="flex flex-col gap-6">
+        <h5 class="font-headline font-bold text-sm uppercase tracking-widest text-zinc-200">Services</h5>
+        <ul class="space-y-3">
+          <li><a class="text-sm text-zinc-500 hover:text-zinc-200 hover:underline decoration-primary underline-offset-4 transition-all" href="/index.html#services">AI &amp; Automation</a></li>
+          <li><a class="text-sm text-zinc-500 hover:text-zinc-200 hover:underline decoration-primary underline-offset-4 transition-all" href="/solutions.html">Solutions</a></li>
+          <li><a class="text-sm text-zinc-500 hover:text-zinc-200 hover:underline decoration-primary underline-offset-4 transition-all" href="/how-we-work.html">How We Work</a></li>
+        </ul>
+      </div>
+      <div class="flex flex-col gap-6">
+        <h5 class="font-headline font-bold text-sm uppercase tracking-widest text-zinc-200">Company</h5>
+        <ul class="space-y-3">
+          <li><a class="text-sm text-zinc-500 hover:text-zinc-200 hover:underline decoration-primary underline-offset-4 transition-all" href="/about.html">About</a></li>
+          <li><a class="text-sm text-zinc-500 hover:text-zinc-200 hover:underline decoration-primary underline-offset-4 transition-all" href="/contact.html">Contact</a></li>
+          <li><a class="text-sm text-zinc-500 hover:text-zinc-200 hover:underline decoration-primary underline-offset-4 transition-all" href="/privacy-policy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="flex flex-col gap-6">
+        <h5 class="font-headline font-bold text-sm uppercase tracking-widest text-zinc-200">Insights</h5>
+        <ul class="space-y-3">
+          <li><a class="text-sm text-zinc-500 hover:text-zinc-200 hover:underline decoration-primary underline-offset-4 transition-all" href="/blog-1-claude-api.html">Choosing an AI Model</a></li>
+          <li><a class="text-sm text-zinc-500 hover:text-zinc-200 hover:underline decoration-primary underline-offset-4 transition-all" href="/blog-2-copilot-vs-custom.html">Copilot vs Custom AI</a></li>
+          <li><a class="text-sm text-zinc-500 hover:text-zinc-200 hover:underline decoration-primary underline-offset-4 transition-all" href="/blog-3-five-processes.html">5 Processes to Automate</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="px-6 md:px-12 py-6 border-t border-zinc-900 flex flex-col md:flex-row justify-between items-center gap-4">
+      <span class="text-[10px] tracking-[0.2em] text-zinc-600">&copy; 2026 UTILIS TECHNOLOGIES LIMITED. REGISTERED IN ENGLAND &amp; WALES.</span>
+      <div class="flex items-center gap-2">
+        <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+        <a href="https://ico.org.uk/" target="_blank" rel="noopener" class="text-[10px] tracking-[0.2em] text-zinc-400 hover:text-primary transition-colors">ICO REGISTRATION: 00013348807</a>
       </div>
     </div>
   </footer>
 
-  <!-- Intersection Observer for Reveal Animation -->
+  <!-- Scripts -->
   <script>
-    const revealElements = document.querySelectorAll('.reveal, .stagger-children');
+    // Enhanced reveal observer with stagger-children support
+    const reveals = document.querySelectorAll('.reveal, .stagger-children');
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
+      entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.1, rootMargin: '0px 0px -100px 0px' });
+    }, { threshold: 0.1 });
+    reveals.forEach(el => observer.observe(el));
 
-    revealElements.forEach((el) => observer.observe(el));
+    // Parallax effect on hero background
+    window.addEventListener('scroll', () => {
+      const hero = document.querySelector('.hero-bg');
+      if (hero) {
+        const scrolled = window.pageYOffset;
+        hero.style.transform = `translateY(${scrolled * 0.4}px)`;
+      }
+    });
 
-    // Parallax effect for hero section
-    const heroSection = document.querySelector('.hero-bg');
-    if (heroSection) {
-      window.addEventListener('scroll', () => {
-        const scrolled = window.scrollY;
-        heroSection.style.transform = `translateY(${scrolled * 0.5}px)`;
-      });
+    // Counter animation for stats
+    function animateCounter(el) {
+      const target = el.getAttribute('data-target');
+      const suffix = el.getAttribute('data-suffix') || '';
+      const isDecimal = target.includes('.');
+      const end = parseFloat(target);
+      const duration = 2000;
+      const start = performance.now();
+
+      function tick(now) {
+        const elapsed = now - start;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const current = isDecimal ? (eased * end).toFixed(1) : Math.floor(eased * end);
+        el.textContent = current + suffix;
+        if (progress < 1) requestAnimationFrame(tick);
+      }
+
+      requestAnimationFrame(tick);
     }
+
+    const counters = document.querySelectorAll('[data-target]');
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          counterObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    counters.forEach(el => counterObserver.observe(el));
   </script>
+
+  <!-- Chatbase widget -->
+  <script>window.chatbaseConfig = { chatbotId: "3nq0jRR8L0rHIxz-opcM4" };</script>
+  <script src="https://www.chatbase.co/embed.min.js" id="3nq0jRR8L0rHIxz-opcM4" defer></script>
 </body>
 </html>
