@@ -1,149 +1,301 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="dark" lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact — Emberline Studio</title>
-  <meta name="description" content="Get in touch with Emberline Studio. We'd love to hear about your project.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — AI Consultancy UK — Utilis Technologies</title>
+  <meta name="description" content="Get in touch with Utilis Technologies. Whether you're ready to start or just exploring, let's discuss how AI integration can work for your business." />
+  <link rel="canonical" href="https://utilistech.co.uk/contact.html" />
+  <meta property="og:title" content="Contact — AI Consultancy UK" />
+  <meta property="og:description" content="Get in touch with Utilis Technologies. Whether you're ready to start or just exploring, let's discuss how AI integration can work for your business." />
+  <meta property="og:url" content="https://utilistech.co.uk/contact.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Utilis Technologies" />
+  <meta property="og:image" content="https://utilistech.co.uk/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Contact — AI Consultancy UK" />
+  <meta name="twitter:description" content="Get in touch with Utilis Technologies. Whether you're ready to start or just exploring, let's discuss how AI integration can work for your business." />
+  <meta name="twitter:image" content="https://utilistech.co.uk/og-image.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
+  <script>
+    window.addEventListener('load', function() {
+      try {
+        if (typeof Calendly !== 'undefined') {
+          Calendly.initBadgeWidget({ url: 'https://calendly.com/contact-utilistech/30min', text: 'Book a Free Call', color: '#42dec3', textColor: '#131313', branding: false });
+        }
+      } catch(e) {}
+    });
+  </script>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface": "#131313",
+            "surface-dim": "#131313",
+            "surface-container-lowest": "#0e0e0e",
+            "surface-container-low": "#1c1b1b",
+            "surface-container": "#201f1f",
+            "surface-container-high": "#2a2a2a",
+            "surface-container-highest": "#353534",
+            "surface-variant": "#353534",
+            "surface-bright": "#3a3939",
+            "on-surface": "#e5e2e1",
+            "on-surface-variant": "#bbcac4",
+            "primary": "#42dec3",
+            "primary-container": "#00c2a8",
+            "on-primary": "#00382f",
+            "secondary": "#a4c9ff",
+            "secondary-container": "#1a92ff",
+            "outline": "#85948f",
+            "outline-variant": "#3c4a46",
+            "background": "#131313",
+            "on-background": "#e5e2e1",
+            "error": "#ffb4ab",
+          },
+          fontFamily: {
+            "headline": ["Space Grotesk", "sans-serif"],
+            "body": ["Inter", "sans-serif"],
+          },
+          borderRadius: { DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem" },
+        },
+      },
+    };
+  </script>
+  <style>
+    body { background-color: #131313; color: #e5e2e1; font-family: 'Inter', sans-serif; }
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+    .glass-card { background: rgba(53, 53, 52, 0.4); backdrop-filter: blur(20px); }
+    .glow-primary { box-shadow: 0 0 20px rgba(66, 222, 195, 0.15); }
+    .text-glow { text-shadow: 0 0 30px rgba(66, 222, 195, 0.3); }
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+    #nav-toggle { display: none; }
+    #nav-toggle:checked ~ .mobile-menu { display: flex; }
+    #nav-toggle:checked ~ nav .hamburger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    #nav-toggle:checked ~ nav .hamburger span:nth-child(2) { opacity: 0; }
+    #nav-toggle:checked ~ nav .hamburger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    input:focus, textarea:focus { outline: none; }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Utilis Technologies",
+    "url": "https://utilistech.co.uk",
+    "description": "AI integration consultancy for UK businesses — strategy, custom tools, deployment, and training.",
+    "email": "contact@utilistech.co.uk",
+    "areaServed": "GB",
+    "priceRange": "££",
+    "founder": {
+      "@type": "Person",
+      "name": "Dean Kewley"
+    }
+  }
+  </script>
 </head>
 <body>
+<input type="checkbox" id="nav-toggle" aria-hidden="true">
 
-  <nav class="navbar" id="navbar">
-    <div class="container navbar__inner">
-      <a href="index.html" class="navbar__logo">Emberline</a>
-      <ul class="navbar__links" id="navLinks">
-        <li><a href="work.html">Work</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
+<!-- NAV -->
+<nav class="fixed top-0 left-0 w-full z-50 bg-zinc-950/60 backdrop-blur-2xl border-b border-zinc-800/30">
+  <div class="flex justify-between items-center w-full px-6 md:px-10 py-4 max-w-[1440px] mx-auto">
+    <a href="/index.html" class="text-xl font-bold tracking-tighter text-primary uppercase font-headline no-underline">Utilis<span class="text-on-surface">.</span>Tech</a>
+    <div class="hidden md:flex items-center gap-10 font-headline font-medium tracking-tight text-sm">
+      <a class="text-zinc-400 hover:text-primary transition-colors" href="#services">Services</a>
+      <a class="text-zinc-400 hover:text-primary transition-colors" href="/solutions.html">Solutions</a>
+      <a class="text-zinc-400 hover:text-primary transition-colors" href="/how-we-work.html">How We Work</a>
+      <a class="text-zinc-400 hover:text-primary transition-colors" href="/about.html">About</a>
+      <a class="text-zinc-400 hover:text-primary transition-colors" href="/contact.html">Contact</a>
+    </div>
+    <div class="flex items-center gap-4">
+      <a href="https://calendly.com/contact-utilistech" target="_blank" rel="noopener" class="hidden md:inline-flex bg-primary text-on-primary px-6 py-2.5 font-headline font-bold tracking-tight text-sm rounded-sm hover:brightness-110 transition-all active:scale-95 glow-primary no-underline">Book a Call</a>
+      <label for="nav-toggle" class="hamburger md:hidden flex flex-col gap-[5px] cursor-pointer p-2 z-[1001]" aria-label="Menu">
+        <span class="block w-6 h-0.5 bg-on-surface rounded transition-all"></span>
+        <span class="block w-6 h-0.5 bg-on-surface rounded transition-all"></span>
+        <span class="block w-6 h-0.5 bg-on-surface rounded transition-all"></span>
+      </label>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu hidden fixed inset-0 z-40 bg-surface flex-col items-center justify-center gap-0">
+  <a class="w-full text-center py-5 text-lg font-headline font-medium text-on-surface border-b border-zinc-800/30 hover:text-primary transition-colors" href="#services">Services</a>
+  <a class="w-full text-center py-5 text-lg font-headline font-medium text-on-surface border-b border-zinc-800/30 hover:text-primary transition-colors" href="/solutions.html">Solutions</a>
+  <a class="w-full text-center py-5 text-lg font-headline font-medium text-on-surface border-b border-zinc-800/30 hover:text-primary transition-colors" href="/how-we-work.html">How We Work</a>
+  <a class="w-full text-center py-5 text-lg font-headline font-medium text-on-surface border-b border-zinc-800/30 hover:text-primary transition-colors" href="/about.html">About</a>
+  <a class="w-full text-center py-5 text-lg font-headline font-medium text-on-surface border-b border-zinc-800/30 hover:text-primary transition-colors" href="/contact.html">Contact</a>
+  <a href="https://calendly.com/contact-utilistech" target="_blank" rel="noopener" class="mt-8 bg-primary text-on-primary px-10 py-4 font-headline font-bold text-base rounded-sm no-underline">Book a Call</a>
+</div>
+
+<!-- PAGE HERO -->
+<header class="relative pt-32 pb-16 md:pt-40 md:pb-20 border-b border-zinc-800/30">
+  <div class="container mx-auto px-6 md:px-10 relative z-10">
+    <div class="max-w-2xl">
+      <p class="text-[10px] uppercase tracking-[0.2em] font-bold text-primary mb-6 reveal">Contact</p>
+      <h1 class="font-headline text-5xl md:text-7xl font-bold leading-[0.95] tracking-tighter mb-6 text-on-surface reveal reveal-delay-1">LET'S TALK.</h1>
+      <p class="font-body text-lg md:text-xl text-on-surface-variant max-w-xl leading-relaxed reveal reveal-delay-2">Whether you're ready to start or just exploring, we're happy to have an honest conversation about where AI fits in your business.</p>
+    </div>
+  </div>
+</header>
+
+<!-- CONTACT SECTION -->
+<section class="py-20 md:py-28 relative z-10">
+  <div class="container mx-auto px-6 md:px-10">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+
+      <!-- LEFT COLUMN: FORM -->
+      <div class="reveal">
+        <form action="https://formspree.io/f/xyknwrpb" method="POST" class="space-y-6">
+          <div>
+            <label for="name" class="block text-xs font-bold text-on-surface uppercase tracking-widest mb-3">Name <span class="text-primary">*</span></label>
+            <input type="text" id="name" name="name" required placeholder="Your name" class="w-full bg-surface-container-low border border-zinc-800/30 text-on-surface rounded-sm px-4 py-3 font-body text-sm placeholder:text-zinc-600 focus:border-primary focus:ring-1 focus:ring-primary/30 transition-all" />
+          </div>
+
+          <div>
+            <label for="email" class="block text-xs font-bold text-on-surface uppercase tracking-widest mb-3">Email <span class="text-primary">*</span></label>
+            <input type="email" id="email" name="email" required placeholder="you@company.com" class="w-full bg-surface-container-low border border-zinc-800/30 text-on-surface rounded-sm px-4 py-3 font-body text-sm placeholder:text-zinc-600 focus:border-primary focus:ring-1 focus:ring-primary/30 transition-all" />
+          </div>
+
+          <div>
+            <label for="company" class="block text-xs font-bold text-on-surface uppercase tracking-widest mb-3">Company Name</label>
+            <input type="text" id="company" name="company" placeholder="Your company (optional)" class="w-full bg-surface-container-low border border-zinc-800/30 text-on-surface rounded-sm px-4 py-3 font-body text-sm placeholder:text-zinc-600 focus:border-primary focus:ring-1 focus:ring-primary/30 transition-all" />
+          </div>
+
+          <div>
+            <label for="message" class="block text-xs font-bold text-on-surface uppercase tracking-widest mb-3">Message <span class="text-primary">*</span></label>
+            <textarea id="message" name="message" required placeholder="Tell us a bit about what you're working on..." class="w-full bg-surface-container-low border border-zinc-800/30 text-on-surface rounded-sm px-4 py-3 font-body text-sm placeholder:text-zinc-600 focus:border-primary focus:ring-1 focus:ring-primary/30 transition-all resize-vertical min-h-[140px]"></textarea>
+          </div>
+
+          <button type="submit" class="w-full bg-primary text-on-primary font-headline font-bold text-sm px-8 py-4 rounded-sm hover:brightness-110 transition-all active:scale-95 uppercase tracking-widest glow-primary">Send Message</button>
+
+          <div class="pt-6 border-t border-zinc-800/30">
+            <p class="text-xs text-zinc-500 leading-relaxed">We'll never share your details with third parties. See our <a href="/privacy-policy.html" class="text-primary hover:underline">privacy policy</a>.</p>
+          </div>
+        </form>
+      </div>
+
+      <!-- RIGHT COLUMN: CONTACT CARDS -->
+      <div class="space-y-6">
+        <!-- BOOK DISCOVERY CALL -->
+        <div class="glass-card p-8 group hover:bg-surface-container-high transition-all duration-500 reveal">
+          <div class="flex items-start gap-4 mb-4">
+            <span class="material-symbols-outlined text-primary text-3xl mt-1">calendar_today</span>
+            <div class="flex-1">
+              <h3 class="font-headline font-bold text-lg tracking-tighter uppercase mb-2 text-on-surface">Book a Free Discovery Call</h3>
+              <p class="text-on-surface-variant text-sm leading-relaxed mb-4">Have a 30-minute conversation with Dean about your AI needs. No pitch, no obligation — just an honest discussion about what's possible.</p>
+              <a href="https://calendly.com/contact-utilistech/30min" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-primary font-headline font-bold text-xs uppercase tracking-widest hover:translate-x-1 transition-transform no-underline">
+                Schedule Now
+                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- EMAIL US -->
+        <div class="glass-card p-8 group hover:bg-surface-container-high transition-all duration-500 reveal reveal-delay-1">
+          <div class="flex items-start gap-4 mb-4">
+            <span class="material-symbols-outlined text-secondary text-3xl mt-1">mail</span>
+            <div class="flex-1">
+              <h3 class="font-headline font-bold text-lg tracking-tighter uppercase mb-2 text-on-surface">Email Us</h3>
+              <p class="text-on-surface-variant text-sm leading-relaxed mb-4">Prefer email? Drop us a line and we'll get back to you within one business day.</p>
+              <a href="mailto:contact@utilistech.co.uk" class="inline-flex items-center gap-2 text-primary font-headline font-bold text-xs uppercase tracking-widest hover:translate-x-1 transition-transform no-underline">
+                contact@utilistech.co.uk
+                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- LINKEDIN -->
+        <div class="glass-card p-8 group hover:bg-surface-container-high transition-all duration-500 reveal reveal-delay-2">
+          <div class="flex items-start gap-4 mb-4">
+            <span class="material-symbols-outlined text-secondary text-3xl mt-1">link</span>
+            <div class="flex-1">
+              <h3 class="font-headline font-bold text-lg tracking-tighter uppercase mb-2 text-on-surface">Connect on LinkedIn</h3>
+              <p class="text-on-surface-variant text-sm leading-relaxed mb-4">Get to know Dean better, see what we're working on, and connect with the Utilis Technologies team.</p>
+              <a href="https://www.linkedin.com/in/dean-k-275b94133/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-primary font-headline font-bold text-xs uppercase tracking-widest hover:translate-x-1 transition-transform no-underline">
+                View Profile
+                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="w-full border-t border-zinc-800/30 bg-zinc-950 relative z-10">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 px-6 md:px-12 py-16 md:py-20 w-full">
+    <div class="flex flex-col gap-6">
+      <a href="/index.html" class="text-xl font-bold text-primary font-headline tracking-tighter uppercase no-underline">Utilis<span class="text-on-surface">.</span>Tech</a>
+      <p class="text-sm text-zinc-500 leading-relaxed">AI integration consultancy for UK businesses. Strategy, custom tools, deployment, and training.</p>
+      <a href="https://www.linkedin.com/in/dean-k-275b94133/" target="_blank" rel="noopener" class="w-8 h-8 rounded-full border border-zinc-800 flex items-center justify-center text-zinc-500 hover:text-primary transition-colors"><span class="material-symbols-outlined text-lg">person</span></a>
+    </div>
+    <div class="flex flex-col gap-6">
+      <h5 class="font-headline font-bold text-sm uppercase tracking-widest text-zinc-200">Services</h5>
+      <ul class="space-y-3">
+        <li><a class="text-sm text-zinc-500 hover:text-zinc-200 hover:underline decoration-primary underline-offset-4 transition-all" href="/index.html#services">AI &amp; Automation</a></li>
+        <li><a class="text-sm text-zinc-500 hover:text-zinc-200 hover:underline decoration-primary underline-offset-4 transition-all" href="/solutions.html">Solutions</a></li>
+        <li><a class="text-sm text-zinc-500 hover:text-zinc-200 hover:underline decoration-primary underline-offset-4 transition-all" href="/how-we-work.html">How We Work</a></li>
       </ul>
-      <button class="navbar__toggle" id="navToggle" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
     </div>
-  </nav>
-
-  <section class="page-header">
-    <span class="page-header__eyebrow">Let's Talk</span>
-    <h1>Get in Touch</h1>
-    <p>Every project starts with a conversation. Tell us where you are and where you'd like to be.</p>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="contact-layout">
-
-        <div class="contact-info">
-          <h3>We'd love to<br>hear from you</h3>
-          <div class="divider"></div>
-
-          <div class="contact-detail">
-            <span class="contact-detail__label">General Enquiries</span>
-            <a href="mailto:hello@emberline.studio">hello@emberline.studio</a>
-          </div>
-
-          <div class="contact-detail">
-            <span class="contact-detail__label">New Business</span>
-            <a href="mailto:projects@emberline.studio">projects@emberline.studio</a>
-          </div>
-
-          <div class="contact-detail">
-            <span class="contact-detail__label">London</span>
-            <p style="color: var(--charcoal);">Ember House, 14 Shoreditch High Street<br>London E1 6PG</p>
-          </div>
-
-          <div class="contact-detail">
-            <span class="contact-detail__label">New York</span>
-            <p style="color: var(--charcoal);">Suite 400, 55 West 21st Street<br>New York, NY 10010</p>
-          </div>
-
-          <div class="contact-detail">
-            <span class="contact-detail__label">Follow Us</span>
-            <div style="display: flex; gap: 1.5rem; margin-top: 0.25rem;">
-              <a href="#" style="color: var(--charcoal);">LinkedIn</a>
-              <a href="#" style="color: var(--charcoal);">Instagram</a>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <form class="form" id="contactForm">
-            <div class="form__row">
-              <div class="form__group">
-                <label class="form__label" for="name">Name</label>
-                <input class="form__input" type="text" id="name" name="name" placeholder="Your full name" required>
-              </div>
-              <div class="form__group">
-                <label class="form__label" for="email">Email</label>
-                <input class="form__input" type="email" id="email" name="email" placeholder="you@company.com" required>
-              </div>
-            </div>
-            <div class="form__group">
-              <label class="form__label" for="company">Company</label>
-              <input class="form__input" type="text" id="company" name="company" placeholder="Your company or brand">
-            </div>
-            <div class="form__group">
-              <label class="form__label" for="services">What do you need help with?</label>
-              <input class="form__input" type="text" id="services" name="services" placeholder="Brand strategy, identity, digital, campaign...">
-            </div>
-            <div class="form__group">
-              <label class="form__label" for="message">Tell us about your project</label>
-              <textarea class="form__textarea" id="message" name="message" placeholder="What are you working on? What does success look like?" required></textarea>
-            </div>
-            <div class="form__group">
-              <label class="form__label" for="budget">Indicative Budget</label>
-              <input class="form__input" type="text" id="budget" name="budget" placeholder="Helps us understand scope — no commitment required">
-            </div>
-            <button type="submit" class="btn btn--filled" style="align-self: flex-start;">Send Enquiry <span>&rarr;</span></button>
-          </form>
-        </div>
-
-      </div>
+    <div class="flex flex-col gap-6">
+      <h5 class="font-headline font-bold text-sm uppercase tracking-widest text-zinc-200">Company</h5>
+      <ul class="space-y-3">
+        <li><a class="text-sm text-zinc-500 hover:text-zinc-200 hover:underline decoration-primary underline-offset-4 transition-all" href="/about.html">About</a></li>
+        <li><a class="text-sm text-zinc-500 hover:text-zinc-200 hover:underline decoration-primary underline-offset-4 transition-all" href="/contact.html">Contact</a></li>
+        <li><a class="text-sm text-zinc-500 hover:text-zinc-200 hover:underline decoration-primary underline-offset-4 transition-all" href="/privacy-policy.html">Privacy Policy</a></li>
+      </ul>
     </div>
-  </section>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__grid">
-        <div class="footer__brand">
-          <span class="footer__logo">Emberline</span>
-          <p>A women-founded creative consultancy for ambitious brands. London &amp; New York.</p>
-        </div>
-        <div>
-          <h4>Studio</h4>
-          <ul class="footer__links">
-            <li><a href="work.html">Work</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Services</h4>
-          <ul class="footer__links">
-            <li><a href="#">Brand Strategy</a></li>
-            <li><a href="#">Visual Identity</a></li>
-            <li><a href="#">Digital Experience</a></li>
-            <li><a href="#">Campaigns</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Connect</h4>
-          <ul class="footer__links">
-            <li><a href="mailto:hello@emberline.studio">hello@emberline.studio</a></li>
-            <li><a href="#">LinkedIn</a></li>
-            <li><a href="#">Instagram</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer__bottom">
-        <span>&copy; 2026 Emberline Studio. All rights reserved.</span>
-        <span>London &middot; New York</span>
-      </div>
+    <div class="flex flex-col gap-6">
+      <h5 class="font-headline font-bold text-sm uppercase tracking-widest text-zinc-200">Insights</h5>
+      <ul class="space-y-3">
+        <li><a class="text-sm text-zinc-500 hover:text-zinc-200 hover:underline decoration-primary underline-offset-4 transition-all" href="/blog-1-claude-api.html">Choosing an AI Model</a></li>
+        <li><a class="text-sm text-zinc-500 hover:text-zinc-200 hover:underline decoration-primary underline-offset-4 transition-all" href="/blog-2-copilot-vs-custom.html">Copilot vs Custom AI</a></li>
+        <li><a class="text-sm text-zinc-500 hover:text-zinc-200 hover:underline decoration-primary underline-offset-4 transition-all" href="/blog-3-five-processes.html">5 Processes to Automate</a></li>
+      </ul>
     </div>
-  </footer>
+  </div>
+  <div class="px-6 md:px-12 py-6 border-t border-zinc-900 flex flex-col md:flex-row justify-between items-center gap-4">
+    <span class="text-[10px] tracking-[0.2em] text-zinc-600">&copy; 2026 UTILIS TECHNOLOGIES LIMITED. REGISTERED IN ENGLAND &amp; WALES.</span>
+    <div class="flex items-center gap-2">
+      <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+      <a href="https://ico.org.uk/" target="_blank" rel="noopener" class="text-[10px] tracking-[0.2em] text-zinc-400 hover:text-primary transition-colors">ICO REGISTRATION: 00013348807</a>
+    </div>
+  </div>
+</footer>
 
-  <script src="js/main.js"></script>
+<script>
+  document.body.classList.add('js-loaded');
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(el => observer.observe(el));
+</script>
+
+<script>window.chatbaseConfig = { chatbotId: "3nq0jRR8L0rHIxz-opcM4" };</script>
+<script src="https://www.chatbase.co/embed.min.js" id="3nq0jRR8L0rHIxz-opcM4" defer></script>
+
 </body>
 </html>
