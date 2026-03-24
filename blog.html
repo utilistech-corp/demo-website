@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Utilistech - AI Insights for Enterprise</title>
+    <meta name="description" content="Expert insights on AI adoption, governance, and implementation for enterprise organizations.">
+    <meta name="keywords" content="AI blog, enterprise AI, AI governance, digital transformation">
+    <meta name="author" content="Utilistech">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fafafa;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+        
+        nav {
+            background: #fff;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: #667eea;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        nav a:hover {
+            color: #764ba2;
+        }
+        
+        main {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 1rem;
+        }
+        
+        .hero {
+            background: white;
+            border-radius: 8px;
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        
+        .hero h2 {
+            font-size: 1.8rem;
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .blog-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+        }
+        
+        .blog-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 2rem 1.5rem;
+            color: white;
+            min-height: 120px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .blog-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .blog-category {
+            font-size: 0.85rem;
+            opacity: 0.9;
+            font-weight: 500;
+        }
+        
+        .blog-content {
+            padding: 1.5rem;
+        }
+        
+        .blog-content h3 {
+            color: #333;
+            margin-bottom: 0.75rem;
+            font-size: 1.25rem;
+        }
+        
+        .blog-content p {
+            color: #666;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+        
+        .blog-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1rem;
+            border-top: 1px solid #eee;
+            font-size: 0.9rem;
+            color: #999;
+        }
+        
+        .read-more {
+            color: #667eea;
+            font-weight: 500;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .read-more:hover {
+            color: #764ba2;
+        }
+        
+        .tag {
+            display: inline-block;
+            background: #f0f4ff;
+            color: #667eea;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+            margin-right: 0.5rem;
+        }
+        
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+        }
+        
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+        
+        .reveal {
+            opacity: 0;
+            animation: reveal 0.6s ease forwards;
+        }
+        
+        @keyframes reveal {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            nav {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Blog</h1>
+        <p>Insights and expertise on AI adoption, governance, and transformation</p>
+    </header>
+    
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="blog.html">Blog</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+    
+    <main>
+        <div class="hero">
+            <h2>Latest Insights on Enterprise AI</h2>
+            <p>Discover how leading organizations are successfully adopting, implementing, and governing AI technologies to drive business value and competitive advantage.</p>
+        </div>
+        
+        <div class="blog-grid">
+            <div class="blog-card reveal">
+                <div class="blog-header">
+                    <div class="blog-number">1</div>
+                    <div class="blog-category">FOUNDATIONAL</div>
+                </div>
+                <div class="blog-content">
+                    <h3>Getting Started with Enterprise AI</h3>
+                    <p>An introduction to AI concepts, business applications, and the key decisions organizations need to make when starting their AI journey.</p>
+                    <div class="tag">Beginner</div>
+                    <div class="tag">Strategy</div>
+                    <div class="blog-meta">
+                        <span>5 min read</span>
+                        <a href="#" class="read-more">Read →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="blog-card reveal">
+                <div class="blog-header">
+                    <div class="blog-number">2</div>
+                    <div class="blog-category">IMPLEMENTATION</div>
+                </div>
+                <div class="blog-content">
+                    <h3>Building Your First AI Use Case</h3>
+                    <p>A practical guide to identifying, scoping, and implementing your organization's first AI project with realistic timelines and resource planning.</p>
+                    <div class="tag">Implementation</div>
+                    <div class="tag">How-to</div>
+                    <div class="blog-meta">
+                        <span>8 min read</span>
+                        <a href="#" class="read-more">Read →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="blog-card reveal">
+                <div class="blog-header">
+                    <div class="blog-number">3</div>
+                    <div class="blog-category">TECHNOLOGY</div>
+                </div>
+                <div class="blog-content">
+                    <h3>Modern AI Architecture and Tools</h3>
+                    <p>Exploring current AI platforms, frameworks, and infrastructure patterns that enable enterprise-scale AI implementation and MLOps.</p>
+                    <div class="tag">Technology</div>
+                    <div class="tag">Technical</div>
+                    <div class="blog-meta">
+                        <span>10 min read</span>
+                        <a href="#" class="read-more">Read →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="blog-card reveal">
+                <div class="blog-header">
+                    <div class="blog-number">4</div>
+                    <div class="blog-category">GOVERNANCE</div>
+                </div>
+                <div class="blog-content">
+                    <h3>AI Policy & Compliance for Businesses</h3>
+                    <p>Navigate AI governance, compliance, and risk management frameworks for responsible and sustainable enterprise AI adoption.</p>
+                    <div class="tag">Governance</div>
+                    <div class="tag">Risk</div>
+                    <div class="blog-meta">
+                        <span>9 min read</span>
+                        <a href="blog-4-ai-policy.html" class="read-more">Read →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="blog-card reveal">
+                <div class="blog-header">
+                    <div class="blog-number">5</div>
+                    <div class="blog-category">ASSESSMENT</div>
+                </div>
+                <div class="blog-content">
+                    <h3>AI Readiness Checklist for Enterprises</h3>
+                    <p>A comprehensive checklist to assess your organization's readiness for AI adoption across strategy, data, talent, governance, and technology.</p>
+                    <div class="tag">Assessment</div>
+                    <div class="tag">Planning</div>
+                    <div class="blog-meta">
+                        <span>7 min read</span>
+                        <a href="blog-5-ai-readiness.html" class="read-more">Read →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="blog-card reveal">
+                <div class="blog-header">
+                    <div class="blog-number">6</div>
+                    <div class="blog-category">PEOPLE</div>
+                </div>
+                <div class="blog-content">
+                    <h3>AI Awareness and Employee Productivity</h3>
+                    <p>How AI awareness training enhances productivity and prepares employees for the future of work with AI as a collaborative tool.</p>
+                    <div class="tag">Learning</div>
+                    <div class="tag">Culture</div>
+                    <div class="blog-meta">
+                        <span>8 min read</span>
+                        <a href="blog-6-ai-awareness.html" class="read-more">Read →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Utilistech. All rights reserved.</p>
+        <p>Advancing responsible AI adoption for enterprise success.</p>
+    </footer>
+    
+    <script>
+        // Add staggered reveal animation
+        const cards = document.querySelectorAll('.blog-card');
+        cards.forEach((card, index) => {
+            card.style.animationDelay = `${index * 0.1}s`;
+        });
+    </script>
+</body>
+</html>
