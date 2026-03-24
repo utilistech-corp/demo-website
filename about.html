@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+  <meta />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Dean Kewley — AI Integration Consultant UK — Utilis Technologies</title>
   <meta name="description" content="Dean Kewley is an AI integration consultant and founder of Utilis Technologies, helping UK businesses adopt AI safely and effectively — from strategy and governance to hands-on implementation." />
@@ -18,8 +22,7 @@
   <meta name="twitter:image" content="https://utilistech.co.uk/og-image.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
   <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
   <script type="text/javascript">
@@ -29,7 +32,7 @@
       Calendly.initBadgeWidget({
         url: 'https://calendly.com/contact-utilistech/30min',
         text: 'Book a Free Call',
-        color: '#42dec3',
+        color: '#00c2a8',
         textColor: '#000000',
         branding: false
       });
@@ -37,38 +40,56 @@
       } catch(e) {}
     }
   </script>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --primary: #42dec3;
-      --primary-dark: #2db3a3;
-      --secondary: #a4c9ff;
-      --accent-pink: #ff4f8f;
-      --surface-1: #0a0a0a;
-      --surface-2: #121212;
-      --surface-3: #1a1a1a;
-      --surface-4: #242424;
-      --text-primary: #ffffff;
-      --text-secondary: #b0b0b0;
-      --text-tertiary: #707070;
-      --border-color: rgba(255, 255, 255, 0.08);
-      --border-hover: rgba(255, 255, 255, 0.16);
-      --glass-bg: rgba(18, 18, 18, 0.5);
+      --bg: #080808;
+      --bg2: #0f0f0f;
+      --bg3: #141414;
+      --border: rgba(255,255,255,0.07);
+      --border-hover: rgba(255,255,255,0.15);
+      --text: #e8e8e8;
+      --text-muted: #666;
+      --text-dim: #b0b0b0;
+      --accent: #00c2a8;
+      --accent2: #0090ff;
+      --accent-glow: rgba(0, 194, 168, 0.15);
+      --font-display: 'Syne', sans-serif;
+      --font-body: 'DM Sans', sans-serif;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    /* ── Unified Nav ── */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); background: rgba(19,19,19,0.6); border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .nav-inner { display: flex; justify-content: space-between; align-items: center; max-width: 1440px; margin: 0 auto; padding: 16px 24px; }
+    @media (min-width: 768px) { .nav-inner { padding: 16px 40px; } }
+    .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; white-space: nowrap; }
+    .nav-logo .logo-mark { flex-shrink: 0; }
+    .nav-logo-text { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 18px; line-height: 1.1; letter-spacing: -0.04em; color: #fff; }
+    .nav-logo-name { display: block; }
+    .nav-logo-sub { display: block; font-weight: 400; font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: #42dec3; margin-top: 1px; }
+    .nav-links { display: none; list-style: none; gap: 40px; margin: 0; padding: 0; }
+    @media (min-width: 768px) { .nav-links { display: flex; } }
+    .nav-links a { font-family: 'Space Grotesk', sans-serif; font-size: 14px; font-weight: 500; color: #9ca3af; text-decoration: none; transition: color 0.2s; letter-spacing: -0.01em; }
+    .nav-links a:hover { color: #42dec3; }
+    .nav-right { display: flex; align-items: center; gap: 16px; }
+    .nav-cta { display: none; font-family: 'Space Grotesk', sans-serif; font-size: 14px; font-weight: 700; background: #42dec3; color: #00382f; padding: 10px 24px; border-radius: 2px; text-decoration: none; letter-spacing: -0.01em; transition: filter 0.2s; white-space: nowrap; }
+    @media (min-width: 768px) { .nav-cta { display: inline-flex; } }
+    .nav-cta:hover { filter: brightness(1.1); }
+    .nav-label { display: flex; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; z-index: 1001; }
+    @media (min-width: 768px) { .nav-label { display: none; } }
+    .nav-label span { display: block; width: 24px; height: 2px; background: #e5e2e1; border-radius: 2px; transition: all 0.3s; }
+    #nav-toggle:checked ~ nav .nav-label span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    #nav-toggle:checked ~ nav .nav-label span:nth-child(2) { opacity: 0; }
+    #nav-toggle:checked ~ nav .nav-label span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    html { scroll-behavior: smooth; }
 
     body {
-      background: var(--surface-1);
-      color: var(--text-primary);
-      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
       font-size: 16px;
       line-height: 1.6;
       overflow-x: hidden;
@@ -79,126 +100,76 @@
       content: '';
       position: fixed;
       inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.02'/%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
       pointer-events: none;
       z-index: 1000;
+      opacity: 0.4;
     }
 
     .grid-bg {
       position: fixed;
       inset: 0;
       background-image:
-        linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
       background-size: 60px 60px;
       pointer-events: none;
       z-index: 0;
     }
 
     /* ── NAV ── */
-    nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      padding: 20px 48px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border-color);
-      background: rgba(10, 10, 10, 0.8);
-    }
-
-    .nav-logo {
-      font-family: 'Space Grotesk', sans-serif;
-      font-weight: 700;
-      font-size: 18px;
-      color: var(--text-primary);
-      text-decoration: none;
-      letter-spacing: -0.3px;
-    }
-    .nav-logo span { color: var(--primary); }
-
-    .nav-links { display: flex; gap: 36px; list-style: none; }
-    .nav-links a {
-      font-size: 14px;
-      color: var(--text-tertiary);
-      text-decoration: none;
-      font-weight: 400;
-      letter-spacing: 0.2px;
-      transition: color 0.2s;
-    }
-    .nav-links a:hover { color: var(--text-primary); }
-
-    .nav-cta {
-      background: var(--primary);
-      color: #000 !important;
-      padding: 9px 20px;
-      border-radius: 6px;
-      font-weight: 500 !important;
-      font-size: 13px !important;
-      transition: opacity 0.2s !important;
-    }
-    .nav-cta:hover { opacity: 0.85; color: #000 !important; }
 
     section { position: relative; z-index: 1; }
 
     .container {
-      max-width: 1200px;
+      max-width: 1160px;
       margin: 0 auto;
       padding: 0 48px;
     }
 
     /* ── SHARED TYPE ── */
     .section-label {
-      font-family: 'Space Grotesk', sans-serif;
+      font-family: var(--font-display);
       font-size: 11px;
       font-weight: 600;
       letter-spacing: 3px;
       text-transform: uppercase;
-      color: var(--primary);
+      color: var(--accent);
       margin-bottom: 16px;
     }
 
-    h1, h2, h3 {
-      font-family: 'Space Grotesk', sans-serif;
+    h1, h2 {
+      font-family: var(--font-display);
       letter-spacing: -1px;
-      color: var(--text-primary);
-    }
-
-    h1 {
-      font-size: clamp(40px, 5vw, 64px);
-      font-weight: 700;
-      line-height: 1.05;
-      margin-bottom: 24px;
+      color: #fff;
     }
 
     h2 {
       font-size: clamp(32px, 4vw, 52px);
-      font-weight: 700;
+      font-weight: 800;
       line-height: 1.08;
-      margin-bottom: 32px;
     }
 
     h3 {
+      font-family: var(--font-display);
       font-size: 18px;
       font-weight: 700;
       letter-spacing: -0.3px;
+      color: #fff;
       margin-bottom: 8px;
     }
 
-    .accent-word { color: var(--primary); }
+    .accent-word { color: var(--accent); }
 
-    p { color: var(--text-secondary); line-height: 1.75; }
+    p { color: var(--text-dim); line-height: 1.75; }
 
     .btn-primary {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: var(--primary);
+      background: var(--accent);
       color: #000;
-      font-family: 'Space Grotesk', sans-serif;
+      font-family: var(--font-display);
       font-size: 14px;
       font-weight: 600;
       padding: 14px 28px;
@@ -214,8 +185,8 @@
       align-items: center;
       gap: 8px;
       background: transparent;
-      color: var(--text-primary);
-      font-family: 'Space Grotesk', sans-serif;
+      color: var(--text);
+      font-family: var(--font-display);
       font-size: 14px;
       font-weight: 500;
       padding: 13px 28px;
@@ -224,24 +195,9 @@
       text-decoration: none;
       transition: border-color 0.2s, transform 0.2s;
     }
-    .btn-ghost:hover { border-color: var(--primary); transform: translateY(-1px); }
+    .btn-ghost:hover { border-color: var(--accent); transform: translateY(-1px); }
 
-    /* ── GLASS CARD ── */
-    .glass-card {
-      background: var(--glass-bg);
-      border: 1px solid var(--border-color);
-      border-radius: 12px;
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      padding: 32px;
-      transition: border-color 0.3s, transform 0.3s;
-    }
-    .glass-card:hover {
-      border-color: var(--border-hover);
-      transform: translateY(-2px);
-    }
-
-    /* ── REVEAL ANIMATION ── */
+    /* ── REVEAL ── */
     .reveal {
       opacity: 1;
       transform: translateY(0);
@@ -256,30 +212,10 @@
       transform: translateY(0);
     }
 
-    .reveal-delay-1 { transition-delay: 0.1s; }
-    body.js-loaded .reveal-delay-1 { transition-delay: 0.1s; }
-    body.js-loaded .reveal.visible.reveal-delay-1 { transition-delay: 0.1s; }
-
-    .reveal-delay-2 { transition-delay: 0.2s; }
-    body.js-loaded .reveal-delay-2 { transition-delay: 0.2s; }
-    body.js-loaded .reveal.visible.reveal-delay-2 { transition-delay: 0.2s; }
-
-    .reveal-delay-3 { transition-delay: 0.3s; }
-    body.js-loaded .reveal-delay-3 { transition-delay: 0.3s; }
-    body.js-loaded .reveal.visible.reveal-delay-3 { transition-delay: 0.3s; }
-
-    .reveal-delay-4 { transition-delay: 0.4s; }
-    body.js-loaded .reveal-delay-4 { transition-delay: 0.4s; }
-    body.js-loaded .reveal.visible.reveal-delay-4 { transition-delay: 0.4s; }
-
-    .reveal-delay-5 { transition-delay: 0.5s; }
-    body.js-loaded .reveal-delay-5 { transition-delay: 0.5s; }
-    body.js-loaded .reveal.visible.reveal-delay-5 { transition-delay: 0.5s; }
-
     /* ── PAGE HERO ── */
     .page-hero {
       padding: 160px 0 80px;
-      border-bottom: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border);
     }
 
     .page-hero-inner {
@@ -289,51 +225,59 @@
       align-items: center;
     }
 
-    .page-hero-content {
-      display: flex;
-      flex-direction: column;
+    .page-hero h1 {
+      font-size: clamp(40px, 5vw, 64px);
+      font-weight: 800;
+      line-height: 1.05;
+      margin-bottom: 24px;
     }
 
     .page-hero p {
       font-size: 18px;
       line-height: 1.7;
-      color: var(--text-secondary);
+      color: var(--text-dim);
       font-weight: 300;
       margin-bottom: 36px;
       max-width: 520px;
     }
 
-    .page-hero-actions {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    /* Location badge */
-    .location-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--glass-bg);
-      border: 1px solid var(--border-color);
-      border-radius: 100px;
-      padding: 8px 16px;
-      font-size: 13px;
-      color: var(--text-tertiary);
-      margin-bottom: 24px;
-      width: fit-content;
-    }
-
-    .location-badge span { color: var(--primary); font-size: 14px; }
-
     /* Photo card */
     .photo-card {
-      background: var(--surface-2);
-      border: 1px solid var(--border-color);
+      background: var(--bg2);
+      border: 1px solid var(--border);
       border-radius: 20px;
       overflow: hidden;
-      aspect-ratio: 3/4;
+      aspect-ratio: 4/5;
       position: relative;
+    }
+
+    .photo-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      background: linear-gradient(135deg, var(--bg2) 0%, var(--bg3) 100%);
+    }
+
+    .photo-placeholder-icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: var(--accent-glow);
+      border: 1px solid rgba(0,194,168,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+    }
+
+    .photo-placeholder p {
+      font-size: 13px;
+      color: var(--text-muted);
+      text-align: center;
     }
 
     .photo-card img {
@@ -342,6 +286,22 @@
       object-fit: cover;
       object-position: top;
     }
+
+    /* Location badge */
+    .location-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 8px 16px;
+      font-size: 13px;
+      color: var(--text-dim);
+      margin-bottom: 24px;
+    }
+
+    .location-badge span { color: var(--accent); font-size: 14px; }
 
     /* ── STORY SECTION ── */
     #story { padding: 100px 0; }
@@ -358,32 +318,29 @@
     .story-text p {
       margin-bottom: 20px;
       font-size: 16px;
-      color: var(--text-secondary);
+      color: var(--text-dim);
       font-weight: 300;
     }
 
-    .story-text p strong { color: var(--text-primary); font-weight: 500; }
+    .story-text p strong { color: var(--text); font-weight: 500; }
 
     .story-aside { display: flex; flex-direction: column; gap: 20px; padding-top: 8px; }
 
     /* Stat cards */
     .stat-card {
-      background: var(--glass-bg);
-      border: 1px solid var(--border-color);
+      background: var(--bg2);
+      border: 1px solid var(--border);
       border-radius: 12px;
-      padding: 28px;
-      transition: border-color 0.3s, transform 0.3s;
+      padding: 28px 28px;
+      transition: border-color 0.3s;
     }
-    .stat-card:hover {
-      border-color: var(--border-hover);
-      transform: translateY(-2px);
-    }
+    .stat-card:hover { border-color: var(--border-hover); }
 
     .stat-number {
-      font-family: 'Space Grotesk', sans-serif;
+      font-family: var(--font-display);
       font-size: 40px;
-      font-weight: 700;
-      color: var(--primary);
+      font-weight: 800;
+      color: var(--accent);
       letter-spacing: -1px;
       line-height: 1;
       margin-bottom: 6px;
@@ -391,20 +348,12 @@
 
     .stat-label {
       font-size: 14px;
-      color: var(--text-tertiary);
+      color: var(--text-dim);
       font-weight: 300;
     }
 
     /* ── CREDENTIALS ── */
     #credentials { padding: 0 0 100px; }
-
-    .credentials-header {
-      margin-bottom: 48px;
-    }
-
-    .credentials-header h2 {
-      margin-bottom: 0;
-    }
 
     .cred-grid {
       display: grid;
@@ -413,55 +362,34 @@
     }
 
     .cred-card {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .cred-card-inner {
-      background: var(--glass-bg);
-      border: 1px solid var(--border-color);
+      background: var(--bg2);
+      border: 1px solid var(--border);
       border-radius: 12px;
-      padding: 32px;
+      padding: 32px 28px;
       transition: border-color 0.3s, transform 0.3s;
-      height: 100%;
     }
-
-    .cred-card:hover .cred-card-inner {
-      border-color: var(--border-hover);
-      transform: translateY(-2px);
-    }
+    .cred-card:hover { border-color: rgba(0,194,168,0.2); transform: translateY(-2px); }
 
     .cred-icon {
       font-size: 28px;
       margin-bottom: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 48px;
-      height: 48px;
-      background: rgba(66, 222, 195, 0.1);
-      border-radius: 8px;
-    }
-
-    .cred-card h3 {
-      margin-bottom: 12px;
     }
 
     .cred-body {
       font-size: 14px;
-      color: var(--text-tertiary);
+      color: var(--text-dim);
       line-height: 1.65;
       font-weight: 300;
+      margin-top: 8px;
     }
 
-    /* ── HOW I WORK ── */
-    #how-i-work {
+    /* ── APPROACH ── */
+    #approach {
       padding: 100px 0;
-      border-top: 1px solid var(--border-color);
-      border-bottom: 1px solid var(--border-color);
+      border-top: 1px solid var(--border);
     }
 
-    .how-i-work-header {
+    .approach-header {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 60px;
@@ -469,72 +397,59 @@
       margin-bottom: 64px;
     }
 
-    .how-i-work-header h2 {
-      margin-bottom: 0;
-    }
-
-    .how-i-work-header p {
+    .approach-header p {
       font-size: 16px;
-      color: var(--text-secondary);
+      color: var(--text-dim);
       font-weight: 300;
       line-height: 1.75;
     }
 
-    .principles-grid {
+    .approach-list { display: flex; flex-direction: column; gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
+
+    .approach-item {
+      background: var(--bg2);
+      padding: 32px 36px;
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
+      grid-template-columns: 40px 1fr;
+      gap: 24px;
+      align-items: start;
+      transition: background 0.3s;
+    }
+    .approach-item:hover { background: var(--bg3); }
+
+    .approach-num {
+      font-family: var(--font-display);
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 1px;
+      margin-top: 3px;
     }
 
-    .principle-card {
-      background: var(--glass-bg);
-      border: 1px solid var(--border-color);
-      border-radius: 12px;
-      padding: 32px;
-      transition: border-color 0.3s, transform 0.3s;
-    }
-
-    .principle-card:hover {
-      border-color: var(--border-hover);
-      transform: translateY(-2px);
-    }
-
-    .principle-number {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 48px;
-      font-weight: 700;
-      color: var(--primary);
-      letter-spacing: -2px;
-      line-height: 1;
-      margin-bottom: 16px;
-    }
-
-    .principle-title {
-      font-family: 'Space Grotesk', sans-serif;
+    .approach-title {
+      font-family: var(--font-display);
       font-size: 17px;
       font-weight: 700;
-      color: var(--text-primary);
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin-bottom: 12px;
+      color: #fff;
+      margin-bottom: 8px;
     }
 
-    .principle-desc {
+    .approach-desc {
       font-size: 14px;
-      color: var(--text-tertiary);
+      color: var(--text-dim);
       font-weight: 300;
       line-height: 1.65;
     }
 
     /* ── CTA ── */
-    #cta {
+    #about-cta {
       padding: 100px 0;
       text-align: center;
-      border-top: 1px solid var(--border-color);
+      border-top: 1px solid var(--border);
     }
 
-    #cta h2 { margin-bottom: 16px; }
-    #cta p { font-size: 17px; margin-bottom: 40px; font-weight: 300; }
+    #about-cta h2 { margin-bottom: 16px; }
+    #about-cta p { font-size: 17px; margin-bottom: 40px; font-weight: 300; }
 
     .cta-actions {
       display: flex;
@@ -546,128 +461,53 @@
     /* ── FOOTER ── */
     footer {
       padding: 40px 48px;
-      border-top: 1px solid var(--border-color);
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      gap: 40px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
       position: relative;
       z-index: 1;
     }
 
-    .footer-col h4 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--text-primary);
-      margin-bottom: 16px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
+    .footer-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .footer-logo .logo-mark { flex-shrink: 0; }
+    .footer-logo .nav-logo-text { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 18px; line-height: 1.1; letter-spacing: -0.04em; color: #fff; }
+    .footer-logo .nav-logo-name { display: block; }
+    .footer-logo .nav-logo-sub { display: block; font-weight: 400; font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: #42dec3; margin-top: 1px; }
+    .footer-logo span { color: var(--text); }
 
-    .footer-links { display: flex; flex-direction: column; gap: 12px; list-style: none; }
+    .footer-links { display: flex; gap: 28px; list-style: none; flex-wrap: wrap; }
     .footer-links a {
       font-size: 13px;
-      color: var(--text-tertiary);
+      color: var(--text-muted);
       text-decoration: none;
       transition: color 0.2s;
     }
-    .footer-links a:hover { color: var(--text-primary); }
+    .footer-links a:hover { color: var(--text); }
 
-    .footer-copy { font-size: 12px; color: var(--text-tertiary); }
+    .footer-copy { font-size: 12px; color: var(--text-muted); }
 
     /* ── MOBILE ── */
-    @media (max-width: 1024px) {
-      .principles-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
     @media (max-width: 768px) {
-      nav { padding: 16px 24px; }
-      .nav-links { display: none; }
       .container { padding: 0 24px; }
       .page-hero { padding: 120px 0 60px; }
       .page-hero-inner { grid-template-columns: 1fr; gap: 48px; }
       .photo-card { aspect-ratio: 1/1; max-width: 320px; }
       .story-grid { grid-template-columns: 1fr; gap: 48px; }
       .cred-grid { grid-template-columns: 1fr; }
-      .how-i-work-header { grid-template-columns: 1fr; gap: 24px; }
-      footer {
-        grid-template-columns: 1fr;
-        gap: 32px;
-        padding: 32px 24px;
-      }
+      .approach-header { grid-template-columns: 1fr; gap: 24px; }
+      footer { flex-direction: column; align-items: flex-start; padding: 32px 24px; }
     }
 
-    /* ── MOBILE NAV (pure CSS checkbox hack) ── */
-    #nav-toggle { display: none; }
-
-    .nav-label {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      cursor: pointer;
-      padding: 12px;
-      z-index: 1001;
-      -webkit-tap-highlight-color: transparent;
-    }
-    .nav-label span {
-      display: block;
-      width: 24px;
-      height: 2px;
-      background: var(--text-primary);
-      border-radius: 2px;
-      transition: all 0.3s;
-      pointer-events: none;
-    }
-
-    @media (max-width: 900px) {
-      .nav-label { display: flex; }
-      .nav-links {
-        display: none;
-        position: fixed;
-        top: 0; left: 0; right: 0; bottom: 0;
-        background: #0a0a0a;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 0;
-        z-index: 1000;
-        list-style: none;
-        padding: 80px 0 40px;
-      }
-      .nav-links li {
-        width: 100%;
-        text-align: center;
-        border-bottom: 1px solid rgba(255,255,255,0.07);
-      }
-      .nav-links li:first-child {
-        border-top: 1px solid rgba(255,255,255,0.07);
-      }
-      .nav-links li a {
-        display: block;
-        padding: 20px 40px !important;
-        font-size: 18px !important;
-        color: #fff !important;
-        font-weight: 500 !important;
-        letter-spacing: 0.3px;
-        text-decoration: none;
-      }
-      .nav-links li:last-child {
-        border-bottom: none;
-        margin-top: 32px;
-      }
-      .nav-links .nav-cta {
-        display: inline-block !important;
-        padding: 14px 40px !important;
-        font-size: 16px !important;
-        border-radius: 8px !important;
-      }
-      #nav-toggle:checked ~ nav .nav-links { display: flex; }
-      #nav-toggle:checked ~ nav .nav-label span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-      #nav-toggle:checked ~ nav .nav-label span:nth-child(2) { opacity: 0; }
-      #nav-toggle:checked ~ nav .nav-label span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-    }
+    
+    /* ── Mobile Menu Overlay ── */
+    .mobile-menu { position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 99; background: rgba(19,19,19,1); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0; transform: translateY(-100%); opacity: 0; pointer-events: none; transition: transform 0.35s ease, opacity 0.35s ease; }
+    .mobile-menu a { font-family: 'Space Grotesk', sans-serif; font-size: 18px; font-weight: 500; color: #e5e2e1; text-decoration: none; padding: 20px 0; width: 100%; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.06); transition: color 0.2s; }
+    .mobile-menu a:hover { color: #42dec3; }
+    .mobile-menu .mobile-cta { background: #42dec3; color: #00382f; font-weight: 700; border-bottom: none; margin-top: 16px; width: auto; padding: 14px 40px; border-radius: 2px; }
+    #nav-toggle:checked ~ .mobile-menu { transform: translateY(0); opacity: 1; pointer-events: auto; }
 
   </style>
 </head>
@@ -677,32 +517,46 @@
 <!-- NAV -->
 <input type="checkbox" id="nav-toggle" aria-hidden="true">
 <nav>
-  <a href="/index.html" class="nav-logo">Utilis<span>.</span>Tech</a>
-  <label class="nav-label" for="nav-toggle" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </label>
-  <ul class="nav-links">
-    <li><a href="/index.html#services">Services</a></li>
-    <li><a href="/solutions.html">Solutions</a></li>
-    <li><a href="/how-we-work.html">How We Work</a></li>
-    <li><a href="/about.html">About</a></li>
-    <li><a href="/contact.html">Contact</a></li>
-    <li><a href="https://calendly.com/contact-utilistech" target="_blank" rel="noopener" class="nav-cta">Book a Call</a></li>
-  </ul>
+  <div class="nav-inner">
+    <a href="/index.html" class="nav-logo"><svg class="logo-mark" width="28" height="28" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 6 L8 22 Q8 28 14 28 L20 28 Q26 28 26 22 L26 6" stroke="#42dec3" stroke-width="2.5" stroke-linecap="round" fill="none"/><circle cx="8" cy="6" r="2.5" fill="#42dec3"/><circle cx="26" cy="6" r="2.5" fill="#42dec3"/><line x1="12" y1="17" x2="22" y2="17" stroke="#42dec3" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/><circle cx="12" cy="17" r="1.5" fill="#42dec3" opacity="0.5"/><circle cx="22" cy="17" r="1.5" fill="#42dec3" opacity="0.5"/></svg><span class="nav-logo-text"><span class="nav-logo-name">Utilis</span><span class="nav-logo-sub">Technologies</span></span></a>
+    <ul class="nav-links">
+      <li><a href="/index.html#services">Services</a></li>
+      <li><a href="/solutions.html">Solutions</a></li>
+      <li><a href="/how-we-work.html">How We Work</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/blog.html">Blog</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="https://calendly.com/contact-utilistech" target="_blank" rel="noopener" class="nav-cta">Book a Call</a>
+      <label class="nav-label" for="nav-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </label>
+    </div>
+  </div>
 </nav>
+<div class="mobile-menu">
+  <a href="/index.html#services">Services</a>
+  <a href="/solutions.html">Solutions</a>
+  <a href="/how-we-work.html">How We Work</a>
+  <a href="/about.html">About</a>
+  <a href="/blog.html">Blog</a>
+  <a href="/contact.html">Contact</a>
+  <a href="https://calendly.com/contact-utilistech" target="_blank" rel="noopener" class="mobile-cta">Book a Call</a>
+</div>
 
 <!-- PAGE HERO -->
 <section class="page-hero">
   <div class="container">
     <div class="page-hero-inner">
-      <div class="page-hero-content">
+      <div>
         <div class="location-badge reveal">
           <span>📍</span> UK
         </div>
         <p class="section-label reveal">About</p>
         <h1 class="reveal">Hi, I'm <span class="accent-word">Dean.</span></h1>
         <p class="reveal">I help UK businesses adopt AI safely and effectively — from figuring out where it fits, to building the tools, to making sure your team actually uses them. All backed by 25+ years of hands-on IT experience.</p>
-        <div class="page-hero-actions reveal">
+        <div style="display:flex; gap:16px; flex-wrap:wrap;" class="reveal">
           <a href="https://calendly.com/contact-utilistech" target="_blank" rel="noopener" class="btn-primary">
             Book a Free Call
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
@@ -737,19 +591,19 @@
       </div>
 
       <div class="story-aside">
-        <div class="stat-card reveal reveal-delay-1">
+        <div class="stat-card reveal">
           <div class="stat-number">6</div>
           <div class="stat-label">Years running Utilis Technologies</div>
         </div>
-        <div class="stat-card reveal reveal-delay-2">
+        <div class="stat-card reveal">
           <div class="stat-number">25+</div>
           <div class="stat-label">Years in IT — infrastructure, security, and cloud environments</div>
         </div>
-        <div class="stat-card reveal reveal-delay-3">
+        <div class="stat-card reveal">
           <div class="stat-number">AI</div>
           <div class="stat-label">Safe AI integration — strategy, governance, tools, and training</div>
         </div>
-        <div class="stat-card reveal reveal-delay-4">
+        <div class="stat-card reveal">
           <div class="stat-number">UK</div>
           <div class="stat-label">Based in the UK, GDPR-ready, and focused on businesses like yours</div>
         </div>
@@ -761,80 +615,54 @@
 <!-- CREDENTIALS -->
 <section id="credentials">
   <div class="container">
-    <div class="credentials-header reveal">
-      <p class="section-label">Credentials</p>
-      <h2>Qualified across the <span class="accent-word">full picture.</span></h2>
-    </div>
+    <p class="section-label reveal">Credentials</p>
+    <h2 class="reveal" style="margin-bottom: 48px;">Qualified across the <span class="accent-word">full picture.</span></h2>
     <div class="cred-grid">
 
-      <div class="cred-card reveal reveal-delay-1">
-        <div class="cred-card-inner">
-          <div class="cred-icon">
-            <span class="material-symbols-outlined">verified</span>
-          </div>
-          <h3>Microsoft Certified</h3>
-          <p class="cred-body">Holds Microsoft certifications covering Azure, Microsoft 365, and the wider cloud stack — practical expertise for businesses running Microsoft environments.</p>
-        </div>
+      <div class="cred-card reveal">
+        <div class="cred-icon">🔷</div>
+        <h3>Microsoft Certified</h3>
+        <p class="cred-body">Holds Microsoft certifications covering Azure, Microsoft 365, and the wider cloud stack — practical expertise for businesses running Microsoft environments.</p>
       </div>
 
-      <div class="cred-card reveal reveal-delay-2">
-        <div class="cred-card-inner">
-          <div class="cred-icon">
-            <span class="material-symbols-outlined">security</span>
-          </div>
-          <h3>Cyber Essentials</h3>
-          <p class="cred-body">Certified in Cyber Essentials — the UK government-backed security standard. Every AI deployment is designed with security and data governance built in from day one.</p>
-        </div>
+      <div class="cred-card reveal">
+        <div class="cred-icon">🛡️</div>
+        <h3>Cyber Essentials</h3>
+        <p class="cred-body">Certified in Cyber Essentials — the UK government-backed security standard. Every AI deployment is designed with security and data governance built in from day one.</p>
       </div>
 
-      <div class="cred-card reveal reveal-delay-3">
-        <div class="cred-card-inner">
-          <div class="cred-icon">
-            <span class="material-symbols-outlined">psychology</span>
-          </div>
-          <h3>AI Development</h3>
-          <p class="cred-body">Hands-on experience building production AI tools — including custom integrations, automated workflows, and AI applications connected to business systems.</p>
-        </div>
+      <div class="cred-card reveal">
+        <div class="cred-icon">🤖</div>
+        <h3>AI Development</h3>
+        <p class="cred-body">Hands-on experience building production AI tools — including custom integrations, automated workflows, and AI applications connected to business systems.</p>
       </div>
 
-      <div class="cred-card reveal reveal-delay-1">
-        <div class="cred-card-inner">
-          <div class="cred-icon">
-            <span class="material-symbols-outlined">cloud</span>
-          </div>
-          <h3>Cloud Infrastructure</h3>
-          <p class="cred-body">Extensive experience designing and managing cloud environments — identity, networking, storage, and cost management for businesses of all sizes.</p>
-        </div>
+      <div class="cred-card reveal">
+        <div class="cred-icon">☁️</div>
+        <h3>Cloud Infrastructure</h3>
+        <p class="cred-body">Extensive experience designing and managing cloud environments — identity, networking, storage, and cost management for businesses of all sizes.</p>
       </div>
 
-      <div class="cred-card reveal reveal-delay-2">
-        <div class="cred-card-inner">
-          <div class="cred-icon">
-            <span class="material-symbols-outlined">router</span>
-          </div>
-          <h3>Network & Infrastructure</h3>
-          <p class="cred-body">Deep background in network design and implementation — firewalls, switching, wireless, and VPN across office and hybrid environments.</p>
-        </div>
+      <div class="cred-card reveal">
+        <div class="cred-icon">🌐</div>
+        <h3>Network &amp; Infrastructure</h3>
+        <p class="cred-body">Deep background in network design and implementation — firewalls, switching, wireless, and VPN across office and hybrid environments.</p>
       </div>
 
-      <div class="cred-card reveal reveal-delay-3">
-        <div class="cred-card-inner">
-          <div class="cred-icon">
-            <span class="material-symbols-outlined">policy</span>
-          </div>
-          <h3>UK GDPR Aware</h3>
-          <p class="cred-body">ICO registered. All AI work is delivered with data minimisation, appropriate legal bases, and UK GDPR compliance considered as standard — not bolted on at the end.</p>
-        </div>
+      <div class="cred-card reveal">
+        <div class="cred-icon">📋</div>
+        <h3>UK GDPR Aware</h3>
+        <p class="cred-body">ICO registered. All AI work is delivered with data minimisation, appropriate legal bases, and UK GDPR compliance considered as standard — not bolted on at the end.</p>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- HOW I WORK -->
-<section id="how-i-work">
+<!-- APPROACH -->
+<section id="approach">
   <div class="container">
-    <div class="how-i-work-header">
+    <div class="approach-header">
       <div>
         <p class="section-label reveal">How I Work</p>
         <h2 class="reveal">Principles I don't <span class="accent-word">compromise on.</span></h2>
@@ -842,36 +670,41 @@
       <p class="reveal">These aren't values written for a website. They're the working principles behind every project I take on — and the reason clients come back.</p>
     </div>
 
-    <div class="principles-grid">
-      <div class="principle-card reveal reveal-delay-1">
-        <div class="principle-number">01</div>
-        <div class="principle-title">Security and governance first</div>
-        <p class="principle-desc">AI that bypasses your security posture isn't a solution — it's a liability. Every integration I build respects your existing controls, data boundaries, and compliance obligations.</p>
+    <div class="approach-list">
+      <div class="approach-item reveal">
+        <div class="approach-num">01</div>
+        <div>
+          <div class="approach-title">Security and governance first</div>
+          <p class="approach-desc">AI that bypasses your security posture isn't a solution — it's a liability. Every integration I build respects your existing controls, data boundaries, and compliance obligations.</p>
+        </div>
       </div>
-
-      <div class="principle-card reveal reveal-delay-2">
-        <div class="principle-number">02</div>
-        <div class="principle-title">No solutions looking for problems</div>
-        <p class="principle-desc">I start with your workflows, not with technology. If AI isn't the right answer for a particular process, I'll tell you. The goal is genuine business value, not impressive demos.</p>
+      <div class="approach-item reveal">
+        <div class="approach-num">02</div>
+        <div>
+          <div class="approach-title">No solutions looking for problems</div>
+          <p class="approach-desc">I start with your workflows, not with technology. If AI isn't the right answer for a particular process, I'll tell you. The goal is genuine business value, not impressive demos.</p>
+        </div>
       </div>
-
-      <div class="principle-card reveal reveal-delay-3">
-        <div class="principle-number">03</div>
-        <div class="principle-title">Work with what you've got</div>
-        <p class="principle-desc">Most businesses have more capability in their existing tools than they realise. I prefer to extend and enhance what you already have rather than introduce unnecessary new systems and vendors.</p>
+      <div class="approach-item reveal">
+        <div class="approach-num">03</div>
+        <div>
+          <div class="approach-title">Work with what you've got</div>
+          <p class="approach-desc">Most businesses have more capability in their existing tools than they realise. I prefer to extend and enhance what you already have rather than introduce unnecessary new systems and vendors.</p>
+        </div>
       </div>
-
-      <div class="principle-card reveal reveal-delay-4">
-        <div class="principle-number">04</div>
-        <div class="principle-title">Outcomes over outputs</div>
-        <p class="principle-desc">A working integration that nobody uses is a failed project. I stay involved through adoption, measure what's actually changed, and iterate until the value is real and measurable.</p>
+      <div class="approach-item reveal">
+        <div class="approach-num">04</div>
+        <div>
+          <div class="approach-title">Outcomes over outputs</div>
+          <p class="approach-desc">A working integration that nobody uses is a failed project. I stay involved through adoption, measure what's actually changed, and iterate until the value is real and measurable.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- CTA -->
-<section id="cta">
+<section id="about-cta">
   <div class="container">
     <p class="section-label reveal">Get In Touch</p>
     <h2 class="reveal">Let's have a <span class="accent-word">conversation.</span></h2>
@@ -882,7 +715,7 @@
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
       </a>
       <a href="#" onclick="window.location='mai'+'lto:contact@utilistech.co.uk'; return false;" class="btn-ghost">
-        <span class="__cf_email__" data-cfemail="62010d0c160301162217160b0e0b111607010a4c010d4c1709">[email&#160;protected]</span>
+        contact@utilistech.co.uk
       </a>
     </div>
   </div>
@@ -890,33 +723,17 @@
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-col">
-    <h4>Product</h4>
-    <ul class="footer-links">
-      <li><a href="/index.html#services">Services</a></li>
-      <li><a href="/solutions.html">Solutions</a></li>
-      <li><a href="/how-we-work.html">How We Work</a></li>
-    </ul>
-  </div>
-  <div class="footer-col">
-    <h4>Company</h4>
-    <ul class="footer-links">
-      <li><a href="/about.html">About</a></li>
-      <li><a href="/contact.html">Contact</a></li>
-      <li><a href="https://www.linkedin.com/in/dean-k-275b94133/" target="_blank" rel="noopener">LinkedIn</a></li>
-    </ul>
-  </div>
-  <div class="footer-col">
-    <h4>Legal</h4>
-    <ul class="footer-links">
-      <li><a href="/privacy-policy.html">Privacy Policy</a></li>
-      <li><a href="https://ico.org.uk/" target="_blank" rel="noopener">ICO Registration: 00013348807</a></li>
-    </ul>
-  </div>
-  <div class="footer-col">
-    <p class="footer-copy">© 2026 Utilis Technologies Limited. Registered in England & Wales.</p>
-  </div>
-</footer>
+  <a href="/index.html" class="footer-logo"><svg class="logo-mark" width="28" height="28" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 6 L8 22 Q8 28 14 28 L20 28 Q26 28 26 22 L26 6" stroke="#42dec3" stroke-width="2.5" stroke-linecap="round" fill="none"/><circle cx="8" cy="6" r="2.5" fill="#42dec3"/><circle cx="26" cy="6" r="2.5" fill="#42dec3"/><line x1="12" y1="17" x2="22" y2="17" stroke="#42dec3" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/><circle cx="12" cy="17" r="1.5" fill="#42dec3" opacity="0.5"/><circle cx="22" cy="17" r="1.5" fill="#42dec3" opacity="0.5"/></svg><span class="nav-logo-text"><span class="nav-logo-name">Utilis</span><span class="nav-logo-sub">Technologies</span></span></a>
+  <ul class="footer-links">
+    <li><a href="/index.html#services">Services</a></li>
+    <li><a href="/solutions.html">Solutions</a></li>
+    <li><a href="/how-we-work.html">How We Work</a></li>
+    <li><a href="/about.html">About</a></li>
+    <li><a href="/contact.html">Contact</a></li>
+    <li><a href="https://www.linkedin.com/in/dean-k-275b94133/" target="_blank" rel="noopener">LinkedIn</a></li>
+    <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+  </ul>
+  <p class="footer-copy">© 2026 Utilis Technologies Limited. Registered in England &amp; Wales. | <a href="https://ico.org.uk/" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline;">ICO Registration: 00013348807</a></p></footer>
 
 <script>
   document.body.classList.add('js-loaded');
@@ -931,11 +748,5 @@
   reveals.forEach(el => observer.observe(el));
 </script>
 
-<script>
-  window.chatbaseConfig = {
-    chatbotId: "3nq0jRR8L0rHIxz-opcM4",
-  };
-</script>
-<script src="https://www.chatbase.co/embed.min.js" id="3nq0jRR8L0rHIxz-opcM4" defer></script>
-</body>
+<script src="/chatbot-widget.js" data-api-url="https://utilistech-chatbot-dwdqatbbhwcubvgx.uksouth-01.azurewebsites.net/api/chat" defer></script>
 </html>
