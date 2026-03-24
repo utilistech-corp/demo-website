@@ -1,246 +1,296 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Policy & Compliance for Businesses | Utilistech</title>
-    <meta name="description" content="Navigate AI governance, compliance, and risk management frameworks for enterprise adoption.">
-    <meta name="keywords" content="AI policy, compliance, governance, enterprise, risk management">
-    <meta name="author" content="Utilistech">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #fafafa;
-        }
-        
-        header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 2rem 1rem;
-            text-align: center;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-        
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-            font-weight: 700;
-        }
-        
-        header p {
-            font-size: 1.1rem;
-            opacity: 0.95;
-        }
-        
-        nav {
-            background: #fff;
-            padding: 1rem 2rem;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
-        
-        nav a {
-            text-decoration: none;
-            color: #667eea;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-        
-        nav a:hover {
-            color: #764ba2;
-        }
-        
-        main {
-            max-width: 900px;
-            margin: 3rem auto;
-            padding: 0 1rem;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-            overflow: hidden;
-        }
-        
-        article {
-            padding: 3rem 2rem;
-        }
-        
-        article h2 {
-            color: #667eea;
-            margin: 2rem 0 1rem 0;
-            font-size: 1.8rem;
-        }
-        
-        article h3 {
-            color: #764ba2;
-            margin: 1.5rem 0 0.75rem 0;
-            font-size: 1.3rem;
-        }
-        
-        article p {
-            margin-bottom: 1rem;
-            text-align: justify;
-        }
-        
-        article ul, article ol {
-            margin: 1rem 0 1rem 2rem;
-        }
-        
-        article li {
-            margin-bottom: 0.5rem;
-        }
-        
-        .highlight-box {
-            background: #f0f4ff;
-            border-left: 4px solid #667eea;
-            padding: 1.5rem;
-            margin: 1.5rem 0;
-            border-radius: 4px;
-        }
-        
-        .highlight-box strong {
-            color: #667eea;
-        }
-        
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 2rem 1rem;
-            margin-top: 3rem;
-        }
-        
-        footer p {
-            margin-bottom: 0.5rem;
-        }
-        
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 1.8rem;
-            }
-            
-            article {
-                padding: 2rem 1rem;
-            }
-            
-            nav {
-                gap: 1rem;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+  <meta />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Why every business needs an AI usage policy (and what to put in it) — Utilis Technologies</title>
+  <meta name="description" content="Unmanaged AI adoption creates real risks: data leaks, inconsistent outputs, compliance issues. Here's what a pragmatic AI policy looks like — and how to build one without stalling progress." />
+  <link rel="canonical" href="https://utilistech.co.uk/blog-4-ai-policy.html" />
+  <meta property="og:title" content="Why every business needs an AI usage policy (and what to put in it)" />
+  <meta property="og:description" content="Unmanaged AI adoption creates real risks: data leaks, inconsistent outputs, compliance issues. Here's what a pragmatic AI policy looks like — and how to build one without stalling progress." />
+  <meta property="og:url" content="https://utilistech.co.uk/blog-4-ai-policy.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Utilis Technologies" />
+  <meta property="og:image" content="https://utilistech.co.uk/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Why every business needs an AI usage policy (and what to put in it)" />
+  <meta name="twitter:description" content="Unmanaged AI adoption creates real risks: data leaks, inconsistent outputs, compliance issues. Here's what a pragmatic AI policy looks like — and how to build one without stalling progress." />
+  <meta name="twitter:image" content="https://utilistech.co.uk/og-image.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #080808; --bg2: #0f0f0f; --bg3: #141414;
+      --border: rgba(255,255,255,0.07); --border-hover: rgba(255,255,255,0.15);
+      --text: #e8e8e8; --text-muted: #666; --text-dim: #b0b0b0;
+      --accent: #00c2a8; --accent2: #0090ff; --accent-glow: rgba(0,194,168,0.15);
+      --font-display: 'Syne', sans-serif; --font-body: 'DM Sans', sans-serif;
+    }
+
+    /* ── Unified Nav ── */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); background: rgba(19,19,19,0.6); border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .nav-inner { display: flex; justify-content: space-between; align-items: center; max-width: 1440px; margin: 0 auto; padding: 16px 24px; }
+    @media (min-width: 768px) { .nav-inner { padding: 16px 40px; } }
+    .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; white-space: nowrap; }
+    .nav-logo .logo-mark { flex-shrink: 0; }
+    .nav-logo-text { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 18px; line-height: 1.1; letter-spacing: -0.04em; color: #fff; }
+    .nav-logo-name { display: block; }
+    .nav-logo-sub { display: block; font-weight: 400; font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: #42dec3; margin-top: 1px; }
+    .nav-links { display: none; list-style: none; gap: 40px; margin: 0; padding: 0; }
+    @media (min-width: 768px) { .nav-links { display: flex; } }
+    .nav-links a { font-family: 'Space Grotesk', sans-serif; font-size: 14px; font-weight: 500; color: #9ca3af; text-decoration: none; transition: color 0.2s; letter-spacing: -0.01em; }
+    .nav-links a:hover { color: #42dec3; }
+    .nav-right { display: flex; align-items: center; gap: 16px; }
+    .nav-cta { display: none; font-family: 'Space Grotesk', sans-serif; font-size: 14px; font-weight: 700; background: #42dec3; color: #00382f; padding: 10px 24px; border-radius: 2px; text-decoration: none; letter-spacing: -0.01em; transition: filter 0.2s; white-space: nowrap; }
+    @media (min-width: 768px) { .nav-cta { display: inline-flex; } }
+    .nav-cta:hover { filter: brightness(1.1); }
+    .nav-label { display: flex; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; z-index: 1001; }
+    @media (min-width: 768px) { .nav-label { display: none; } }
+    .nav-label span { display: block; width: 24px; height: 2px; background: #e5e2e1; border-radius: 2px; transition: all 0.3s; }
+    #nav-toggle:checked ~ nav .nav-label span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    #nav-toggle:checked ~ nav .nav-label span:nth-child(2) { opacity: 0; }
+    #nav-toggle:checked ~ nav .nav-label span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: var(--font-body); font-size: 16px; line-height: 1.6; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+    body::before { content: ''; position: fixed; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E"); pointer-events: none; z-index: 1000; opacity: 0.4; }
+    .grid-bg { position: fixed; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px); background-size: 60px 60px; pointer-events: none; z-index: 0; }
+    .article-wrap { position: relative; z-index: 1; max-width: 740px; margin: 0 auto; padding: 160px 48px 120px; }
+    .back-link { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-muted); text-decoration: none; margin-bottom: 48px; transition: color 0.2s; }
+    .back-link:hover { color: var(--text-dim); }
+    .article-cat { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-bottom: 20px; }
+    .article-cat::before { content: ''; display: inline-block; width: 20px; height: 1px; background: var(--accent); }
+    .article-title { font-family: var(--font-display); font-size: clamp(36px, 5vw, 56px); font-weight: 800; letter-spacing: -2px; color: #fff; line-height: 1.05; margin-bottom: 24px; }
+    .article-meta { display: flex; align-items: center; gap: 20px; margin-bottom: 56px; padding-bottom: 32px; border-bottom: 1px solid var(--border); }
+    .article-date { font-size: 13px; color: var(--text-muted); }
+    .article-read { font-size: 13px; color: var(--text-muted); }
+    .article-dot { width: 3px; height: 3px; background: var(--text-muted); border-radius: 50%; }
+    .prose p { font-size: 17px; color: #c8c8c8; line-height: 1.8; font-weight: 300; margin-bottom: 28px; }
+    .prose h2 { font-family: var(--font-display); font-size: 28px; font-weight: 700; letter-spacing: -0.8px; color: #fff; margin: 52px 0 20px; }
+    .prose h3 { font-family: var(--font-display); font-size: 20px; font-weight: 600; letter-spacing: -0.3px; color: #fff; margin: 36px 0 14px; }
+    .prose strong { color: #fff; font-weight: 500; }
+    .prose ul { margin: 0 0 28px 0; padding: 0; list-style: none; }
+    .prose ul li { font-size: 17px; color: #c8c8c8; line-height: 1.8; font-weight: 300; padding: 8px 0 8px 24px; position: relative; border-bottom: 1px solid var(--border); }
+    .prose ul li:first-child { border-top: 1px solid var(--border); }
+    .prose ul li::before { content: '→'; position: absolute; left: 0; color: var(--accent); font-size: 13px; top: 10px; }
+    .callout { background: var(--bg2); border: 1px solid rgba(0,194,168,0.2); border-left: 3px solid var(--accent); border-radius: 8px; padding: 28px 32px; margin: 40px 0; }
+    .callout p { margin-bottom: 0; font-size: 16px; color: var(--text-dim); }
+    .article-cta { margin-top: 80px; padding: 52px; background: var(--bg2); border: 1px solid var(--border); border-radius: 16px; text-align: center; }
+    .article-cta h3 { font-family: var(--font-display); font-size: 28px; font-weight: 700; letter-spacing: -0.8px; color: #fff; margin-bottom: 12px; }
+    .article-cta p { font-size: 16px; color: var(--text-dim); margin-bottom: 28px; font-weight: 300; }
+    .btn-primary { display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: #000; padding: 14px 28px; border-radius: 8px; font-family: var(--font-body); font-size: 15px; font-weight: 500; text-decoration: none; transition: all 0.2s; }
+    .btn-primary:hover { background: #00d9bc; transform: translateY(-1px); box-shadow: 0 8px 32px rgba(0,194,168,0.3); }
+    footer { border-top: 1px solid var(--border); padding: 40px 48px; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
+    .footer-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .footer-logo .logo-mark { flex-shrink: 0; }
+    .footer-logo .nav-logo-text { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 18px; line-height: 1.1; letter-spacing: -0.04em; color: #fff; }
+    .footer-logo .nav-logo-name { display: block; }
+    .footer-logo .nav-logo-sub { display: block; font-weight: 400; font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: #42dec3; margin-top: 1px; }
+    .footer-logo span { color: var(--text); }
+    .footer-copy { font-size: 12px; color: var(--text-muted); }
+    @media (max-width: 768px) {
+      .article-wrap { padding: 120px 24px 80px; }
+      footer { flex-direction: column; gap: 16px; text-align: center; padding: 32px 24px; }
+    }
+
+    
+    /* ── Mobile Menu Overlay ── */
+    .mobile-menu { position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 99; background: rgba(19,19,19,1); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0; transform: translateY(-100%); opacity: 0; pointer-events: none; transition: transform 0.35s ease, opacity 0.35s ease; }
+    .mobile-menu a { font-family: 'Space Grotesk', sans-serif; font-size: 18px; font-weight: 500; color: #e5e2e1; text-decoration: none; padding: 20px 0; width: 100%; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.06); transition: color 0.2s; }
+    .mobile-menu a:hover { color: #42dec3; }
+    .mobile-menu .mobile-cta { background: #42dec3; color: #00382f; font-weight: 700; border-bottom: none; margin-top: 16px; width: auto; padding: 14px 40px; border-radius: 2px; }
+    #nav-toggle:checked ~ .mobile-menu { transform: translateY(0); opacity: 1; pointer-events: auto; }
+
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Why every business needs an AI usage policy (and what to put in it)",
+  "datePublished": "2026-03-01",
+  "dateModified": "2026-03-12",
+  "author": {
+    "@type": "Person",
+    "name": "Dean Kewley"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Utilis Technologies",
+    "url": "https://utilistech.co.uk"
+  },
+  "description": "Unmanaged AI adoption creates real risks: data leaks, inconsistent outputs, compliance issues. Here's what a pragmatic AI policy looks like — and how to build one without stalling progress.",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://utilistech.co.uk/blog-4-ai-policy.html"
+  }
+}
+  </script>
 </head>
 <body>
-    <header>
-        <h1>AI Policy & Compliance</h1>
-        <p>Navigating governance and risk management for enterprise AI</p>
-    </header>
-    
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="blog.html">Blog</a>
-        <a href="#">Services</a>
-        <a href="#">Contact</a>
-    </nav>
-    
-    <main>
-        <article>
-            <h2>Building a Robust AI Policy Framework</h2>
-            
-            <p>As organizations increasingly integrate artificial intelligence into their operations, establishing comprehensive policies and governance frameworks has become essential. The rise of AI adoption across industries has brought regulatory scrutiny and stakeholder expectations for responsible deployment.</p>
-            
-            <h3>Why AI Policy Matters</h3>
-            
-            <p>AI systems make decisions that affect customers, employees, and society. Without proper governance, organizations risk:</p>
-            <ul>
-                <li>Regulatory penalties and legal exposure</li>
-                <li>Reputational damage from biased or harmful outputs</li>
-                <li>Loss of customer trust and market position</li>
-                <li>Operational inefficiencies from uncontrolled AI deployment</li>
-                <li>Security and data privacy breaches</li>
-            </ul>
-            
-            <div class="highlight-box">
-                <strong>Key Insight:</strong> Forward-thinking organizations are not waiting for regulation—they're building AI governance frameworks proactively to gain competitive advantage and build stakeholder confidence.
-            </div>
-            
-            <h3>Core Components of an AI Policy Framework</h3>
-            
-            <p>A comprehensive AI policy should address:</p>
-            
-            <h3>1. Governance Structure</h3>
-            <p>Establish clear accountability and decision-making authority. Define who owns AI initiatives, how they report, and what escalation paths exist for concerns. Many organizations create AI governance committees with cross-functional representation.</p>
-            
-            <h3>2. Use Case Assessment</h3>
-            <p>Not all AI applications carry equal risk. Develop a classification system for evaluating AI projects based on impact, sensitivity, and complexity. High-risk use cases (hiring, lending, healthcare) require stricter controls than low-risk applications.</p>
-            
-            <h3>3. Transparency and Explainability Requirements</h3>
-            <p>Users of AI systems need to understand how decisions are made. Policies should mandate that high-stakes decisions include explainability mechanisms and clear disclosure when AI is involved.</p>
-            
-            <h3>4. Bias Testing and Mitigation</h3>
-            <p>Implement processes to identify and eliminate discriminatory bias in training data and model outputs. Regular audits should assess whether AI systems perform equitably across demographic groups.</p>
-            
-            <h3>5. Data Privacy and Security</h3>
-            <p>AI systems often require large datasets. Ensure policies address data minimization, consent, retention, and protection. Compliance with GDPR, CCPA, and emerging AI regulations must be embedded.</p>
-            
-            <h3>6. Human Oversight and Control</h3>
-            <p>Critical decisions should retain human involvement. Policies should specify when humans must review AI recommendations, and establish override capabilities for safety or fairness concerns.</p>
-            
-            <h3>7. Monitoring and Auditing</h3>
-            <p>AI systems can drift over time. Implement continuous monitoring for performance degradation, bias emergence, and security vulnerabilities. Regular audits provide accountability and improvement opportunities.</p>
-            
-            <div class="highlight-box">
-                <strong>Implementation Tip:</strong> Start with a pilot program testing policy frameworks on lower-risk AI applications before rolling out enterprise-wide.
-            </div>
-            
-            <h3>Regulatory Landscape</h3>
-            
-            <p>The regulatory environment is evolving rapidly:</p>
-            
-            <ul>
-                <li><strong>EU AI Act:</strong> Categorizes AI systems by risk level with corresponding compliance requirements</li>
-                <li><strong>US Executive Order on AI:</strong> Focuses on safety, security, and equity in high-impact AI</li>
-                <li><strong>Industry-specific regulations:</strong> Healthcare, finance, and government have emerging AI standards</li>
-                <li><strong>Data protection laws:</strong> GDPR, CCPA, and emerging privacy regulations apply to AI systems</li>
-            </ul>
-            
-            <h3>Building Your Policy Roadmap</h3>
-            
-            <p>Consider this phased approach:</p>
-            
-            <ol>
-                <li><strong>Assess current state:</strong> Inventory existing AI systems and identify gaps in governance</li>
-                <li><strong>Define principles:</strong> Establish core values (transparency, fairness, accountability, security)</li>
-                <li><strong>Draft policies:</strong> Create specific policies addressing governance, use cases, and compliance</li>
-                <li><strong>Implement controls:</strong> Deploy tools and processes to enforce policies</li>
-                <li><strong>Monitor and iterate:</strong> Regular reviews and updates as technology and regulation evolve</li>
-            </ol>
-            
-            <p>Organizations that invest in AI governance now will be better positioned for regulatory compliance, risk management, and stakeholder trust. The companies leading in AI responsibility are gaining competitive advantages through customer confidence and operational resilience.</p>
-            
-            <div class="highlight-box">
-                <strong>Next Step:</strong> Schedule an AI governance assessment with our team to evaluate your current policies and identify priorities for your organization.
-            </div>
-        </article>
-    </main>
-    
-    <footer>
-        <p>&copy; 2024 Utilistech. All rights reserved.</p>
-        <p>Advancing responsible AI adoption for enterprise success.</p>
-    </footer>
-    
-    <script>
-        // Simple analytics
-        console.log('Blog page loaded');
-    </script>
+<div class="grid-bg"></div>
+
+<input type="checkbox" id="nav-toggle" aria-hidden="true">
+<nav>
+  <div class="nav-inner">
+    <a href="/index.html" class="nav-logo"><svg class="logo-mark" width="28" height="28" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 6 L8 22 Q8 28 14 28 L20 28 Q26 28 26 22 L26 6" stroke="#42dec3" stroke-width="2.5" stroke-linecap="round" fill="none"/><circle cx="8" cy="6" r="2.5" fill="#42dec3"/><circle cx="26" cy="6" r="2.5" fill="#42dec3"/><line x1="12" y1="17" x2="22" y2="17" stroke="#42dec3" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/><circle cx="12" cy="17" r="1.5" fill="#42dec3" opacity="0.5"/><circle cx="22" cy="17" r="1.5" fill="#42dec3" opacity="0.5"/></svg><span class="nav-logo-text"><span class="nav-logo-name">Utilis</span><span class="nav-logo-sub">Technologies</span></span></a>
+    <ul class="nav-links">
+      <li><a href="/index.html#services">Services</a></li>
+      <li><a href="/solutions.html">Solutions</a></li>
+      <li><a href="/how-we-work.html">How We Work</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/blog.html">Blog</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="https://calendly.com/contact-utilistech" target="_blank" rel="noopener" class="nav-cta">Book a Call</a>
+      <label class="nav-label" for="nav-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </label>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <a href="/index.html#services">Services</a>
+  <a href="/solutions.html">Solutions</a>
+  <a href="/how-we-work.html">How We Work</a>
+  <a href="/about.html">About</a>
+  <a href="/blog.html">Blog</a>
+  <a href="/contact.html">Contact</a>
+  <a href="https://calendly.com/contact-utilistech" target="_blank" rel="noopener" class="mobile-cta">Book a Call</a>
+</div>
+
+<div class="article-wrap">
+  <a href="/blog.html" class="back-link">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+    Back to Insights
+  </a>
+
+  <div class="article-cat">AI Governance</div>
+  <h1 class="article-title">Why every business needs an AI usage policy (and what to put in it)</h1>
+  <div class="article-meta">
+    <span class="article-date">March 2026</span>
+    <div class="article-dot"></div>
+    <span class="article-read">8 min read</span>
+  </div>
+
+  <div class="prose">
+    <p>AI adoption is moving faster than policy. Right now, across most UK businesses, employees are using ChatGPT, Copilot, and other AI tools with minimal oversight. Some are sharing sensitive client data. Some are pasting entire contracts into consumer-grade AI. Some are using AI outputs in client deliverables without review. Meanwhile, nobody in leadership has actually thought about the compliance implications or decided whether this is acceptable.</p>
+
+    <p>This isn't scaremongering. It's a predictable outcome of useful technology arriving before the governance framework does. The fix isn't to ban AI — that's both unenforceable and wasteful of a valuable tool. The fix is a pragmatic AI usage policy that sets boundaries on what's acceptable while enabling the legitimate value that AI creates.</p>
+
+    <h2>What can go wrong if you don't have one</h2>
+
+    <p><strong>Data leakage through consumer-grade AI.</strong> If an employee is using free ChatGPT or an unmanaged cloud service to process business data, that data is being sent to third-party servers, potentially used for model training, and isn't covered by any data processing agreement. GDPR compliance just went out the window. The ICO doesn't take this kindly.</p>
+
+    <p><strong>Inconsistent or unreliable outputs being delivered to clients.</strong> When there's no defined process for AI-assisted work, some teams review AI outputs carefully before use. Others don't. Some run outputs through a lawyer. Others treat them as final. The result is inconsistent quality and risk exposure. You also can't audit what actually happened.</p>
+
+    <p><strong>Hidden IP and confidentiality problems.</strong> An employee pastes your proprietary process documentation into an AI tool. An architect copies a contract template into a generative AI to get a quick first draft. A support team uses AI to handle customer queries without clearly distinguishing between AI-generated and human responses. Each creates risk.</p>
+
+    <p><strong>Compliance and regulatory exposure.</strong> If you operate in a regulated industry — finance, healthcare, legal services — and your people are using AI without any governance, you've probably already violated your obligations. The issue isn't whether AI helps; it's whether you can prove the AI was used appropriately and its outputs were verified.</p>
+
+    <h2>What a pragmatic AI policy actually covers</h2>
+
+    <p>A good AI policy doesn't need to be complex. It needs to answer a few clear questions that employees can understand and follow.</p>
+
+    <h3>Which AI tools are approved for which types of work?</h3>
+
+    <p>This is the first boundary. You don't need to ban all consumer AI — that's often impractical and kills productivity. Instead, define categories: "Approved for brainstorming and general writing assistance" (ChatGPT, Copilot). "Approved for approved-systems-only data processing" (enterprise Claude, tools with data processing agreements). "Not approved" (any tool that doesn't have a clear data handling commitment).</p>
+
+    <p>Make this specific to your business. If you're running on Google Workspace, Google's Duet AI might be fine for your scenario. If you're on Microsoft 365, Copilot with the right permissions settings works. If you're integrated with third-party systems, you might need API-based tools instead. But be explicit about the choice and why.</p>
+
+    <h3>What data can go into each tool?</h3>
+
+    <p>This is the critical protection. Your policy should clearly state: "Client data cannot go into unapproved AI tools." "Employee personal data cannot be processed by external AI." "Confidential business strategy must not be pasted into any public AI." And the positive: "General, non-confidential queries can be run through approved tools."</p>
+
+    <p>Use your existing data classification (public, internal, confidential, restricted) and map it directly to what can be processed where. If you don't have a data classification system yet, this is a good moment to create one. It doesn't need to be elaborate — three or four categories work fine.</p>
+
+    <h3>What's the process for AI-assisted outputs before they're used?</h3>
+
+    <p>This depends on risk. For a marketing team using AI to draft social media content, the review might be quick — "read it, make sure it's on-brand, post it." For client-facing deliverables, the standard should be higher. For regulated work (financial advice, legal opinions, medical guidance), the standard is much higher still.</p>
+
+    <p>Your policy should define which roles are responsible for review, and for what types of output. Make it clear that "AI-generated" doesn't mean "AI-reviewed" or "verified." If an AI output is used in a client deliverable, someone with relevant expertise should have actually checked it.</p>
+
+    <h3>How do you handle third-party data?</h3>
+
+    <p>If your business handles client or customer data, the policy needs to be explicit: "Client data must not be processed by any external AI tool without explicit written consent and a data processing agreement." This applies to legal firms sharing contracts, consultancies sharing project docs, anyone with customer information. It's not negotiable under GDPR.</p>
+
+    <p>For employee personal data, the bar is similarly high. You cannot routinely process employee data through consumer AI.</p>
+
+    <h3>What about AI use in your own products or deliverables?</h3>
+
+    <p>If you're using AI to generate content, analysis, or recommendations that you then deliver to clients or use in your own products, the policy needs to address this explicitly. The question isn't whether you're allowed to use AI — you are. The question is: how do you ensure it's been reviewed, it's accurate, and your clients (if applicable) know it's AI-assisted.</p>
+
+    <p>This is worth being transparent about. More and more clients expect to know if content was AI-assisted. Some will want assurance that it was reviewed by a human. Being upfront about your process actually builds confidence.</p>
+
+    <h2>How to create one without it becoming theatre</h2>
+
+    <p>The easiest way to build a policy nobody follows is to create a document so restrictive that it's impractical. Something like "all AI outputs must be reviewed by management before use" sounds good until your team is supposed to be generating fifty customer responses a day.</p>
+
+    <p>A better approach:</p>
+
+    <p><strong>Start with a real conversation.</strong> Ask teams what they're actually doing with AI right now. You'll probably find some are already using tools appropriately, and others are using them recklessly. Listen to both. Understand what genuine problems they're solving.</p>
+
+    <p><strong>Make approval criteria, not restrictions.</strong> Instead of "you can't use X," say "you can use X for Y types of work, with these constraints." This gives people flexibility while setting boundaries.</p>
+
+    <p><strong>Keep it operational.</strong> Your policy should be a checklist an employee can actually use. "If data is confidential, don't send it to external AI. If it's client data, you need their consent first. If it's going to a client, check it." That's actionable. A 20-page policy about data governance principles is not.</p>
+
+    <p><strong>Build in an exception process.</strong> There will be edge cases where someone legitimately needs to use AI in a way your standard policy doesn't quite cover. Make it easy to ask for an exception rather than just ignoring the policy. Give a person in leadership (usually your data protection lead or IT manager) authority to approve exceptions with documentation.</p>
+
+    <p><strong>Review it regularly.</strong> AI is moving fast. Your policy from 2026 will be outdated in 18 months. Schedule a review every quarter or six months. As new tools become available and new risks emerge, adjust accordingly.</p>
+
+    <div class="callout">
+      <p><strong>A note on enforcement:</strong> A policy is only useful if people actually follow it. This means training (even just 15 minutes of clarity goes a long way), making the tools easy to use appropriately, and creating a culture where breaking the policy feels risky. If someone shares client data in the wrong tool, that should result in a conversation and retraining, not a firing. But it should still be a conversation.</p>
+    </div>
+
+    <h2>The bottom line</h2>
+
+    <p>You don't need to choose between embracing AI and protecting your business. A simple, clear, operational AI policy does both. It gives your team confidence that they're using tools appropriately, it protects you from the most obvious data and compliance risks, and it buys you time to become genuinely AI-mature over the next couple of years.</p>
+
+    <p>Without a policy, you have unmanaged AI adoption. With a pragmatic one, you have managed risk and ongoing productivity benefit. The cost of writing the policy is a few hours of leadership time. The benefit is potentially millions of pounds worth of exposure avoided.</p>
+
+  </div>
+
+  <div class="article-cta">
+    <h3>Ready to create an AI policy that actually works?</h3>
+    <p>We can help you design a pragmatic policy that sets clear boundaries while enabling your team to use AI effectively. Book a discussion to walk through your specific risks and use cases.</p>
+    <a href="mailto:contact@utilistech.co.uk" class="btn-primary">
+      Get in Touch
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+    </a>
+  </div>
+</div>
+
+<footer>
+  <a href="/" class="footer-logo">Utilis<span>.</span>Tech</a>
+<p class="footer-copy">© 2026 Utilis Technologies Limited. Registered in England & Wales. | <a href="https://ico.org.uk/" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline;">ICO Registration: 00013348807</a></p>
+</footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var hamburger = document.getElementById('hamburger');
+      var navLinks = document.querySelector('.nav-links');
+      if (!hamburger || !navLinks) return;
+      function toggleMenu(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        hamburger.classList.toggle('open');
+        navLinks.classList.toggle('open');
+      }
+      hamburger.addEventListener('click', toggleMenu);
+      hamburger.addEventListener('touchend', toggleMenu);
+      navLinks.querySelectorAll('a').forEach(function(a) {
+        a.addEventListener('click', function() {
+          hamburger.classList.remove('open');
+          navLinks.classList.remove('open');
+        });
+      });
+    });
+  </script>
 </body>
+<script src="/chatbot-widget.js" data-api-url="https://utilistech-chatbot-dwdqatbbhwcubvgx.uksouth-01.azurewebsites.net/api/chat" defer></script>
 </html>
